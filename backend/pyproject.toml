@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomy-engine"
+version = "0.1.0"
+description = "PS-9.1 Graduated Autonomy Engine — risk-scores agent actions and routes them to the right autonomy level"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+# Tests import `autonomy_engine.*` directly; src/ on the path makes that work
+# without needing an editable install.
+pythonpath = ["src"]
+testpaths = ["tests"]
+# Live API calls are opt-in, not opt-out. Previously integration tests were held
+# back only by a skipif on the key being absent -- so the moment a developer put
+# a real key in their .env, every plain `pytest` run started spending tokens
+# against the daily quota. Deselecting by marker makes `pytest` free and offline
+# regardless of environment; `pytest -m integration` is the deliberate opt-in.
+addopts = ["-m", "not integration"]
+markers = [
+    "integration: hits the real Groq API and spends tokens; run with `pytest -m integration`",
+]

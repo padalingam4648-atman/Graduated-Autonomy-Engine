@@ -1,0 +1,71 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---- Virtualenvs ----
+.venv/
+venv/
+ENV/
+env/
+
+# ---- Testing / coverage ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Environment / secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+credentials
+
+# ---- AWS SAM ----
+.aws-sam/
+samconfig.toml.bak
+packaged.yaml
+build/
+
+# ---- Node / frontend ----
+frontend/node_modules/
+frontend/dist/
+frontend/.vercel/
+frontend/*.local
+
+# ---- Generated data ----
+# Pre-write snapshots of the transaction CSV. Each is a full ~7 MB copy and
+# they are regenerated on every mutation, so they are never committed.
+# data/customer_shopping_data.csv itself IS tracked, as the seed state.
+data/snapshots/
+data/*.csv.tmp
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

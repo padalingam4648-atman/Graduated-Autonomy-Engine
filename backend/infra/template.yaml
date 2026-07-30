@@ -1,0 +1,112 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: PS-9.1 Graduated Autonomy Engine — Lambda + API Gateway + DynamoDB + S3
+
+Parameters:
+  GroqApiKey:
+    Type: String
+    NoEcho: true
+    Description: Groq API key for the agent LLM
+
+  CorsAllowedOrigin:
+    Type: String
+    Default: "https://agent-rish-console.vercel.app"
+    Description: Frontend origin allowed by CORS
+
+  TablePrefix:
+    Type: String
+    Default: "ps-9-1-autonomy-engine"
+    Description: Prefix for DynamoDB table names
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures: [x86_64]
+    Timeout: 60
+    MemorySize: 512
+    Environment:
+      Variables:
+        GROQ_API_KEY: !Ref GroqApiKey
+        DYNAMODB_TABLE_PREFIX: !Ref TablePrefix
+        CORS_ALLOWED_ORIGINS: !Ref CorsAllowedOrigin
+        CUSTOMER_DATA_S3_URI: !Sub "s3://${DataBucket}/customer_shopping_data.csv"
+
+Resources:
+
+  # ── S3 bucket for the transaction CSV ──────────────────────────────────
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "autonomy-engine-data-${AWS::AccountId}"
+
+  # ── DynamoDB audit-log table ────────────────────────────────────────────
+  AuditLogTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${TablePrefix}-audit-log"
+      BillingMode: PAY_PER_REQUEST
+      KeySchema:
+        - AttributeName: session_id
+          KeyType: HASH
+        - AttributeName: timestamp
+          KeyType: RANGE
+      AttributeDefinitions:
+        - AttributeName: session_id
+          AttributeType: S
+        - AttributeName: timestamp
+          AttributeType: S
+
+  # ── Lambda function ─────────────────────────────────────────────────────
+  AutonomyEngineFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: autonomy-engine
+      Handler: autonomy_engine.lambda_handler.handler
+      CodeUri: ../
+      Description: FastAPI autonomy engine wrapped with Mangum
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AuditLogTable
+        - S3CrudPolicy:
+            BucketName: !Ref DataBucket
+      Events:
+        ApiProxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref AutonomyApi
+            Path: /{proxy+}
+            Method: ANY
+        ApiRoot:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref AutonomyApi
+            Path: /
+            Method: ANY
+
+  # ── API Gateway HTTP API ─────────────────────────────────────────────────
+  AutonomyApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      Description: HTTP API for the autonomy engine
+      CorsConfiguration:
+        AllowOrigins:
+          - !Ref CorsAllowedOrigin
+        AllowMethods:
+          - GET
+          - POST
+          - OPTIONS
+        AllowHeaders:
+          - Content-Type
+
+Outputs:
+  ApiUrl:
+    Description: "API Gateway URL — set as VITE_API_BASE_URL in Vercel"
+    Value: !Sub "https://${AutonomyApi}.execute-api.${AWS::Region}.amazonaws.com"
+
+  DataBucketName:
+    Description: "Upload customer_shopping_data.csv to this S3 bucket"
+    Value: !Ref DataBucket
+
+  TableName:
+    Description: DynamoDB audit-log table
+    Value: !Ref AuditLogTable
