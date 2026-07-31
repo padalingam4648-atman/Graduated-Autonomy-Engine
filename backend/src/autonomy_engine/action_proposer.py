@@ -156,13 +156,17 @@ _CATEGORY_HINT = "\n".join(
 )
 
 SYSTEM_PROMPT: Final[str] = f"""\
-You are an AI agent inside a graduated autonomy engine backed by a retail
-transaction CSV (~99 000 rows).
+You are an AI agent inside a graduated autonomy engine backed by a Global
+Superstore retail transaction CSV (~51,000 rows spanning 2011-2014).
 
 Schema columns: {', '.join(data_store.FIELDS)}
 
 Known categorical values:
 {_CATEGORY_HINT}
+
+Numerical fields (use greater_than / less_than operators): quantity, sales, profit, discount
+Date field (use before / after operators, ISO format YYYY-MM-DD): order_date
+Primary key (for single-record operations): order_id
 
 === MANDATORY TWO-PHASE PROCESS ===
 
@@ -191,11 +195,14 @@ required, every string field must be non-empty):
                     bulk_delete_transactions
 
   filter          (array) criteria for query/summarize/bulk_delete tools
-  invoice_no      (string) for update_transaction and delete_transaction
+  invoice_no      (string) the order_id value for update_transaction and delete_transaction
   field           (string) for update_transaction
   new_value       (string) for update_transaction
   group_by        (string) for summarize_transactions; use "" for no grouping
-  limit           (integer) for query_transactions; max rows to return based on user request (e.g. 100). Default is 25.
+  limit           (integer, REQUIRED for query_transactions) — extract the exact count from
+                  the user's request and pass it here. Examples: "show 20" → limit=20,
+                  "top 10" → limit=10, "first 5" → limit=5, "get 50 rows" → limit=50.
+                  If the user gives no specific number, omit this field (returns up to 100).
 
   reversibility   (string, required) EXACTLY one of:
                     "reversible"           — reads only
@@ -212,11 +219,11 @@ required, every string field must be non-empty):
   data_scope_reasoning      (string, required, non-empty)
 
   regulatory_category (string, required) EXACTLY one of:
-                    "none"               — retail metrics only (category, mall,
-                                           payment_method, quantity, price)
-                    "internal_sensitive" — personal fields (customer_id, age, gender)
-                    "regulated"          — financial + personal combined, or
-                                           request labels data as sensitive
+                    "none"               — non-personal retail metrics (category, region,
+                                           sales, quantity, ship_mode, market)
+                    "internal_sensitive" — customer identifiers (customer_id, customer_name)
+                    "regulated"          — financial+personal combined, or request
+                                           labels data as sensitive
 
   regulatory_reasoning      (string, required, non-empty)
 
@@ -317,7 +324,7 @@ PHASE1_TOOLS: Final[list[dict[str, Any]]] = [
                     },
                     "limit": {
                         "type": "integer",
-                        "description": "For query_transactions; max number of rows to return based on the user's request. Default 25.",
+                        "description": "For query_transactions: MUST be set to the exact number the user requested (e.g. 'show 20' → 20, 'top 10' → 10). Default 25 if no count specified. Max 100.",
                     },
                     # ── risk dimensions ─────────────────────────────────────
                     "reversibility": {
@@ -396,8 +403,14 @@ PHASE1_TOOLS: Final[list[dict[str, Any]]] = [
     },
 ]
 
-def _client():
-    return _groq_client()
+# Module-level singleton — avoids creating a new HTTP connection pool per request.
+_groq_singleton: groq_module.Groq | None = None
+
+def _client() -> groq_module.Groq:
+    global _groq_singleton
+    if _groq_singleton is None:
+        _groq_singleton = _groq_client()
+    return _groq_singleton
 
 # Legacy schema structures expected by test_agent_actions unit test suite
 PLANNING_TOOL: Final[dict[str, Any]] = {
@@ -494,7 +507,7 @@ _TOOL_FILTER_SCHEMA = {
     "items": {
         "type": "object",
         "properties": {
-            "field": {"type": "string", "enum": CUSTOMER_FIELDS},
+            "field": {"type": "string", "enum": list(CUSTOMER_FIELDS)},
             "operator": {
                 "type": "string",
                 "enum": ["equals", "not_equals", "contains", "before", "after", "greater_than", "less_than"],
@@ -603,7 +616,7 @@ def _run_count(args: dict[str, Any]) -> str:
     try:
         criteria = _parse_criteria(args.get("filter", []))
         count = data_store.count_matching(criteria)
-        return f"That filter matches {count:,} of 99,457 rows (1.0%). Use this as data_scope."
+        return f"That filter matches {count:,} of 51,290 rows. Use this as data_scope."
     except DataStoreError as exc:
         return f"Filter criteria could not be run: {exc}"
 

@@ -39,16 +39,22 @@ SEED_ROW_COUNT = 300
 
 @pytest.fixture(autouse=True)
 def isolated_transaction_data(tmp_path, monkeypatch):
-    """Give every test a private copy of the transaction CSV and snapshot dir.
+    """Give every test a private copy of the transaction CSV, snapshot dir, and calibration state.
 
     Autouse and unconditional: the protection is only worth anything if it is
     impossible to forget.
     """
+    from autonomy_engine import adaptive_calibration
+    cal_file = tmp_path / "calibration.json"
+    monkeypatch.setenv("CALIBRATION_FILE_PATH", str(cal_file))
+    adaptive_calibration.reset()
+
     working_csv = tmp_path / "customer_shopping_data.csv"
     shutil.copy(SEED_CSV, working_csv)
     monkeypatch.setenv("CUSTOMER_DATA_PATH", str(working_csv))
     monkeypatch.setenv("CUSTOMER_SNAPSHOT_DIR", str(tmp_path / "snapshots"))
     yield working_csv
+    adaptive_calibration.reset()
 
 
 @pytest.fixture

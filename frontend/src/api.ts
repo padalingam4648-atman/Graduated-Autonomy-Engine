@@ -7,6 +7,9 @@ import {
   type ProposeResponse,
   type ResolveResponse,
   type ReviewDecision,
+  type AuditEntry,
+  type DashboardStatsResponse,
+  type DashboardRecentResponse,
 } from "./types";
 
 const BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000").replace(
@@ -88,42 +91,54 @@ export function getHealth(): Promise<HealthResponse> {
 
 export { BASE_URL as apiBaseUrl };
 
-import type { DashboardStatsResponse, DashboardRecentResponse, AuditEntry } from "./types";
+let _auditLogsCache: Promise<AuditEntry[]> | null = null;
+let _auditLogsCacheTime = 0;
 
 export async function getAllAuditLogs(): Promise<AuditEntry[]> {
-  try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 4000);
-    const res = await request<{ count: number; actions: AuditEntry[] }>("/audit/all", {
-      signal: controller.signal,
-    });
-    clearTimeout(timer);
-    if (res && Array.isArray(res.actions)) {
-      return res.actions.sort(
-        (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
-      );
-    }
-  } catch (err) {
-    console.warn("Falling back to session-based audit fetch", err);
+  const now = Date.now();
+  if (_auditLogsCache && now - _auditLogsCacheTime < 3000) {
+    return _auditLogsCache;
   }
 
-  const sessions = JSON.parse(localStorage.getItem("autonomy_sessions") || "[]");
-  if (sessions.length === 0) return [];
-  
-  const promises = sessions.map((s: string) => 
-    getAuditTrail(s).catch(() => ({ actions: [] }))
-  );
-  
-  const results = await Promise.all(promises);
-  let allActions: AuditEntry[] = [];
-  
-  for (const res of results) {
-    if (res && res.actions) {
-      allActions = allActions.concat(res.actions as unknown as AuditEntry[]);
+  const fetchLogs = async () => {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 12000);
+      const res = await request<{ count: number; actions: AuditEntry[] }>("/audit/all", {
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      if (res && Array.isArray(res.actions)) {
+        return res.actions.sort(
+          (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+        );
+      }
+    } catch (err) {
+      console.warn("Falling back to session-based audit fetch", err);
     }
-  }
-  
-  return allActions.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+
+    const sessions = JSON.parse(localStorage.getItem("autonomy_sessions") || "[]");
+    if (sessions.length === 0) return [];
+    
+    const promises = sessions.map((s: string) => 
+      getAuditTrail(s).catch(() => ({ actions: [] }))
+    );
+    
+    const results = await Promise.all(promises);
+    let allActions: AuditEntry[] = [];
+    
+    for (const res of results) {
+      if (res && res.actions) {
+        allActions = allActions.concat(res.actions as unknown as AuditEntry[]);
+      }
+    }
+    
+    return allActions.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+  };
+
+  _auditLogsCache = fetchLogs();
+  _auditLogsCacheTime = now;
+  return _auditLogsCache;
 }
 
 export async function getDashboardStats(): Promise<DashboardStatsResponse> {

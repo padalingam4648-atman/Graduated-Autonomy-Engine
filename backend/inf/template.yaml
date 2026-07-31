@@ -29,7 +29,7 @@ Globals:
         GROQ_API_KEY: !Ref GroqApiKey
         DYNAMODB_TABLE_PREFIX: !Ref TablePrefix
         CORS_ALLOWED_ORIGINS: !Ref CorsAllowedOrigin
-        CUSTOMER_DATA_S3_URI: !Sub "s3://${DataBucket}/customer_shopping_data.csv"
+        CUSTOMER_DATA_S3_URI: !Sub "s3://${DataBucket}/superstore.csv"
 
 Resources:
 
@@ -62,7 +62,7 @@ Resources:
     Properties:
       FunctionName: autonomy-engine
       Handler: autonomy_engine.lambda_handler.handler
-      CodeUri: ../
+      CodeUri: ../src
       Description: FastAPI autonomy engine wrapped with Mangum
       Policies:
         - DynamoDBCrudPolicy:

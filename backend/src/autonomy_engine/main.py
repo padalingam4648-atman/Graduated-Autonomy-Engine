@@ -241,7 +241,10 @@ async def propose(body: ProposeRequest, request: Request) -> dict:
     # preflight is strictly read-only — safe on an action a human may reject.
     scope = executor.preflight(action.tool_name, action.parameters)
 
-    if executor.is_scope_mismatch(action.data_scope, scope.actual_rows):
+    if not scope.is_mutation:
+        # Reads have a claimed data_scope of 0 by design. Skip reassessment.
+        pass
+    elif executor.is_scope_mismatch(action.data_scope, scope.actual_rows):
         logger.info(
             "data scope mismatch (claimed %d vs actual %d); triggering reassessment",
             action.data_scope,
@@ -292,6 +295,8 @@ async def propose(body: ProposeRequest, request: Request) -> dict:
             "risk_score": _score_payload(assessment),
             "result": result.to_payload(),
             "audit_record_id": record["record_id"],
+            "action_type": action.action_type,
+            "tool_name": action.tool_name,
         }
 
     if decision == "confirm":
@@ -303,6 +308,8 @@ async def propose(body: ProposeRequest, request: Request) -> dict:
             "risk_score": _score_payload(assessment),
             "confirmation_id": confirmation_id,
             "preview": action.description,
+            "action_type": action.action_type,
+            "tool_name": action.tool_name,
         }
 
     review_id = confirmation.create_review_request(
@@ -313,6 +320,8 @@ async def propose(body: ProposeRequest, request: Request) -> dict:
         "risk_score": _score_payload(assessment),
         "review_id": review_id,
         "preview": action.description,
+        "action_type": action.action_type,
+        "tool_name": action.tool_name,
     }
 
 
@@ -435,12 +444,22 @@ def _resolution_payload(record: dict) -> dict:
     the action then worked. Both are returned because a reviewer who clicks
     approve needs to know if the deletion actually happened.
     """
+    import json as _json
+    raw = record.get("execution_result")
+    if isinstance(raw, str):
+        try:
+            result = _json.loads(raw)
+        except Exception:
+            result = None
+    else:
+        result = raw
     return {
         "status": record["status"],
         "reviewer": record["reviewer"],
         "execution_status": record.get("execution_status"),
         "execution_detail": record.get("execution_detail"),
         "snapshot_path": record.get("snapshot_path"),
+        "result": result,
     }
 
 

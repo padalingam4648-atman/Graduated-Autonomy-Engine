@@ -27,11 +27,9 @@ from autonomy_engine.data_store import Criterion, DataStoreError
 
 logger = logging.getLogger(__name__)
 
-#: Rows returned by a query. A read is low risk to *perform* but an unbounded
-#: result set is still a way to exfiltrate the table in one call, so reads are
-#: capped and the cap is reported in the result rather than applied silently.
-#: With ~99k rows behind it, this cap is load-bearing rather than theoretical --
-#: it is also why summarize_transactions exists.
+#: Hard cap on rows a single query can return. Prevents accidental full-table
+#: dumps. The agent always passes limit= from the user's request; this cap is
+#: only a final safety net if no limit is supplied at all.
 QUERY_ROW_LIMIT: Final[int] = 100
 
 ExecutionStatus = Literal["success", "failed", "skipped"]
@@ -302,6 +300,9 @@ def _run_query(
         except (ValueError, TypeError):
             limit = QUERY_ROW_LIMIT
     else:
+        # Agent did not pass a limit — return up to the full cap.
+        # The system prompt instructs the agent to always pass the user's
+        # requested count, so arriving here means no specific count was asked.
         limit = QUERY_ROW_LIMIT
 
     limit = min(limit, QUERY_ROW_LIMIT)

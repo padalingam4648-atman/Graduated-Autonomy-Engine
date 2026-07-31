@@ -2,11 +2,6 @@
   "bulk_delete": {
     "band_offset": 0.0,
     "confirms_without_modification": 3,
-    "rejects_or_modifications": 6
-  },
-  "single_record_write": {
-    "band_offset": 0.0,
-    "confirms_without_modification": 12,
-    "rejects_or_modifications": 3
+    "rejects_or_modifications": 1
   }
 }

@@ -56,64 +56,175 @@ from pydantic import BaseModel, Field
 # Schema
 # --------------------------------------------------------------------------
 
-#: Columns of the transaction CSV, in file order. Also the set of fields a
-#: filter or an update may name -- anything else is rejected rather than
-#: silently matching nothing.
-FIELDS: Final[tuple[str, ...]] = (
-    "invoice_no",
-    "customer_id",
-    "gender",
-    "age",
-    "category",
-    "quantity",
-    "price",
-    "payment_method",
-    "invoice_date",
-    "shopping_mall",
+# Dynamic Schema Support
+class Schema:
+    def __init__(self, fields, id_field, date_fields, numeric_fields, field_values, column_map, date_format):
+        self.fields = fields
+        self.id_field = id_field
+        self.date_fields = date_fields
+        self.numeric_fields = numeric_fields
+        self.field_values = field_values
+        self.column_map = column_map
+        self.date_format = date_format
+
+
+SUPERSTORE_SCHEMA = Schema(
+    fields=(
+        "order_id", "customer_id", "customer_name", "segment", "category",
+        "sub_category", "region", "market", "ship_mode", "order_priority",
+        "quantity", "sales", "profit", "discount", "order_date", "state"
+    ),
+    id_field="order_id",
+    date_fields=frozenset({"order_date"}),
+    numeric_fields=frozenset({"quantity", "sales", "profit", "discount"}),
+    field_values={
+        "segment": ("Consumer", "Corporate", "Home Office"),
+        "category": ("Furniture", "Office Supplies", "Technology"),
+        "sub_category": (
+            "Accessories", "Appliances", "Art", "Binders", "Bookcases",
+            "Chairs", "Copiers", "Envelopes", "Fasteners", "Furnishings",
+            "Labels", "Machines", "Paper", "Phones", "Storage", "Supplies", "Tables",
+        ),
+        "region": (
+            "West", "East", "Central", "South",
+            "EMEA", "Africa", "Canada", "Central Asia",
+            "Caribbean", "North", "North Asia", "Oceania", "Southeast Asia",
+        ),
+        "market": ("US", "EU", "APAC", "LATAM", "Africa", "EMEA", "Canada"),
+        "ship_mode": ("Standard Class", "Second Class", "First Class", "Same Day"),
+        "order_priority": ("Low", "Medium", "High", "Critical"),
+    },
+    column_map={
+        "Order.ID":        "order_id",
+        "Customer.ID":     "customer_id",
+        "Customer.Name":   "customer_name",
+        "Segment":         "segment",
+        "Category":        "category",
+        "Sub.Category":    "sub_category",
+        "Region":          "region",
+        "Market":          "market",
+        "Ship.Mode":       "ship_mode",
+        "Order.Priority":  "order_priority",
+        "Quantity":        "quantity",
+        "Sales":           "sales",
+        "Profit":          "profit",
+        "Discount":        "discount",
+        "Order.Date":      "order_date",
+        "State":           "state",
+    },
+    date_format="%Y-%m-%d %H:%M:%S.%f"
 )
 
-#: The primary key: one row per invoice. Never writable by an update.
-ID_FIELD: Final[str] = "invoice_no"
-
-#: Fields holding day-first ``DD/MM/YYYY`` dates, so ``before``/``after`` mean
-#: chronology rather than string ordering.
-DATE_FIELDS: Final[frozenset[str]] = frozenset({"invoice_date"})
-
-#: Fields compared numerically by ``greater_than``/``less_than``.
-NUMERIC_FIELDS: Final[frozenset[str]] = frozenset({"age", "quantity", "price"})
-
-#: Known values for the categorical columns. Handed to the model in its system
-#: prompt so it filters on ``"Food & Beverage"`` rather than inventing
-#: ``"food"`` and quietly matching nothing.
-FIELD_VALUES: Final[dict[str, tuple[str, ...]]] = {
-    "gender": ("Male", "Female"),
-    "category": (
-        "Clothing",
-        "Shoes",
-        "Books",
-        "Cosmetics",
-        "Food & Beverage",
-        "Toys",
-        "Technology",
-        "Souvenir",
+SHOPPING_SCHEMA = Schema(
+    fields=(
+        "invoice_no", "customer_id", "gender", "age", "category",
+        "quantity", "price", "payment_method", "invoice_date", "shopping_mall"
     ),
-    "payment_method": ("Cash", "Credit Card", "Debit Card"),
-    "shopping_mall": (
-        "Kanyon",
-        "Forum Istanbul",
-        "Metrocity",
-        "Metropol AVM",
-        "Istinye Park",
-        "Mall of Istanbul",
-        "Emaar Square Mall",
-        "Cevahir AVM",
-        "Viaport Outlet",
-        "Zorlu Center",
-    ),
-}
+    id_field="invoice_no",
+    date_fields=frozenset({"invoice_date"}),
+    numeric_fields=frozenset({"age", "quantity", "price"}),
+    field_values={
+        "gender": ("Male", "Female"),
+        "category": (
+            "Clothing", "Shoes", "Books", "Cosmetics", "Food & Beverage", "Toys", "Technology", "Souvenir"
+        ),
+        "payment_method": ("Cash", "Credit Card", "Debit Card"),
+        "shopping_mall": (
+            "Kanyon", "Forum Istanbul", "Metrocity", "Metropol AVM", "Istinye Park", "Mall of Istanbul",
+            "Emaar Square Mall", "Cevahir AVM", "Viaport Outlet", "Zorlu Center"
+        ),
+    },
+    column_map=None,
+    date_format="%d/%m/%Y"
+)
 
-#: How dates appear in the file. Day-first: ``16/05/2021`` is 16 May.
-STORAGE_DATE_FORMAT: Final[str] = "%d/%m/%Y"
+_detected_schema_cache = None
+_detected_schema_path = None
+_detected_schema_mtime = None
+
+
+def active_schema() -> Schema:
+    global _detected_schema_cache, _detected_schema_path, _detected_schema_mtime
+    s3_loc = _s3_bucket_key()
+    if s3_loc and _S3_LOCAL_CACHE.exists():
+        try:
+            with _S3_LOCAL_CACHE.open(encoding="utf-8-sig") as f:
+                header = f.readline()
+                if "invoice_no" in header:
+                    return SHOPPING_SCHEMA
+                else:
+                    return SUPERSTORE_SCHEMA
+        except Exception:
+            pass
+
+    path = data_path()
+    try:
+        mtime = path.stat().st_mtime
+    except OSError:
+        mtime = 0
+    if _detected_schema_cache is not None and _detected_schema_path == path and _detected_schema_mtime == mtime:
+        return _detected_schema_cache
+
+    if path.exists():
+        try:
+            with path.open(encoding="utf-8-sig") as f:
+                header = f.readline()
+                if "invoice_no" in header:
+                    _detected_schema_cache = SHOPPING_SCHEMA
+                else:
+                    _detected_schema_cache = SUPERSTORE_SCHEMA
+        except Exception:
+            _detected_schema_cache = SUPERSTORE_SCHEMA
+    else:
+        _detected_schema_cache = SUPERSTORE_SCHEMA
+
+    _detected_schema_path = path
+    _detected_schema_mtime = mtime
+    return _detected_schema_cache
+
+
+def __getattr__(name: str) -> Any:
+    schema = active_schema()
+    if name == "FIELDS":
+        return schema.fields
+    if name == "ID_FIELD":
+        return schema.id_field
+    if name == "DATE_FIELDS":
+        return schema.date_fields
+    if name == "NUMERIC_FIELDS":
+        return schema.numeric_fields
+    if name == "FIELD_VALUES":
+        return schema.field_values
+    if name == "STORAGE_DATE_FORMAT":
+        return schema.date_format
+    if name == "_CSV_COLUMN_MAP":
+        return schema.column_map
+    if name == "_TYPED_OPERATORS":
+        return {
+            "before": schema.date_fields,
+            "after": schema.date_fields,
+            "greater_than": schema.numeric_fields,
+            "less_than": schema.numeric_fields,
+        }
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+
+def __dir__() -> list[str]:
+    return sorted(list(globals().keys()) + [
+        "FIELDS", "ID_FIELD", "DATE_FIELDS", "NUMERIC_FIELDS",
+        "FIELD_VALUES", "STORAGE_DATE_FORMAT", "_CSV_COLUMN_MAP", "_TYPED_OPERATORS"
+    ])
+
+
+#: Clean snake_case field names exposed to the agent and filter layer (type hints for type-checkers).
+FIELDS: Final[tuple[str, ...]]
+ID_FIELD: Final[str]
+DATE_FIELDS: Final[frozenset[str]]
+NUMERIC_FIELDS: Final[frozenset[str]]
+FIELD_VALUES: Final[dict[str, tuple[str, ...]]]
+STORAGE_DATE_FORMAT: Final[str]
+_CSV_COLUMN_MAP: Final[dict[str, str]]
+_TYPED_OPERATORS: Final[dict[str, frozenset[str]]]
 
 #: How many deleted invoice numbers to name in a bulk-delete result. The
 #: snapshot holds the full record; this is just enough for a human to
@@ -129,15 +240,6 @@ Operator: TypeAlias = Literal[
     "greater_than",
     "less_than",
 ]
-
-#: Operators that only make sense on certain column types, and the fields they
-#: are therefore restricted to.
-_TYPED_OPERATORS: Final[dict[str, frozenset[str]]] = {
-    "before": DATE_FIELDS,
-    "after": DATE_FIELDS,
-    "greater_than": NUMERIC_FIELDS,
-    "less_than": NUMERIC_FIELDS,
-}
 
 
 # --------------------------------------------------------------------------
@@ -189,7 +291,7 @@ class Criterion(BaseModel):
 # --------------------------------------------------------------------------
 
 _DEFAULT_DATA_PATH: Final[Path] = (
-    Path(__file__).resolve().parents[2] / "data" / "customer_shopping_data.csv"
+    Path(__file__).resolve().parents[2] / "data" / "superstore.csv"
 )
 
 # When running on Lambda the CSV lives in S3.
@@ -223,22 +325,65 @@ def snapshot_dir() -> Path:
 # File I/O  (local + S3)
 # --------------------------------------------------------------------------
 
-_S3_LOCAL_CACHE: Path = Path("/tmp/customer_shopping_data.csv")
+_S3_LOCAL_CACHE: Path = Path("/tmp/superstore.csv")
+
+
+def _normalise_row(raw: dict[str, str], schema: Schema | None = None) -> dict[str, str]:
+    """Map raw CSV columns to clean FIELDS names based on active schema.
+
+    Drops columns not in active_schema().column_map and normalises date value.
+    """
+    if schema is None:
+        schema = active_schema()
+    if schema.column_map is None:
+        return raw
+    out: dict[str, str] = {}
+    for csv_col, field_name in schema.column_map.items():
+        val = raw.get(field_name, raw.get(csv_col, ""))
+        if field_name == "order_date" and val:
+            # Trim the time component: "2011-01-07 00:00:00.000" -> "2011-01-07"
+            val = val.split(" ")[0]
+        out[field_name] = val
+    return out
+
+# In-memory cache for loaded rows. Reading and normalising 51k rows from a
+# 15 MB CSV takes ~200ms per call, and a single /propose request triggers
+# load_rows() 3-5 times (count_matching, preflight, execute). Caching here
+# cuts that to one disk read per server lifetime (invalidated on writes).
+_rows_cache: list[dict[str, str]] | None = None
+_rows_cache_signature: tuple[str, int, float] | None = None
+
+
+def _invalidate_cache() -> None:
+    """Clear the in-memory row cache. Called after every write."""
+    global _rows_cache, _rows_cache_signature
+    _rows_cache = None
+    _rows_cache_signature = None
 
 
 def load_rows() -> list[dict[str, str]]:
-    """Read every transaction row — from S3 on Lambda, from disk locally."""
+    """Read every transaction row — cached in memory, invalidated on writes."""
+    global _rows_cache, _rows_cache_signature
+
     s3_loc = _s3_bucket_key()
     if s3_loc:
         return _load_rows_s3(*s3_loc)
+
     path = data_path()
     if not path.exists():
         raise DataStoreError(
             f"transaction data file not found at {path}. "
             "Set CUSTOMER_DATA_PATH or CUSTOMER_DATA_S3_URI."
         )
-    with path.open(newline="", encoding="utf-8") as handle:
-        return [dict(row) for row in csv.DictReader(handle)]
+
+    sig = _file_signature()
+    if _rows_cache is not None and _rows_cache_signature == sig:
+        return [dict(row) for row in _rows_cache]
+
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        _rows_cache = [_normalise_row(dict(row)) for row in csv.DictReader(handle)]
+    _rows_cache_signature = sig
+    return [dict(row) for row in _rows_cache]
 
 
 def _load_rows_s3(bucket: str, key: str) -> list[dict[str, str]]:
@@ -246,14 +391,38 @@ def _load_rows_s3(bucket: str, key: str) -> list[dict[str, str]]:
     import io
     import boto3 as _boto3
     if not _S3_LOCAL_CACHE.exists():
-        s3 = _boto3.client("s3")
-        buf = io.BytesIO()
-        s3.download_fileobj(bucket, key, buf)
-        buf.seek(0)
-        _S3_LOCAL_CACHE.parent.mkdir(parents=True, exist_ok=True)
-        _S3_LOCAL_CACHE.write_bytes(buf.read())
-    with _S3_LOCAL_CACHE.open(newline="", encoding="utf-8") as handle:
-        return [dict(row) for row in csv.DictReader(handle)]
+        try:
+            s3 = _boto3.client("s3")
+            buf = io.BytesIO()
+            s3.download_fileobj(bucket, key, buf)
+            buf.seek(0)
+            _S3_LOCAL_CACHE.parent.mkdir(parents=True, exist_ok=True)
+            _S3_LOCAL_CACHE.write_bytes(buf.read())
+        except Exception as exc:
+            logger.warning("Failed to fetch S3 data file s3://%s/%s (%s); falling back to bundled data_path()", bucket, key, exc)
+            path = data_path()
+            if path.exists():
+                with path.open(newline="", encoding="utf-8-sig") as handle:
+                    rows = [dict(row) for row in csv.DictReader(handle)]
+                    schema = active_schema()
+                    if rows:
+                        first = rows[0]
+                        if "invoice_no" in first or "shopping_mall" in first or "price" in first:
+                            schema = SHOPPING_SCHEMA
+                        elif "order_id" in first or "customer_name" in first:
+                            schema = SUPERSTORE_SCHEMA
+                    return [_normalise_row(r, schema=schema) for r in rows]
+            raise
+    with _S3_LOCAL_CACHE.open(newline="", encoding="utf-8-sig") as handle:
+        rows = [dict(row) for row in csv.DictReader(handle)]
+        schema = active_schema()
+        if rows:
+            first = rows[0]
+            if "invoice_no" in first or "shopping_mall" in first or "price" in first:
+                schema = SHOPPING_SCHEMA
+            elif "order_id" in first or "customer_name" in first:
+                schema = SUPERSTORE_SCHEMA
+        return [_normalise_row(r, schema=schema) for r in rows]
 
 
 def _write_rows(rows: list[dict[str, str]]) -> None:
@@ -261,15 +430,17 @@ def _write_rows(rows: list[dict[str, str]]) -> None:
     s3_loc = _s3_bucket_key()
     if s3_loc:
         _write_rows_s3(rows, *s3_loc)
+        _invalidate_cache()
         return
     path = data_path()
     path.parent.mkdir(parents=True, exist_ok=True)
     temp_path = path.with_suffix(".csv.tmp")
     with temp_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(FIELDS))
+        writer = csv.DictWriter(handle, fieldnames=list(active_schema().fields))
         writer.writeheader()
         writer.writerows(rows)
     os.replace(temp_path, path)
+    _invalidate_cache()
 
 
 def _write_rows_s3(rows: list[dict[str, str]], bucket: str, key: str) -> None:
@@ -277,7 +448,7 @@ def _write_rows_s3(rows: list[dict[str, str]], bucket: str, key: str) -> None:
     import io
     import boto3 as _boto3
     buf = io.StringIO()
-    writer = csv.DictWriter(buf, fieldnames=list(FIELDS))
+    writer = csv.DictWriter(buf, fieldnames=list(active_schema().fields))
     writer.writeheader()
     writer.writerows(rows)
     body = buf.getvalue().encode("utf-8")
@@ -328,20 +499,31 @@ def restore_snapshot(tag: str) -> int:
 
 
 def _validate_field(field: str) -> None:
-    if field not in FIELDS:
+    schema = active_schema()
+    if field not in schema.fields:
         raise UnknownFieldError(
-            f"{field!r} is not a transaction field; expected one of {list(FIELDS)}"
+            f"{field!r} is not a transaction field; expected one of {list(schema.fields)}"
         )
 
 
 def _parse_stored_date(value: str, *, context: str) -> date:
-    """Parse a date as it appears in the file: day-first ``DD/MM/YYYY``."""
-    try:
-        return datetime.strptime(value.strip(), STORAGE_DATE_FORMAT).date()
-    except ValueError as exc:
-        raise DataStoreError(
-            f"{context}: stored date {value!r} is not in {STORAGE_DATE_FORMAT} form"
-        ) from exc
+    """Parse a date as stored in the file, based on active schema."""
+    schema = active_schema()
+    text = value.strip().split(" ")[0]
+    if schema.date_format == "%d/%m/%Y":
+        try:
+            return datetime.strptime(text, "%d/%m/%Y").date()
+        except ValueError as exc:
+            raise DataStoreError(
+                f"{context}: stored date {value!r} is not in DD/MM/YYYY form"
+            ) from exc
+    else:
+        try:
+            return date.fromisoformat(text)
+        except ValueError as exc:
+            raise DataStoreError(
+                f"{context}: stored date {value!r} is not in YYYY-MM-DD form"
+            ) from exc
 
 
 def _parse_filter_date(value: str, *, context: str) -> date:
@@ -358,7 +540,7 @@ def _parse_filter_date(value: str, *, context: str) -> date:
     except ValueError:
         pass
     try:
-        return datetime.strptime(text, STORAGE_DATE_FORMAT).date()
+        return datetime.strptime(text, active_schema().date_format).date()
     except ValueError as exc:
         raise DataStoreError(
             f"{context}: {value!r} is not a date; use ISO form, e.g. 2022-08-05"
@@ -381,7 +563,14 @@ def _matches(row: dict[str, str], criterion: Criterion) -> bool:
     """
     _validate_field(criterion.field)
 
-    allowed_fields = _TYPED_OPERATORS.get(criterion.operator)
+    schema = active_schema()
+    typed_operators = {
+        "before": schema.date_fields,
+        "after": schema.date_fields,
+        "greater_than": schema.numeric_fields,
+        "less_than": schema.numeric_fields,
+    }
+    allowed_fields = typed_operators.get(criterion.operator)
     if allowed_fields is not None and criterion.field not in allowed_fields:
         raise DataStoreError(
             f"operator {criterion.operator!r} is not valid on field "
@@ -488,35 +677,59 @@ def summarize(criteria: list[Criterion], group_by: str | None = None) -> dict[st
     if group_by is not None:
         _validate_field(group_by)
 
+    schema = active_schema()
     rows = select(criteria)
-    totals = {
-        "transactions": len(rows),
-        "total_quantity": sum(_parse_number(r["quantity"], context="quantity") for r in rows),
-        "total_revenue": round(
+    
+    if "sales" in schema.fields:
+        total_revenue = round(
+            sum(_parse_number(r["sales"], context="sales") for r in rows), 2
+        )
+        total_profit = round(
+            sum(_parse_number(r["profit"], context="profit") for r in rows), 2
+        )
+    else:
+        total_revenue = round(
             sum(
                 _parse_number(r["price"], context="price")
                 * _parse_number(r["quantity"], context="quantity")
                 for r in rows
             ),
-            2,
-        ),
+            2
+        )
+        total_profit = 0.0
+
+    totals = {
+        "transactions": len(rows),
+        "total_quantity": sum(_parse_number(r["quantity"], context="quantity") for r in rows),
+        "total_revenue": total_revenue,
     }
+    if "sales" in schema.fields:
+        totals["total_profit"] = total_profit
 
     if group_by is None:
         return totals
 
     groups: dict[str, dict[str, float]] = {}
     for row in rows:
-        bucket = groups.setdefault(
-            row[group_by], {"transactions": 0, "total_quantity": 0.0, "total_revenue": 0.0}
-        )
-        quantity = _parse_number(row["quantity"], context="quantity")
+        if "sales" in schema.fields:
+            bucket = groups.setdefault(
+                row[group_by], {"transactions": 0, "total_quantity": 0.0, "total_revenue": 0.0, "total_profit": 0.0}
+            )
+            bucket["total_revenue"] += _parse_number(row["sales"], context="sales")
+            bucket["total_profit"] += _parse_number(row["profit"], context="profit")
+        else:
+            bucket = groups.setdefault(
+                row[group_by], {"transactions": 0, "total_quantity": 0.0, "total_revenue": 0.0}
+            )
+            bucket["total_revenue"] += _parse_number(row["price"], context="price") * _parse_number(row["quantity"], context="quantity")
+            
         bucket["transactions"] += 1
-        bucket["total_quantity"] += quantity
-        bucket["total_revenue"] += _parse_number(row["price"], context="price") * quantity
+        bucket["total_quantity"] += _parse_number(row["quantity"], context="quantity")
 
     for bucket in groups.values():
         bucket["total_revenue"] = round(bucket["total_revenue"], 2)
+        if "total_profit" in bucket:
+            bucket["total_profit"] = round(bucket["total_profit"], 2)
 
     totals["groups"] = dict(
         sorted(groups.items(), key=lambda kv: kv[1]["total_revenue"], reverse=True)
@@ -530,8 +743,9 @@ def summarize(criteria: list[Criterion], group_by: str | None = None) -> dict[st
 
 
 def _find_row(rows: list[dict[str, str]], invoice_no: str) -> dict[str, str] | None:
+    schema = active_schema()
     wanted = invoice_no.strip().casefold()
-    return next((r for r in rows if r[ID_FIELD].strip().casefold() == wanted), None)
+    return next((r for r in rows if r[schema.id_field].strip().casefold() == wanted), None)
 
 
 def update_record(
@@ -559,13 +773,14 @@ def update_record(
         RecordNotFoundError: No such invoice.
     """
     _validate_field(field)
-    if field == ID_FIELD:
-        raise UnknownFieldError(f"{ID_FIELD!r} is the primary key and cannot be updated")
+    schema = active_schema()
+    if field == schema.id_field:
+        raise UnknownFieldError(f"{schema.id_field!r} is the primary key and cannot be updated")
 
     rows = load_rows()
     target = _find_row(rows, invoice_no)
     if target is None:
-        raise RecordNotFoundError(f"no transaction with {ID_FIELD}={invoice_no!r}")
+        raise RecordNotFoundError(f"no transaction with {schema.id_field}={invoice_no!r}")
 
     snapshot = take_snapshot(snapshot_tag)
     old_value = target[field]
@@ -573,7 +788,7 @@ def update_record(
     _write_rows(rows)
 
     return {
-        "invoice_no": target[ID_FIELD],
+        "invoice_no": target[schema.id_field],
         "field": field,
         "old_value": old_value,
         "new_value": new_value,
@@ -582,20 +797,12 @@ def update_record(
 
 
 def delete_record(invoice_no: str, *, snapshot_tag: str) -> dict[str, Any]:
-    """Delete exactly one transaction, by invoice number.
-
-    Kept separate from :func:`delete_matching` rather than expressed as a
-    one-row filter. Deleting a named invoice and deleting everything matching a
-    predicate are different acts with different blast radii, and the engine
-    should be able to tell them apart before a human is asked to approve one.
-
-    Raises:
-        RecordNotFoundError: No such invoice.
-    """
+    """Delete exactly one transaction, by invoice number."""
+    schema = active_schema()
     rows = load_rows()
     target = _find_row(rows, invoice_no)
     if target is None:
-        raise RecordNotFoundError(f"no transaction with {ID_FIELD}={invoice_no!r}")
+        raise RecordNotFoundError(f"no transaction with {schema.id_field}={invoice_no!r}")
 
     snapshot = take_snapshot(snapshot_tag)
     remaining = [r for r in rows if r is not target]
@@ -603,7 +810,7 @@ def delete_record(invoice_no: str, *, snapshot_tag: str) -> dict[str, Any]:
 
     return {
         "deleted_count": 1,
-        "deleted_ids": [target[ID_FIELD]],
+        "deleted_ids": [target[schema.id_field]],
         "deleted_row": dict(target),
         "remaining": len(remaining),
         "snapshot": snapshot,
@@ -638,6 +845,7 @@ def delete_matching(
             "transaction. Pass allow_unbounded=True only if that is genuinely intended."
         )
 
+    schema = active_schema()
     rows = load_rows()
     # Partitioned in one pass by identity rather than by filtering twice on
     # value: two transactions can legitimately hold identical field values, and
@@ -652,7 +860,7 @@ def delete_matching(
 
     return {
         "deleted_count": len(doomed),
-        "deleted_ids": [row[ID_FIELD] for row in doomed[:DELETED_ID_SAMPLE]],
+        "deleted_ids": [row[schema.id_field] for row in doomed[:DELETED_ID_SAMPLE]],
         "deleted_ids_truncated": len(doomed) > DELETED_ID_SAMPLE,
         "remaining": len(survivors),
         "snapshot": snapshot,

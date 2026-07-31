@@ -73,6 +73,7 @@ export interface ResolveResponse {
   execution_status: ExecutionStatus | null;
   execution_detail: string | null;
   snapshot_path: string | null;
+  result?: ExecutionResult;
 }
 
 export interface AuditEntry {

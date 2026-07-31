@@ -37,7 +37,7 @@ os.environ.setdefault("AWS_REGION",            "us-east-1")
 # so boto3 talks to it exactly as it would talk to real AWS.
 from moto.server import create_backend_app  # type: ignore
 
-ENDPOINT = os.getenv("DYNAMODB_ENDPOINT_URL", "http://localhost:5000")
+ENDPOINT = os.getenv("DYNAMODB_ENDPOINT_URL", "http://127.0.0.1:5000")
 _host, _port_str = ENDPOINT.rsplit(":", 1)
 _host = _host.replace("http://", "").replace("https://", "")
 MOTO_PORT = int(_port_str)

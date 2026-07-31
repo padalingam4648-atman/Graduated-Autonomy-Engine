@@ -1,0 +1,1200 @@
+order_id,customer_id,customer_name,segment,category,sub_category,region,market,ship_mode,order_priority,quantity,sales,profit,discount,order_date,state
+CA-2016-100001,CV-12805,Cynthia Voltz,Home Office,Furniture,Bookcases,West,LATAM,Standard Class,Low,12,1693.68,-354.49,0.10,2014-04-15,New York
+CA-2016-100002,HP-14815,Harold Pawlan,Corporate,Furniture,Bookcases,West,EU,Same Day,High,9,930.78,-351.19,0.45,2015-04-05,Florida
+CA-2016-100003,AA-10315,Alex Avila,Corporate,Furniture,Furnishings,West,LATAM,Standard Class,Critical,2,101.82,3.39,0.00,2014-12-19,New York
+CA-2015-100004,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Labels,East,US,Same Day,High,10,1001.80,-170.52,0.00,2014-08-22,Ohio
+CA-2016-100005,CV-12805,Cynthia Voltz,Consumer,Office Supplies,Binders,East,EU,Second Class,Critical,6,1085.16,60.97,0.20,2015-12-01,Pennsylvania
+CA-2015-100006,AG-10270,Alejandro Grove,Corporate,Technology,Copiers,Central,US,Second Class,High,11,1820.72,-93.07,0.00,2014-02-02,Washington
+CA-2016-100007,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Paper,Central,LATAM,Same Day,High,11,2553.43,-789.62,0.20,2016-02-02,Washington
+CA-2016-100008,AA-10315,Alex Avila,Corporate,Technology,Phones,West,LATAM,Same Day,Critical,2,758.22,-76.32,0.00,2014-06-13,Virginia
+CA-2016-100009,AG-10270,Alejandro Grove,Corporate,Technology,Accessories,West,APAC,Same Day,Medium,11,3979.36,-644.38,0.45,2016-02-27,Ohio
+CA-2016-100010,CG-12520,Claire Gute,Corporate,Technology,Machines,East,EU,First Class,Medium,9,3439.53,-195.34,0.45,2016-06-10,Virginia
+CA-2015-100011,GH-14410,Gary Hansen,Consumer,Furniture,Furnishings,West,EU,Standard Class,Low,8,117.12,20.05,0.20,2016-05-01,Ohio
+CA-2016-100012,SO-20335,Sean O'Donnell,Corporate,Technology,Copiers,East,EU,First Class,Critical,3,994.74,-539.81,0.45,2015-06-25,Illinois
+CA-2016-100013,TB-21520,Tracy Blumstein,Consumer,Technology,Phones,East,US,Standard Class,Low,2,255.42,5.05,0.00,2015-08-26,Washington
+CA-2016-100014,SO-20335,Sean O'Donnell,Consumer,Furniture,Furnishings,South,EU,Same Day,Critical,2,519.02,18.08,0.20,2014-08-08,Washington
+CA-2016-100015,BH-11710,Brosina Hoffman,Home Office,Furniture,Tables,West,US,Same Day,High,6,1288.02,79.21,0.30,2014-02-25,New York
+CA-2014-100016,PK-19075,Pete Kriz,Consumer,Furniture,Chairs,South,US,Standard Class,Low,9,2043.54,-778.04,0.30,2015-04-19,New York
+CA-2015-100017,PK-19075,Pete Kriz,Consumer,Furniture,Tables,South,APAC,Same Day,High,8,1946.16,168.51,0.30,2014-06-18,Pennsylvania
+CA-2016-100018,SN-20710,Stephanie Phelps,Home Office,Technology,Phones,West,APAC,Standard Class,Low,3,297.00,97.91,0.10,2015-08-17,North Carolina
+CA-2016-100019,MA-17560,Matt Abelman,Consumer,Technology,Copiers,East,LATAM,Standard Class,Medium,1,480.59,169.83,0.00,2014-03-12,North Carolina
+CA-2015-100020,RA-19885,Ruben Ausman,Consumer,Furniture,Bookcases,Central,EU,First Class,Critical,7,2312.80,-717.41,0.45,2016-08-15,Texas
+CA-2016-100021,CV-12805,Cynthia Voltz,Consumer,Office Supplies,Storage,West,EU,First Class,Medium,6,2789.16,-540.94,0.00,2015-09-29,Illinois
+CA-2016-100022,SO-20335,Sean O'Donnell,Home Office,Furniture,Furnishings,West,APAC,Standard Class,Medium,5,415.40,-80.05,0.45,2015-09-19,Florida
+CA-2016-100023,BH-11710,Brosina Hoffman,Home Office,Furniture,Chairs,Central,LATAM,First Class,Low,5,722.35,120.23,0.10,2014-07-28,New York
+CA-2014-100024,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Fasteners,South,LATAM,Standard Class,Low,1,6.76,0.77,0.10,2014-09-26,New York
+CA-2014-100025,AA-10315,Alex Avila,Corporate,Technology,Accessories,Central,US,First Class,Medium,14,2628.64,-1455.58,0.45,2014-05-11,Washington
+CA-2014-100026,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Supplies,East,LATAM,Standard Class,Medium,14,2886.24,-469.99,0.45,2016-08-05,Illinois
+CA-2015-100027,EH-13945,Eric Hoffmann,Consumer,Technology,Copiers,East,LATAM,First Class,High,5,419.00,20.39,0.00,2014-02-09,Washington
+CA-2015-100028,PK-19075,Pete Kriz,Home Office,Furniture,Chairs,South,APAC,Standard Class,Low,7,1172.43,502.36,0.00,2014-10-13,Florida
+CA-2015-100029,IM-15070,Irene Maddox,Corporate,Technology,Machines,West,LATAM,Second Class,High,1,58.66,-16.15,0.30,2016-03-16,California
+CA-2014-100030,EH-13945,Eric Hoffmann,Home Office,Furniture,Chairs,Central,APAC,Same Day,High,6,1310.94,6.62,0.20,2015-11-11,Pennsylvania
+CA-2014-100031,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Copiers,Central,LATAM,Standard Class,High,4,852.48,-50.93,0.30,2016-07-13,Florida
+CA-2016-100032,HP-14815,Harold Pawlan,Consumer,Office Supplies,Labels,West,APAC,First Class,Low,8,1789.44,57.73,0.10,2016-03-23,Washington
+CA-2014-100033,ZD-21925,Zuschuss Donatelli,Corporate,Furniture,Chairs,South,EU,Same Day,Critical,3,51.27,17.41,0.10,2015-09-18,Pennsylvania
+CA-2014-100034,PK-19075,Pete Kriz,Home Office,Furniture,Bookcases,South,US,Second Class,Low,13,5601.96,1714.05,0.00,2014-08-13,Ohio
+CA-2016-100035,AA-10315,Alex Avila,Corporate,Office Supplies,Supplies,South,EU,Same Day,Critical,9,2697.75,-274.57,0.30,2016-01-07,Florida
+CA-2015-100036,PK-19075,Pete Kriz,Consumer,Technology,Machines,Central,EU,First Class,High,13,5069.35,-469.49,0.30,2014-10-09,Illinois
+CA-2015-100037,SN-20710,Stephanie Phelps,Corporate,Furniture,Chairs,Central,LATAM,Same Day,Low,3,358.41,57.05,0.10,2014-03-07,Washington
+CA-2015-100038,EH-13945,Eric Hoffmann,Corporate,Office Supplies,Appliances,South,LATAM,Second Class,Critical,14,6173.02,-2486.20,0.45,2014-01-07,Washington
+CA-2015-100039,AG-10270,Alejandro Grove,Consumer,Office Supplies,Storage,West,LATAM,Standard Class,Low,1,197.48,-5.78,0.30,2016-05-10,Pennsylvania
+CA-2015-100040,AA-10315,Alex Avila,Corporate,Office Supplies,Binders,Central,LATAM,First Class,Low,1,133.78,-35.11,0.20,2014-12-01,Ohio
+CA-2014-100041,CG-12520,Claire Gute,Consumer,Technology,Accessories,East,EU,Standard Class,Medium,6,695.94,214.21,0.00,2015-10-30,Washington
+CA-2015-100042,AA-10315,Alex Avila,Consumer,Office Supplies,Art,West,EU,First Class,Low,10,4741.40,-215.01,0.30,2016-02-25,North Carolina
+CA-2016-100043,CG-12520,Claire Gute,Consumer,Office Supplies,Paper,West,APAC,Standard Class,Low,7,3297.21,-826.29,0.10,2015-12-09,Illinois
+CA-2015-100044,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Labels,South,APAC,Same Day,Medium,2,510.90,-200.16,0.20,2015-03-07,Pennsylvania
+CA-2015-100045,IM-15070,Irene Maddox,Home Office,Technology,Machines,Central,APAC,Second Class,Low,10,4050.60,-593.34,0.45,2015-04-22,Florida
+CA-2015-100046,TB-21520,Tracy Blumstein,Consumer,Furniture,Tables,South,EU,First Class,High,10,3071.10,-864.03,0.30,2015-05-22,Illinois
+CA-2015-100047,AG-10270,Alejandro Grove,Corporate,Technology,Machines,East,LATAM,Same Day,Critical,9,90.18,-22.04,0.10,2016-01-08,California
+CA-2015-100048,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Envelopes,Central,LATAM,First Class,High,7,2432.01,76.79,0.20,2015-01-13,Ohio
+CA-2016-100049,AG-10270,Alejandro Grove,Home Office,Office Supplies,Fasteners,East,EU,Second Class,Critical,4,258.88,-24.57,0.10,2016-01-31,Florida
+CA-2015-100050,LC-16885,Lena Creighton,Consumer,Technology,Machines,East,APAC,Standard Class,Low,2,834.30,-210.36,0.20,2014-07-03,Virginia
+CA-2016-100051,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Copiers,South,LATAM,Same Day,High,11,4783.79,-2072.90,0.30,2014-01-13,Texas
+CA-2016-100052,DV-13045,Darrin Van Huff,Home Office,Office Supplies,Storage,West,EU,Second Class,High,2,823.90,-148.60,0.30,2015-08-14,New York
+CA-2015-100053,PK-19075,Pete Kriz,Corporate,Furniture,Tables,South,APAC,Same Day,High,10,3000.80,-1510.31,0.45,2015-06-20,North Carolina
+CA-2014-100054,RA-19885,Ruben Ausman,Consumer,Furniture,Bookcases,East,US,Second Class,Low,13,1402.18,-179.45,0.10,2014-03-25,Pennsylvania
+CA-2015-100055,TB-21520,Tracy Blumstein,Consumer,Technology,Phones,East,APAC,Second Class,Critical,5,105.80,6.30,0.20,2015-12-21,New York
+CA-2015-100056,SN-20710,Stephanie Phelps,Home Office,Furniture,Chairs,Central,LATAM,Standard Class,Critical,5,2070.90,-333.90,0.00,2016-03-22,Florida
+CA-2015-100057,EB-13870,Emily Burns,Home Office,Office Supplies,Supplies,Central,APAC,Standard Class,Low,9,2244.87,423.66,0.00,2016-06-29,Washington
+CA-2014-100058,LC-16885,Lena Creighton,Corporate,Technology,Accessories,South,APAC,Second Class,Critical,13,4391.14,-111.71,0.20,2016-02-21,Ohio
+CA-2015-100059,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Labels,South,APAC,Same Day,Low,7,1189.93,425.43,0.00,2014-12-04,Ohio
+CA-2014-100060,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Fasteners,South,LATAM,Standard Class,Medium,6,374.28,23.28,0.30,2016-04-24,Virginia
+CA-2014-100061,SF-20065,Sandra Flanagan,Corporate,Technology,Phones,South,LATAM,Standard Class,Low,11,2461.91,-166.64,0.00,2015-07-17,North Carolina
+CA-2014-100062,PK-19075,Pete Kriz,Corporate,Technology,Copiers,West,EU,Same Day,High,5,1388.35,-534.25,0.45,2014-08-19,Virginia
+CA-2016-100063,AG-10270,Alejandro Grove,Home Office,Office Supplies,Storage,East,US,First Class,Critical,8,1005.20,-558.87,0.45,2014-07-15,Illinois
+CA-2015-100064,GH-14410,Gary Hansen,Consumer,Office Supplies,Appliances,South,LATAM,First Class,High,5,1822.00,-497.50,0.45,2015-11-07,Virginia
+CA-2015-100065,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Storage,Central,LATAM,Same Day,Critical,6,2612.70,187.25,0.10,2014-08-28,Texas
+CA-2015-100066,MA-17560,Matt Abelman,Consumer,Furniture,Chairs,South,US,Second Class,Critical,9,4345.65,718.36,0.20,2016-06-14,Texas
+CA-2015-100067,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Fasteners,South,APAC,Same Day,Low,6,1881.06,-145.98,0.30,2016-05-22,North Carolina
+CA-2016-100068,SO-20335,Sean O'Donnell,Home Office,Furniture,Furnishings,West,LATAM,Second Class,High,4,1498.60,203.69,0.30,2016-02-18,California
+CA-2015-100069,DV-13045,Darrin Van Huff,Home Office,Office Supplies,Appliances,East,EU,Second Class,Low,5,912.20,-369.79,0.30,2015-06-28,North Carolina
+CA-2015-100070,EB-13870,Emily Burns,Corporate,Technology,Copiers,Central,US,Same Day,High,8,3654.80,-544.85,0.10,2015-10-16,Virginia
+CA-2016-100071,IM-15070,Irene Maddox,Corporate,Furniture,Tables,South,APAC,Second Class,Critical,6,2963.34,45.37,0.20,2015-03-11,Ohio
+CA-2014-100072,BH-11710,Brosina Hoffman,Home Office,Furniture,Tables,South,APAC,Standard Class,Low,10,1826.80,448.02,0.20,2014-10-30,North Carolina
+CA-2015-100073,MA-17560,Matt Abelman,Home Office,Office Supplies,Envelopes,East,US,Standard Class,High,10,4019.60,457.44,0.10,2015-09-28,Ohio
+CA-2014-100074,DV-13045,Darrin Van Huff,Consumer,Technology,Machines,East,APAC,First Class,Medium,12,840.60,-157.72,0.20,2015-03-02,Florida
+CA-2014-100075,MA-17560,Matt Abelman,Home Office,Office Supplies,Labels,South,APAC,Standard Class,Critical,13,806.13,-87.47,0.00,2016-09-16,California
+CA-2016-100076,AG-10270,Alejandro Grove,Corporate,Technology,Accessories,West,EU,Same Day,Low,8,1499.60,-30.05,0.20,2016-04-22,North Carolina
+CA-2016-100077,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Envelopes,West,EU,Standard Class,Low,11,399.19,36.37,0.30,2014-11-06,Florida
+CA-2016-100078,MA-17560,Matt Abelman,Home Office,Furniture,Bookcases,South,EU,Same Day,Low,4,1776.76,-84.18,0.10,2015-01-15,Ohio
+CA-2014-100079,RA-19885,Ruben Ausman,Corporate,Office Supplies,Fasteners,West,APAC,First Class,Low,1,346.69,-4.09,0.10,2016-08-31,Pennsylvania
+CA-2016-100080,AG-10270,Alejandro Grove,Home Office,Furniture,Bookcases,West,US,First Class,Medium,14,5781.58,1334.39,0.00,2015-10-20,Texas
+CA-2014-100081,LC-16885,Lena Creighton,Corporate,Furniture,Bookcases,East,US,First Class,Medium,14,5372.50,435.97,0.10,2016-04-12,Texas
+CA-2014-100082,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Binders,Central,US,Second Class,High,2,664.44,-75.96,0.00,2015-01-02,California
+CA-2015-100083,AA-10315,Alex Avila,Home Office,Technology,Phones,West,LATAM,Second Class,Low,9,551.34,60.40,0.00,2016-03-07,Virginia
+CA-2015-100084,ZD-21925,Zuschuss Donatelli,Home Office,Office Supplies,Appliances,South,US,Standard Class,High,1,499.30,-111.31,0.30,2014-04-21,North Carolina
+CA-2015-100085,AA-10315,Alex Avila,Home Office,Furniture,Chairs,Central,LATAM,Same Day,Low,5,1570.20,-460.96,0.45,2014-11-29,New York
+CA-2015-100086,CV-12805,Cynthia Voltz,Corporate,Technology,Copiers,South,US,First Class,Critical,7,1599.64,-49.62,0.10,2016-04-27,Illinois
+CA-2014-100087,AG-10270,Alejandro Grove,Corporate,Office Supplies,Binders,West,APAC,Second Class,Low,11,5080.68,-714.87,0.00,2014-03-29,North Carolina
+CA-2015-100088,SN-20710,Stephanie Phelps,Home Office,Technology,Machines,West,APAC,First Class,High,11,720.50,120.93,0.20,2016-08-21,New York
+CA-2016-100089,LC-16885,Lena Creighton,Corporate,Technology,Copiers,West,APAC,Second Class,Critical,3,990.24,248.28,0.10,2014-12-25,Virginia
+CA-2016-100090,RA-19885,Ruben Ausman,Corporate,Technology,Accessories,Central,APAC,Standard Class,Medium,10,4649.00,-1772.11,0.20,2014-10-07,Texas
+CA-2014-100091,LC-16885,Lena Creighton,Corporate,Technology,Phones,South,LATAM,First Class,Medium,2,150.46,-21.12,0.00,2015-06-28,Illinois
+CA-2014-100092,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Machines,West,US,First Class,Critical,13,6123.00,-3641.83,0.45,2014-02-23,Pennsylvania
+CA-2014-100093,MA-17560,Matt Abelman,Corporate,Technology,Phones,South,APAC,Standard Class,Medium,7,981.54,-565.39,0.45,2015-03-17,Pennsylvania
+CA-2015-100094,RA-19885,Ruben Ausman,Corporate,Furniture,Bookcases,Central,US,Standard Class,Critical,4,616.80,122.61,0.10,2016-02-22,Pennsylvania
+CA-2015-100095,IM-15070,Irene Maddox,Consumer,Furniture,Tables,South,US,Same Day,Low,9,3179.88,-912.08,0.45,2015-11-16,Ohio
+CA-2014-100096,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Paper,East,LATAM,First Class,Low,10,2051.90,-639.81,0.30,2015-02-19,Pennsylvania
+CA-2016-100097,BH-11710,Brosina Hoffman,Corporate,Furniture,Tables,East,APAC,Second Class,Low,10,2032.20,116.34,0.00,2014-11-14,Virginia
+CA-2015-100098,CV-12805,Cynthia Voltz,Consumer,Furniture,Chairs,East,EU,Standard Class,Medium,13,2313.22,-338.71,0.10,2014-05-30,Ohio
+CA-2015-100099,TB-21520,Tracy Blumstein,Home Office,Technology,Phones,Central,EU,Same Day,Low,11,5087.06,-1180.48,0.45,2015-10-02,Ohio
+CA-2015-100100,TB-21520,Tracy Blumstein,Corporate,Technology,Machines,South,US,Standard Class,High,13,1832.48,52.71,0.00,2014-03-17,Florida
+CA-2016-100101,SO-20335,Sean O'Donnell,Consumer,Technology,Accessories,South,EU,First Class,Critical,10,2990.70,-595.86,0.30,2015-07-22,Virginia
+CA-2016-100102,AA-10315,Alex Avila,Home Office,Furniture,Tables,East,US,Second Class,Critical,2,812.86,193.91,0.20,2014-03-28,Ohio
+CA-2015-100103,GH-14410,Gary Hansen,Home Office,Technology,Copiers,West,APAC,Standard Class,High,6,1137.36,-168.53,0.20,2016-03-04,New York
+CA-2014-100104,SN-20710,Stephanie Phelps,Home Office,Technology,Phones,East,APAC,First Class,Critical,5,648.70,-53.43,0.45,2014-12-08,Texas
+CA-2016-100105,RA-19885,Ruben Ausman,Home Office,Technology,Accessories,West,LATAM,First Class,Low,5,1408.35,181.07,0.20,2015-11-18,Illinois
+CA-2014-100106,ZD-21925,Zuschuss Donatelli,Consumer,Furniture,Chairs,Central,US,Standard Class,High,6,2844.60,-1067.28,0.30,2014-05-21,North Carolina
+CA-2016-100107,AA-10315,Alex Avila,Corporate,Technology,Phones,West,LATAM,First Class,Medium,3,255.93,-31.77,0.45,2014-06-19,Ohio
+CA-2015-100108,RA-19885,Ruben Ausman,Consumer,Office Supplies,Storage,Central,LATAM,Same Day,High,4,1077.36,245.25,0.20,2016-03-14,Pennsylvania
+CA-2014-100109,GH-14410,Gary Hansen,Home Office,Technology,Phones,South,APAC,Standard Class,Low,3,1228.08,-687.78,0.45,2014-09-14,Florida
+CA-2014-100110,SO-20335,Sean O'Donnell,Corporate,Furniture,Furnishings,Central,US,Same Day,Low,8,3625.04,870.66,0.10,2014-04-04,Pennsylvania
+CA-2014-100111,GH-14410,Gary Hansen,Home Office,Office Supplies,Envelopes,Central,EU,Second Class,Low,7,3481.03,-884.35,0.20,2014-11-23,Florida
+CA-2014-100112,MA-17560,Matt Abelman,Consumer,Technology,Copiers,Central,EU,Second Class,Critical,13,4605.12,-460.62,0.30,2016-07-16,New York
+CA-2015-100113,ZD-21925,Zuschuss Donatelli,Consumer,Furniture,Furnishings,West,LATAM,Standard Class,Medium,2,57.28,-4.85,0.30,2015-09-30,Texas
+CA-2016-100114,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Appliances,Central,US,Standard Class,Critical,10,1796.40,-681.25,0.45,2015-11-12,Ohio
+CA-2015-100115,DV-13045,Darrin Van Huff,Consumer,Technology,Phones,West,APAC,Second Class,Low,6,783.36,25.15,0.00,2014-03-11,Illinois
+CA-2016-100116,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Binders,East,US,Same Day,Low,14,5469.52,752.24,0.30,2015-05-06,Florida
+CA-2016-100117,HP-14815,Harold Pawlan,Corporate,Furniture,Chairs,Central,US,Second Class,High,1,161.22,-10.48,0.20,2016-04-14,Illinois
+CA-2016-100118,DV-13045,Darrin Van Huff,Corporate,Technology,Machines,South,APAC,Second Class,Critical,5,333.10,-38.63,0.20,2015-02-14,Ohio
+CA-2014-100119,SF-20065,Sandra Flanagan,Home Office,Technology,Machines,Central,APAC,Standard Class,Low,13,596.57,-267.68,0.30,2015-09-09,Illinois
+CA-2015-100120,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Storage,Central,LATAM,First Class,Low,10,3602.40,534.41,0.10,2014-12-26,New York
+CA-2016-100121,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Labels,South,US,Second Class,Low,9,3613.86,1153.95,0.10,2014-05-27,Washington
+CA-2015-100122,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Labels,Central,LATAM,Standard Class,Medium,7,3324.93,642.75,0.00,2015-11-27,Virginia
+CA-2015-100123,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Labels,South,US,First Class,High,11,1572.45,-288.00,0.00,2014-07-10,Ohio
+CA-2014-100124,HP-14815,Harold Pawlan,Corporate,Technology,Machines,East,LATAM,Standard Class,High,12,5503.92,-2035.81,0.30,2014-05-19,Illinois
+CA-2014-100125,SO-20335,Sean O'Donnell,Consumer,Technology,Machines,East,EU,Second Class,Critical,5,2132.10,460.33,0.10,2015-06-05,California
+CA-2014-100126,SF-20065,Sandra Flanagan,Consumer,Technology,Machines,Central,LATAM,Same Day,Critical,8,3222.48,-1822.79,0.45,2016-06-24,Pennsylvania
+CA-2015-100127,LC-16885,Lena Creighton,Consumer,Furniture,Chairs,East,EU,Same Day,Low,6,1937.76,-382.14,0.30,2015-06-14,New York
+CA-2016-100128,GH-14410,Gary Hansen,Corporate,Furniture,Furnishings,West,APAC,Second Class,High,3,255.51,-19.18,0.10,2016-08-21,Texas
+CA-2014-100129,CV-12805,Cynthia Voltz,Consumer,Office Supplies,Supplies,Central,US,Standard Class,Low,2,507.54,42.98,0.10,2015-08-18,California
+CA-2014-100130,CV-12805,Cynthia Voltz,Corporate,Technology,Machines,Central,APAC,Same Day,Medium,11,1202.85,-456.14,0.45,2015-10-17,Pennsylvania
+CA-2014-100131,ZD-21925,Zuschuss Donatelli,Corporate,Office Supplies,Art,East,APAC,First Class,High,12,415.92,-95.60,0.30,2015-04-21,Pennsylvania
+CA-2015-100132,AA-10315,Alex Avila,Consumer,Office Supplies,Supplies,East,US,Standard Class,High,9,518.04,1.66,0.10,2014-10-01,Pennsylvania
+CA-2015-100133,RA-19885,Ruben Ausman,Consumer,Office Supplies,Envelopes,East,LATAM,Same Day,Critical,14,6322.96,1308.46,0.20,2016-01-09,Florida
+CA-2014-100134,MA-17560,Matt Abelman,Consumer,Furniture,Bookcases,Central,LATAM,Same Day,High,7,1786.40,-286.10,0.10,2014-12-28,Virginia
+CA-2014-100135,CG-12520,Claire Gute,Corporate,Furniture,Tables,West,EU,First Class,High,3,1325.46,127.92,0.20,2015-01-10,New York
+CA-2014-100136,EB-13870,Emily Burns,Consumer,Technology,Phones,South,APAC,First Class,High,13,3603.34,-748.56,0.45,2014-05-02,Texas
+CA-2015-100137,HP-14815,Harold Pawlan,Home Office,Technology,Phones,South,EU,Second Class,High,9,224.37,-24.89,0.00,2014-12-08,North Carolina
+CA-2016-100138,KB-16585,Ken Black,Home Office,Furniture,Tables,South,APAC,Same Day,Low,10,3709.60,-52.23,0.20,2015-06-04,Illinois
+CA-2016-100139,KB-16585,Ken Black,Home Office,Technology,Accessories,East,US,Same Day,Medium,7,2057.51,386.79,0.00,2014-09-29,Virginia
+CA-2016-100140,CV-12805,Cynthia Voltz,Consumer,Technology,Phones,East,US,Same Day,High,3,1235.16,-345.20,0.10,2016-08-28,Pennsylvania
+CA-2016-100141,AA-10315,Alex Avila,Home Office,Office Supplies,Envelopes,West,EU,Second Class,High,7,1773.80,-91.64,0.45,2016-06-12,Ohio
+CA-2016-100142,GH-14410,Gary Hansen,Home Office,Office Supplies,Labels,Central,LATAM,Second Class,Medium,3,697.59,-298.21,0.45,2014-12-29,Florida
+CA-2015-100143,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Envelopes,Central,APAC,First Class,Low,5,1933.65,287.45,0.10,2015-05-16,North Carolina
+CA-2016-100144,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Paper,Central,LATAM,First Class,Critical,14,2461.76,-273.76,0.10,2014-10-22,Washington
+CA-2016-100145,HP-14815,Harold Pawlan,Consumer,Technology,Machines,East,US,Second Class,Medium,9,3146.40,-720.53,0.10,2016-01-29,California
+CA-2014-100146,BH-11710,Brosina Hoffman,Corporate,Office Supplies,Labels,South,LATAM,Second Class,High,12,2866.08,-850.17,0.10,2015-07-18,Illinois
+CA-2016-100147,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Accessories,East,LATAM,Second Class,Low,13,640.64,-319.72,0.45,2016-01-27,Pennsylvania
+CA-2015-100148,MA-17560,Matt Abelman,Corporate,Furniture,Furnishings,South,LATAM,Second Class,Critical,1,9.59,-2.48,0.45,2016-08-08,Florida
+CA-2016-100149,HP-14815,Harold Pawlan,Corporate,Furniture,Furnishings,Central,EU,Second Class,Critical,3,1100.70,73.84,0.20,2014-01-15,Pennsylvania
+CA-2015-100150,GH-14410,Gary Hansen,Consumer,Office Supplies,Art,West,APAC,Same Day,Medium,7,2353.96,795.86,0.10,2015-05-04,Ohio
+CA-2016-100151,AG-10270,Alejandro Grove,Consumer,Office Supplies,Fasteners,West,US,Same Day,High,10,3628.30,-108.81,0.00,2015-01-04,Texas
+CA-2014-100152,EB-13870,Emily Burns,Consumer,Technology,Machines,South,EU,Same Day,High,12,757.44,-122.02,0.20,2014-08-15,Pennsylvania
+CA-2016-100153,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Supplies,South,APAC,Standard Class,Low,13,4338.49,846.91,0.10,2015-11-28,California
+CA-2015-100154,SN-20710,Stephanie Phelps,Consumer,Technology,Copiers,East,LATAM,Standard Class,Critical,10,2706.50,-234.72,0.10,2015-06-17,California
+CA-2015-100155,TB-21520,Tracy Blumstein,Home Office,Furniture,Tables,West,LATAM,First Class,Low,8,2273.12,-794.35,0.45,2016-04-06,Washington
+CA-2014-100156,LC-16885,Lena Creighton,Corporate,Furniture,Bookcases,West,APAC,Same Day,Medium,7,1228.78,186.48,0.00,2014-03-03,Texas
+CA-2015-100157,CV-12805,Cynthia Voltz,Corporate,Technology,Phones,West,EU,First Class,Low,6,2978.76,-620.93,0.30,2016-07-28,Texas
+CA-2014-100158,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Supplies,South,LATAM,Same Day,Medium,3,1095.87,265.90,0.10,2016-02-14,Washington
+CA-2015-100159,TB-21520,Tracy Blumstein,Home Office,Office Supplies,Binders,West,EU,Second Class,Low,5,491.50,-88.01,0.00,2015-11-08,New York
+CA-2015-100160,RA-19885,Ruben Ausman,Corporate,Furniture,Tables,East,EU,Standard Class,Medium,10,3376.50,-138.18,0.00,2014-02-15,Virginia
+CA-2014-100161,ZD-21925,Zuschuss Donatelli,Home Office,Furniture,Furnishings,East,LATAM,First Class,High,10,3009.70,-740.42,0.20,2016-06-16,California
+CA-2015-100162,SN-20710,Stephanie Phelps,Home Office,Technology,Copiers,South,APAC,Same Day,Critical,11,3750.78,-1229.68,0.45,2016-09-22,Texas
+CA-2016-100163,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Binders,South,US,Same Day,Critical,13,3526.51,888.93,0.10,2014-11-04,Virginia
+CA-2015-100164,GH-14410,Gary Hansen,Corporate,Furniture,Tables,West,EU,Standard Class,High,4,524.88,10.69,0.20,2016-08-02,Pennsylvania
+CA-2014-100165,RA-19885,Ruben Ausman,Corporate,Technology,Accessories,East,APAC,First Class,Low,14,574.42,-102.94,0.45,2015-07-27,Washington
+CA-2016-100166,HP-14815,Harold Pawlan,Home Office,Technology,Accessories,East,LATAM,Second Class,High,12,5997.48,566.08,0.30,2015-12-14,Florida
+CA-2015-100167,EB-13870,Emily Burns,Corporate,Office Supplies,Supplies,West,LATAM,First Class,Medium,11,2011.13,-334.31,0.20,2016-06-22,Illinois
+CA-2016-100168,KB-16585,Ken Black,Home Office,Office Supplies,Appliances,South,APAC,Second Class,Medium,10,4327.20,-1252.54,0.10,2015-07-21,Illinois
+CA-2015-100169,PK-19075,Pete Kriz,Home Office,Office Supplies,Envelopes,South,LATAM,Second Class,High,8,2220.56,-516.81,0.20,2016-04-21,Texas
+CA-2014-100170,AA-10315,Alex Avila,Home Office,Technology,Phones,West,US,Standard Class,Low,3,1376.61,-8.66,0.45,2016-09-07,Pennsylvania
+CA-2015-100171,AA-10315,Alex Avila,Consumer,Technology,Copiers,South,LATAM,Standard Class,Low,2,710.10,-41.07,0.00,2015-04-12,Virginia
+CA-2014-100172,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Appliances,South,EU,Standard Class,Low,1,267.06,-13.83,0.20,2014-10-21,Virginia
+CA-2014-100173,AA-10315,Alex Avila,Corporate,Furniture,Chairs,South,LATAM,Second Class,Medium,10,2656.00,-600.89,0.20,2015-02-11,Florida
+CA-2016-100174,SO-20335,Sean O'Donnell,Consumer,Technology,Accessories,East,US,Same Day,Critical,2,411.22,-57.88,0.30,2014-02-27,Illinois
+CA-2014-100175,LC-16885,Lena Creighton,Home Office,Furniture,Bookcases,Central,US,Second Class,High,4,438.60,-149.53,0.45,2014-02-17,California
+CA-2014-100176,HP-14815,Harold Pawlan,Home Office,Technology,Copiers,East,LATAM,First Class,Critical,13,5346.12,554.76,0.30,2014-11-03,Texas
+CA-2016-100177,SO-20335,Sean O'Donnell,Home Office,Technology,Machines,South,APAC,Standard Class,High,1,53.35,13.08,0.10,2014-12-15,Ohio
+CA-2016-100178,MA-17560,Matt Abelman,Corporate,Furniture,Furnishings,West,APAC,Second Class,Low,9,4237.83,-1607.28,0.30,2015-08-23,New York
+CA-2015-100179,AG-10270,Alejandro Grove,Consumer,Furniture,Tables,West,US,First Class,Critical,12,4716.36,852.60,0.10,2014-11-21,Illinois
+CA-2015-100180,AG-10270,Alejandro Grove,Consumer,Furniture,Chairs,West,US,First Class,Low,2,195.52,-26.97,0.30,2015-06-09,North Carolina
+CA-2016-100181,RA-19885,Ruben Ausman,Consumer,Office Supplies,Paper,East,LATAM,Second Class,Medium,1,149.46,0.97,0.30,2016-01-13,Florida
+CA-2015-100182,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Storage,Central,APAC,Second Class,Critical,3,108.96,-34.94,0.30,2014-11-03,North Carolina
+CA-2016-100183,RA-19885,Ruben Ausman,Corporate,Furniture,Tables,Central,LATAM,First Class,Critical,2,144.14,60.07,0.00,2014-12-07,North Carolina
+CA-2015-100184,AA-10315,Alex Avila,Corporate,Office Supplies,Labels,Central,LATAM,Second Class,High,10,4739.00,53.82,0.10,2014-07-01,Pennsylvania
+CA-2014-100185,AG-10270,Alejandro Grove,Home Office,Office Supplies,Labels,West,LATAM,Second Class,Critical,2,932.74,79.23,0.10,2015-07-13,Florida
+CA-2016-100186,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Storage,South,US,Same Day,Critical,3,955.50,-129.72,0.10,2014-06-07,North Carolina
+CA-2016-100187,EB-13870,Emily Burns,Home Office,Technology,Phones,West,US,Second Class,High,9,208.80,11.71,0.20,2016-04-11,Texas
+CA-2015-100188,CV-12805,Cynthia Voltz,Consumer,Technology,Accessories,West,US,First Class,Medium,10,4918.90,631.72,0.30,2014-12-06,Virginia
+CA-2016-100189,GH-14410,Gary Hansen,Home Office,Technology,Copiers,East,APAC,Standard Class,Critical,8,1521.52,3.08,0.30,2015-08-26,New York
+CA-2015-100190,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Art,South,APAC,Same Day,Low,2,833.00,-61.30,0.10,2014-12-18,Ohio
+CA-2016-100191,TB-21520,Tracy Blumstein,Consumer,Office Supplies,Art,East,EU,Second Class,Medium,5,135.60,-25.13,0.00,2014-12-18,Illinois
+CA-2015-100192,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Storage,West,EU,Same Day,Critical,4,1599.56,-286.08,0.10,2015-11-05,Pennsylvania
+CA-2016-100193,CG-12520,Claire Gute,Consumer,Technology,Copiers,Central,APAC,Second Class,Critical,4,571.12,100.10,0.00,2016-03-29,New York
+CA-2015-100194,AG-10270,Alejandro Grove,Home Office,Technology,Phones,West,APAC,First Class,Critical,9,4348.17,-52.04,0.20,2015-09-18,North Carolina
+CA-2015-100195,IM-15070,Irene Maddox,Consumer,Technology,Machines,East,APAC,Second Class,Critical,10,2971.30,-286.52,0.10,2014-09-02,Pennsylvania
+CA-2014-100196,RA-19885,Ruben Ausman,Home Office,Furniture,Tables,East,LATAM,First Class,Medium,7,678.65,-135.23,0.45,2015-10-23,Texas
+CA-2015-100197,KB-16585,Ken Black,Home Office,Office Supplies,Appliances,South,LATAM,Same Day,Critical,14,2558.08,294.17,0.00,2014-07-19,Ohio
+CA-2014-100198,MA-17560,Matt Abelman,Home Office,Furniture,Bookcases,Central,EU,Same Day,Critical,10,202.80,-22.34,0.10,2014-10-09,Virginia
+CA-2014-100199,GH-14410,Gary Hansen,Home Office,Furniture,Bookcases,South,EU,Same Day,Low,5,1943.40,-92.65,0.20,2016-02-14,Washington
+CA-2014-100200,ZD-21925,Zuschuss Donatelli,Consumer,Furniture,Tables,Central,LATAM,Second Class,Medium,5,887.75,75.81,0.00,2014-05-01,Washington
+CA-2015-100201,HP-14815,Harold Pawlan,Corporate,Furniture,Furnishings,Central,US,Second Class,Critical,9,1297.26,-701.24,0.45,2015-12-22,California
+CA-2014-100202,AG-10270,Alejandro Grove,Home Office,Technology,Copiers,South,LATAM,Second Class,High,12,5204.52,-1066.62,0.10,2014-11-26,Pennsylvania
+CA-2015-100203,EB-13870,Emily Burns,Home Office,Office Supplies,Art,Central,LATAM,Same Day,High,11,4381.63,271.02,0.00,2016-02-07,North Carolina
+CA-2016-100204,CG-12520,Claire Gute,Corporate,Technology,Accessories,East,LATAM,Second Class,Critical,12,5834.52,890.17,0.20,2016-03-25,Florida
+CA-2015-100205,KB-16585,Ken Black,Home Office,Office Supplies,Labels,West,US,Standard Class,Critical,9,2619.72,-251.30,0.45,2016-03-18,California
+CA-2014-100206,BH-11710,Brosina Hoffman,Home Office,Furniture,Tables,Central,EU,First Class,Low,8,42.64,-15.71,0.30,2015-12-07,Illinois
+CA-2015-100207,AG-10270,Alejandro Grove,Home Office,Furniture,Furnishings,East,LATAM,Standard Class,Low,11,4976.18,-1325.35,0.10,2015-10-03,California
+CA-2014-100208,HP-14815,Harold Pawlan,Home Office,Office Supplies,Art,Central,US,Same Day,Medium,3,896.61,-186.50,0.45,2014-01-10,Ohio
+CA-2015-100209,SO-20335,Sean O'Donnell,Consumer,Furniture,Tables,South,EU,Second Class,Low,2,733.46,-97.49,0.00,2015-01-12,Virginia
+CA-2015-100210,LC-16885,Lena Creighton,Home Office,Furniture,Chairs,South,EU,Standard Class,Low,8,1430.72,154.88,0.10,2014-06-05,Texas
+CA-2015-100211,BH-11710,Brosina Hoffman,Home Office,Technology,Phones,West,EU,First Class,Low,6,2890.86,330.14,0.20,2014-09-11,Florida
+CA-2014-100212,HP-14815,Harold Pawlan,Corporate,Technology,Copiers,South,US,Second Class,Critical,12,2387.04,738.72,0.00,2016-03-23,North Carolina
+CA-2016-100213,SO-20335,Sean O'Donnell,Corporate,Technology,Accessories,Central,EU,Same Day,Low,6,2803.74,-136.14,0.10,2016-05-09,California
+CA-2016-100214,LC-16885,Lena Creighton,Corporate,Furniture,Bookcases,South,LATAM,Same Day,Low,5,558.95,232.88,0.00,2015-02-12,Virginia
+CA-2014-100215,SN-20710,Stephanie Phelps,Home Office,Technology,Copiers,Central,LATAM,Standard Class,High,5,231.90,30.69,0.00,2014-07-28,Pennsylvania
+CA-2014-100216,PK-19075,Pete Kriz,Corporate,Furniture,Chairs,East,US,Standard Class,Medium,2,925.38,87.63,0.00,2015-09-16,California
+CA-2016-100217,IM-15070,Irene Maddox,Corporate,Office Supplies,Labels,West,US,First Class,Critical,9,2349.27,-684.75,0.20,2014-05-10,Florida
+CA-2015-100218,GH-14410,Gary Hansen,Consumer,Furniture,Furnishings,South,EU,First Class,Medium,12,5851.80,716.82,0.00,2015-06-08,Florida
+CA-2014-100219,BH-11710,Brosina Hoffman,Consumer,Technology,Accessories,West,LATAM,First Class,Critical,4,1486.76,-254.79,0.00,2016-06-02,Texas
+CA-2015-100220,IM-15070,Irene Maddox,Consumer,Furniture,Tables,Central,US,Standard Class,Medium,4,657.16,62.63,0.30,2014-11-24,Washington
+CA-2015-100221,GH-14410,Gary Hansen,Consumer,Furniture,Tables,South,US,First Class,Medium,2,878.22,90.27,0.20,2014-11-15,Florida
+CA-2014-100222,LC-16885,Lena Creighton,Home Office,Office Supplies,Envelopes,East,EU,Standard Class,Critical,8,1498.40,222.60,0.30,2016-03-05,California
+CA-2016-100223,PK-19075,Pete Kriz,Corporate,Technology,Machines,Central,US,Second Class,Medium,11,4626.49,1934.54,0.00,2014-01-02,Pennsylvania
+CA-2016-100224,MA-17560,Matt Abelman,Corporate,Furniture,Chairs,Central,LATAM,Standard Class,Low,12,1722.12,686.83,0.00,2016-07-07,Virginia
+CA-2014-100225,AA-10315,Alex Avila,Consumer,Technology,Phones,Central,APAC,First Class,Critical,2,595.98,49.31,0.00,2016-09-14,Illinois
+CA-2016-100226,KB-16585,Ken Black,Consumer,Office Supplies,Fasteners,East,US,Second Class,Critical,4,167.88,-35.51,0.10,2016-02-28,Ohio
+CA-2015-100227,KB-16585,Ken Black,Consumer,Office Supplies,Art,West,EU,First Class,Low,9,1641.15,-10.26,0.10,2015-04-20,Washington
+CA-2016-100228,KB-16585,Ken Black,Corporate,Furniture,Bookcases,Central,EU,Standard Class,Critical,12,1534.44,-218.57,0.20,2014-02-20,Ohio
+CA-2014-100229,SN-20710,Stephanie Phelps,Consumer,Technology,Copiers,East,LATAM,First Class,Low,2,467.42,-103.33,0.10,2014-03-05,North Carolina
+CA-2014-100230,LC-16885,Lena Creighton,Consumer,Office Supplies,Art,Central,US,Standard Class,Critical,1,498.59,142.91,0.10,2015-03-31,California
+CA-2015-100231,IM-15070,Irene Maddox,Consumer,Technology,Phones,Central,EU,Second Class,High,14,5090.26,-2447.58,0.30,2015-12-01,Florida
+CA-2015-100232,TB-21520,Tracy Blumstein,Home Office,Furniture,Bookcases,South,US,Standard Class,High,10,3114.90,376.06,0.10,2015-05-26,Pennsylvania
+CA-2016-100233,AA-10315,Alex Avila,Consumer,Office Supplies,Envelopes,South,APAC,Same Day,Critical,11,4871.90,-2377.75,0.45,2016-04-01,Illinois
+CA-2014-100234,LC-16885,Lena Creighton,Corporate,Technology,Machines,West,LATAM,First Class,Medium,7,972.09,7.07,0.00,2014-08-13,Texas
+CA-2014-100235,BH-11710,Brosina Hoffman,Home Office,Furniture,Chairs,South,APAC,Second Class,Medium,5,1345.90,399.24,0.00,2016-08-28,Washington
+CA-2014-100236,LC-16885,Lena Creighton,Home Office,Office Supplies,Labels,East,LATAM,First Class,Medium,10,189.60,40.94,0.20,2015-08-01,Ohio
+CA-2015-100237,DV-13045,Darrin Van Huff,Home Office,Furniture,Bookcases,East,EU,First Class,Medium,4,1211.28,172.23,0.00,2014-01-01,Illinois
+CA-2016-100238,DV-13045,Darrin Van Huff,Corporate,Furniture,Chairs,West,APAC,Same Day,Low,10,3538.20,719.45,0.10,2016-05-16,Illinois
+CA-2015-100239,ZD-21925,Zuschuss Donatelli,Home Office,Office Supplies,Binders,Central,EU,First Class,Medium,3,1102.53,16.20,0.30,2016-09-10,North Carolina
+CA-2016-100240,IM-15070,Irene Maddox,Home Office,Office Supplies,Fasteners,South,US,Second Class,High,12,4149.72,-765.58,0.10,2014-01-02,North Carolina
+CA-2014-100241,PK-19075,Pete Kriz,Home Office,Technology,Accessories,West,APAC,Same Day,Low,8,596.96,-27.04,0.00,2014-11-24,Florida
+CA-2015-100242,HP-14815,Harold Pawlan,Corporate,Furniture,Bookcases,South,EU,Same Day,Critical,6,792.30,212.55,0.00,2014-02-19,Pennsylvania
+CA-2014-100243,SF-20065,Sandra Flanagan,Consumer,Technology,Phones,South,US,Standard Class,High,2,830.52,-188.42,0.45,2015-12-05,California
+CA-2016-100244,KB-16585,Ken Black,Consumer,Office Supplies,Art,Central,LATAM,Standard Class,Critical,2,348.40,-137.76,0.30,2014-03-18,Texas
+CA-2016-100245,RA-19885,Ruben Ausman,Home Office,Office Supplies,Binders,Central,APAC,First Class,Medium,1,55.12,18.37,0.10,2015-02-24,New York
+CA-2014-100246,DV-13045,Darrin Van Huff,Corporate,Office Supplies,Supplies,South,EU,Standard Class,Low,14,3472.28,119.93,0.00,2015-03-14,Washington
+CA-2015-100247,IM-15070,Irene Maddox,Corporate,Technology,Machines,Central,US,Same Day,Medium,2,478.84,0.21,0.00,2015-02-12,Illinois
+CA-2015-100248,EB-13870,Emily Burns,Home Office,Office Supplies,Binders,West,EU,Standard Class,Low,8,216.72,-42.85,0.30,2014-08-20,Illinois
+CA-2016-100249,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Envelopes,South,EU,Same Day,High,9,316.71,10.12,0.30,2015-03-05,New York
+CA-2016-100250,EB-13870,Emily Burns,Consumer,Technology,Accessories,West,LATAM,Second Class,Medium,9,2589.75,-335.91,0.45,2015-11-25,Washington
+CA-2016-100251,HP-14815,Harold Pawlan,Consumer,Furniture,Bookcases,Central,APAC,Standard Class,Low,7,306.53,-113.03,0.30,2016-04-22,Pennsylvania
+CA-2014-100252,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Supplies,South,US,Same Day,Medium,6,2574.18,-906.62,0.45,2016-06-13,Texas
+CA-2016-100253,LC-16885,Lena Creighton,Corporate,Technology,Accessories,South,APAC,Same Day,Critical,2,567.06,176.21,0.00,2016-06-07,North Carolina
+CA-2016-100254,RA-19885,Ruben Ausman,Corporate,Office Supplies,Appliances,West,LATAM,First Class,Medium,3,423.99,43.19,0.10,2015-11-29,California
+CA-2015-100255,MA-17560,Matt Abelman,Home Office,Office Supplies,Labels,West,EU,Second Class,High,1,172.24,-34.08,0.20,2016-05-13,Ohio
+CA-2015-100256,KB-16585,Ken Black,Home Office,Office Supplies,Paper,South,APAC,Standard Class,Medium,10,3245.50,-41.82,0.10,2016-07-24,New York
+CA-2014-100257,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Phones,East,US,Second Class,Low,3,1174.08,-92.09,0.45,2014-01-30,Ohio
+CA-2014-100258,DV-13045,Darrin Van Huff,Home Office,Office Supplies,Envelopes,West,EU,First Class,Critical,5,936.65,-160.79,0.30,2015-10-13,North Carolina
+CA-2015-100259,TB-21520,Tracy Blumstein,Home Office,Furniture,Tables,West,APAC,Standard Class,Critical,10,2779.10,-816.27,0.20,2016-07-04,California
+CA-2016-100260,IM-15070,Irene Maddox,Corporate,Technology,Copiers,West,US,Same Day,Medium,14,1603.98,225.36,0.10,2014-10-03,Texas
+CA-2016-100261,RA-19885,Ruben Ausman,Corporate,Furniture,Chairs,South,LATAM,First Class,Critical,5,1530.65,96.86,0.20,2015-12-28,Florida
+CA-2014-100262,HP-14815,Harold Pawlan,Home Office,Office Supplies,Fasteners,Central,APAC,First Class,Low,11,2889.92,-1132.42,0.45,2014-04-15,Ohio
+CA-2016-100263,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Fasteners,East,EU,Second Class,Low,11,1825.34,-420.29,0.20,2015-12-30,North Carolina
+CA-2015-100264,EB-13870,Emily Burns,Corporate,Technology,Machines,South,LATAM,Standard Class,Medium,11,816.97,184.64,0.00,2014-10-30,Illinois
+CA-2016-100265,PK-19075,Pete Kriz,Home Office,Technology,Phones,East,APAC,Standard Class,Critical,11,2007.06,300.10,0.20,2016-05-10,Texas
+CA-2016-100266,AG-10270,Alejandro Grove,Corporate,Technology,Copiers,South,APAC,First Class,High,11,4953.30,-275.08,0.00,2014-08-17,North Carolina
+CA-2014-100267,ZD-21925,Zuschuss Donatelli,Corporate,Office Supplies,Art,East,US,Same Day,High,8,252.56,-68.90,0.45,2015-09-28,Pennsylvania
+CA-2014-100268,DV-13045,Darrin Van Huff,Corporate,Furniture,Chairs,East,US,Same Day,High,4,698.48,-48.65,0.45,2015-04-14,Texas
+CA-2016-100269,KB-16585,Ken Black,Consumer,Technology,Accessories,South,US,Second Class,Critical,1,228.77,44.56,0.10,2014-06-22,Pennsylvania
+CA-2014-100270,EB-13870,Emily Burns,Corporate,Office Supplies,Storage,East,US,Standard Class,Medium,7,51.17,-26.63,0.45,2015-01-18,Washington
+CA-2014-100271,SF-20065,Sandra Flanagan,Corporate,Office Supplies,Binders,Central,LATAM,First Class,Critical,2,389.72,-175.77,0.45,2014-03-08,Texas
+CA-2016-100272,KB-16585,Ken Black,Consumer,Office Supplies,Labels,East,US,Second Class,Low,13,1277.51,-622.87,0.30,2014-08-18,Illinois
+CA-2014-100273,CV-12805,Cynthia Voltz,Home Office,Furniture,Tables,West,US,Standard Class,Low,11,1447.82,-354.66,0.45,2015-09-01,Pennsylvania
+CA-2016-100274,TB-21520,Tracy Blumstein,Consumer,Office Supplies,Art,Central,LATAM,Standard Class,High,9,1170.99,-194.89,0.10,2015-12-04,North Carolina
+CA-2014-100275,RA-19885,Ruben Ausman,Corporate,Technology,Copiers,West,US,Same Day,Medium,7,2913.19,386.09,0.00,2015-09-25,North Carolina
+CA-2016-100276,HP-14815,Harold Pawlan,Corporate,Office Supplies,Supplies,East,LATAM,First Class,Medium,4,728.68,-224.45,0.30,2014-02-10,California
+CA-2016-100277,CG-12520,Claire Gute,Consumer,Technology,Accessories,West,APAC,Second Class,Critical,2,836.88,-337.31,0.30,2014-04-03,Florida
+CA-2016-100278,AG-10270,Alejandro Grove,Corporate,Office Supplies,Appliances,South,US,Standard Class,Low,2,815.04,288.49,0.00,2015-01-04,California
+CA-2016-100279,AA-10315,Alex Avila,Consumer,Technology,Copiers,Central,APAC,Second Class,Low,6,1091.88,131.91,0.30,2014-10-02,Pennsylvania
+CA-2014-100280,EB-13870,Emily Burns,Consumer,Office Supplies,Fasteners,East,US,Second Class,Low,14,2743.02,54.68,0.30,2015-10-27,Pennsylvania
+CA-2016-100281,LC-16885,Lena Creighton,Home Office,Office Supplies,Storage,East,LATAM,Same Day,Low,3,922.80,-2.41,0.20,2016-06-02,Pennsylvania
+CA-2016-100282,TB-21520,Tracy Blumstein,Home Office,Furniture,Bookcases,East,APAC,Standard Class,Critical,5,1646.05,424.63,0.00,2015-11-26,Washington
+CA-2014-100283,MA-17560,Matt Abelman,Consumer,Office Supplies,Paper,East,LATAM,Same Day,Medium,3,1260.96,-88.47,0.45,2015-09-20,New York
+CA-2016-100284,MA-17560,Matt Abelman,Corporate,Office Supplies,Envelopes,South,EU,Standard Class,Critical,6,2911.32,377.03,0.00,2015-07-18,Ohio
+CA-2016-100285,LC-16885,Lena Creighton,Home Office,Office Supplies,Art,West,US,Same Day,Critical,14,3524.36,-1137.81,0.20,2015-05-25,California
+CA-2015-100286,SN-20710,Stephanie Phelps,Home Office,Technology,Accessories,East,LATAM,First Class,High,14,699.86,-16.75,0.45,2015-10-15,California
+CA-2015-100287,PK-19075,Pete Kriz,Home Office,Office Supplies,Labels,South,US,Standard Class,Medium,9,3463.83,-1186.23,0.45,2015-11-04,California
+CA-2015-100288,KB-16585,Ken Black,Consumer,Office Supplies,Fasteners,South,US,First Class,Medium,9,2370.42,-403.55,0.00,2014-06-18,Washington
+CA-2015-100289,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Envelopes,West,LATAM,Same Day,Medium,8,3305.20,548.37,0.10,2014-04-21,Ohio
+CA-2014-100290,CG-12520,Claire Gute,Home Office,Technology,Accessories,East,EU,Standard Class,Critical,9,4211.82,-1415.57,0.45,2015-06-05,North Carolina
+CA-2014-100291,RA-19885,Ruben Ausman,Corporate,Office Supplies,Supplies,South,APAC,First Class,Critical,7,1485.68,-81.20,0.45,2016-02-20,Texas
+CA-2016-100292,AA-10315,Alex Avila,Home Office,Office Supplies,Supplies,East,EU,Second Class,High,5,2111.60,-191.18,0.45,2015-12-30,Illinois
+CA-2015-100293,AA-10315,Alex Avila,Home Office,Technology,Copiers,South,LATAM,First Class,Critical,9,2461.77,151.96,0.20,2016-02-19,California
+CA-2014-100294,GH-14410,Gary Hansen,Corporate,Furniture,Bookcases,Central,EU,Standard Class,High,7,538.58,-37.73,0.00,2016-02-08,Washington
+CA-2016-100295,SN-20710,Stephanie Phelps,Consumer,Furniture,Furnishings,South,EU,First Class,Low,14,3206.42,-275.04,0.45,2016-01-28,Pennsylvania
+CA-2015-100296,EB-13870,Emily Burns,Consumer,Office Supplies,Labels,Central,EU,Second Class,High,9,284.67,-76.29,0.20,2016-06-08,Ohio
+CA-2015-100297,IM-15070,Irene Maddox,Corporate,Technology,Accessories,Central,EU,Second Class,High,3,1444.29,-826.74,0.45,2014-02-11,California
+CA-2016-100298,KB-16585,Ken Black,Home Office,Office Supplies,Binders,Central,LATAM,First Class,Low,1,81.08,-0.98,0.20,2016-03-03,Illinois
+CA-2016-100299,GH-14410,Gary Hansen,Corporate,Furniture,Chairs,West,APAC,Second Class,Medium,9,348.75,-190.56,0.45,2015-07-11,Illinois
+CA-2016-100300,KB-16585,Ken Black,Consumer,Office Supplies,Fasteners,West,APAC,Same Day,Medium,4,1901.60,-580.32,0.45,2015-07-29,North Carolina
+CA-2014-100301,RA-19885,Ruben Ausman,Corporate,Furniture,Bookcases,Central,APAC,Standard Class,High,11,4877.40,465.09,0.30,2016-08-25,Virginia
+CA-2014-100302,GH-14410,Gary Hansen,Consumer,Office Supplies,Storage,West,US,Second Class,Medium,1,151.73,-13.93,0.10,2014-03-26,Pennsylvania
+CA-2014-100303,BH-11710,Brosina Hoffman,Corporate,Furniture,Tables,Central,US,Standard Class,Low,11,4502.19,1285.28,0.00,2014-06-07,California
+CA-2015-100304,IM-15070,Irene Maddox,Corporate,Office Supplies,Supplies,South,LATAM,First Class,Low,2,579.22,169.21,0.10,2015-02-22,Pennsylvania
+CA-2014-100305,BH-11710,Brosina Hoffman,Home Office,Technology,Accessories,West,APAC,Standard Class,High,11,3976.94,1158.78,0.00,2015-08-23,Florida
+CA-2014-100306,RA-19885,Ruben Ausman,Corporate,Furniture,Furnishings,East,EU,Second Class,Critical,13,6028.23,-1465.92,0.30,2015-11-08,Virginia
+CA-2016-100307,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Copiers,East,US,Standard Class,Low,5,1701.30,378.21,0.20,2014-01-12,North Carolina
+CA-2016-100308,RA-19885,Ruben Ausman,Corporate,Office Supplies,Supplies,East,LATAM,Second Class,Medium,9,4263.75,-1123.35,0.20,2016-01-30,Texas
+CA-2016-100309,PK-19075,Pete Kriz,Corporate,Technology,Machines,West,APAC,Standard Class,High,4,246.96,-23.72,0.45,2016-05-21,New York
+CA-2014-100310,HP-14815,Harold Pawlan,Consumer,Technology,Phones,Central,LATAM,Same Day,High,6,1090.68,-256.28,0.10,2015-09-27,North Carolina
+CA-2014-100311,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Copiers,East,EU,Same Day,High,10,2856.00,637.25,0.20,2014-06-22,Illinois
+CA-2016-100312,AA-10315,Alex Avila,Consumer,Technology,Machines,East,US,First Class,Medium,8,1872.88,194.03,0.20,2015-05-14,Virginia
+CA-2014-100313,HP-14815,Harold Pawlan,Home Office,Office Supplies,Art,South,EU,Standard Class,High,12,507.84,178.88,0.00,2015-10-09,Virginia
+CA-2014-100314,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Binders,West,LATAM,First Class,Low,6,1195.74,-207.34,0.45,2014-10-25,Washington
+CA-2016-100315,RA-19885,Ruben Ausman,Home Office,Technology,Copiers,East,LATAM,First Class,Low,13,3373.50,-1337.61,0.30,2015-08-03,Washington
+CA-2015-100316,MA-17560,Matt Abelman,Corporate,Furniture,Bookcases,South,LATAM,Standard Class,Low,5,939.35,220.35,0.00,2015-06-15,Illinois
+CA-2015-100317,BH-11710,Brosina Hoffman,Home Office,Technology,Machines,South,APAC,Standard Class,High,14,5211.50,-1543.50,0.45,2014-06-28,Pennsylvania
+CA-2016-100318,PK-19075,Pete Kriz,Consumer,Technology,Phones,East,LATAM,Second Class,Medium,6,2457.18,-205.27,0.20,2015-05-09,New York
+CA-2014-100319,GH-14410,Gary Hansen,Home Office,Technology,Machines,East,LATAM,First Class,Low,4,317.48,-20.49,0.10,2016-01-05,Ohio
+CA-2014-100320,MA-17560,Matt Abelman,Home Office,Office Supplies,Envelopes,East,EU,Standard Class,Medium,10,848.20,-411.72,0.30,2014-02-14,California
+CA-2014-100321,IM-15070,Irene Maddox,Home Office,Office Supplies,Binders,Central,US,Second Class,Critical,9,4313.97,-86.24,0.45,2015-10-15,North Carolina
+CA-2014-100322,MA-17560,Matt Abelman,Home Office,Office Supplies,Binders,Central,EU,First Class,Critical,4,1664.12,-927.31,0.45,2015-08-20,North Carolina
+CA-2016-100323,LC-16885,Lena Creighton,Home Office,Furniture,Chairs,South,EU,Standard Class,Medium,7,1370.60,-259.36,0.00,2015-06-20,Ohio
+CA-2014-100324,RA-19885,Ruben Ausman,Home Office,Technology,Accessories,West,LATAM,Same Day,High,13,3484.78,-485.87,0.00,2015-11-07,California
+CA-2016-100325,GH-14410,Gary Hansen,Home Office,Office Supplies,Envelopes,West,LATAM,Second Class,High,13,3167.45,-862.06,0.30,2016-04-03,Ohio
+CA-2016-100326,PK-19075,Pete Kriz,Home Office,Furniture,Furnishings,West,US,Standard Class,Critical,10,4390.00,-1459.35,0.30,2014-01-06,Washington
+CA-2016-100327,KB-16585,Ken Black,Corporate,Office Supplies,Labels,Central,APAC,Same Day,Medium,2,163.24,-79.19,0.45,2016-05-25,Pennsylvania
+CA-2016-100328,SN-20710,Stephanie Phelps,Corporate,Technology,Phones,South,EU,Standard Class,Medium,3,564.78,-189.52,0.45,2014-11-11,Ohio
+CA-2016-100329,IM-15070,Irene Maddox,Home Office,Furniture,Chairs,West,EU,Same Day,Low,9,1829.52,220.56,0.20,2015-09-21,New York
+CA-2014-100330,AA-10315,Alex Avila,Home Office,Office Supplies,Paper,South,LATAM,First Class,Low,2,73.44,-4.33,0.10,2015-09-16,Texas
+CA-2016-100331,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Storage,East,EU,Standard Class,High,1,104.85,-48.66,0.45,2014-02-04,Washington
+CA-2015-100332,CV-12805,Cynthia Voltz,Home Office,Furniture,Chairs,East,US,Standard Class,Low,2,996.84,-269.61,0.30,2015-02-09,Virginia
+CA-2014-100333,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Machines,South,US,First Class,Medium,6,2890.98,-731.15,0.20,2016-09-13,Pennsylvania
+CA-2015-100334,GH-14410,Gary Hansen,Home Office,Furniture,Bookcases,Central,LATAM,Same Day,Critical,9,1355.85,436.47,0.00,2016-09-06,Washington
+CA-2015-100335,KB-16585,Ken Black,Home Office,Office Supplies,Storage,East,EU,First Class,Critical,10,4317.00,-1832.25,0.30,2014-03-11,Illinois
+CA-2016-100336,GH-14410,Gary Hansen,Home Office,Technology,Accessories,Central,US,Second Class,Critical,12,5003.16,-566.67,0.10,2015-02-13,Illinois
+CA-2014-100337,SF-20065,Sandra Flanagan,Home Office,Furniture,Furnishings,East,APAC,Second Class,Medium,3,1421.46,34.61,0.10,2014-07-24,Washington
+CA-2016-100338,PK-19075,Pete Kriz,Corporate,Technology,Machines,West,US,Same Day,High,3,1171.71,466.48,0.00,2015-11-24,North Carolina
+CA-2016-100339,KB-16585,Ken Black,Consumer,Office Supplies,Fasteners,West,LATAM,Same Day,Low,8,764.16,-357.49,0.45,2014-08-16,Virginia
+CA-2014-100340,SF-20065,Sandra Flanagan,Consumer,Office Supplies,Binders,East,LATAM,Standard Class,High,8,3906.96,-1371.16,0.45,2015-12-07,Illinois
+CA-2015-100341,RA-19885,Ruben Ausman,Corporate,Office Supplies,Binders,East,LATAM,Same Day,Medium,9,1215.99,-113.85,0.20,2015-09-20,Pennsylvania
+CA-2016-100342,SF-20065,Sandra Flanagan,Consumer,Office Supplies,Paper,West,APAC,Second Class,Critical,5,1140.55,-644.14,0.45,2015-08-13,Pennsylvania
+CA-2016-100343,HP-14815,Harold Pawlan,Home Office,Furniture,Chairs,Central,LATAM,First Class,High,8,3230.48,-84.03,0.10,2014-05-18,Virginia
+CA-2015-100344,LC-16885,Lena Creighton,Home Office,Furniture,Tables,West,LATAM,First Class,High,2,693.64,-41.58,0.00,2014-09-18,Illinois
+CA-2016-100345,SF-20065,Sandra Flanagan,Consumer,Technology,Machines,East,APAC,First Class,High,6,88.92,2.51,0.00,2015-11-27,Virginia
+CA-2014-100346,MA-17560,Matt Abelman,Consumer,Technology,Phones,Central,LATAM,Same Day,Low,2,387.26,-38.17,0.20,2016-09-06,New York
+CA-2016-100347,IM-15070,Irene Maddox,Corporate,Office Supplies,Envelopes,Central,LATAM,First Class,Critical,6,971.10,60.00,0.20,2015-09-12,Pennsylvania
+CA-2016-100348,IM-15070,Irene Maddox,Consumer,Furniture,Bookcases,East,EU,Same Day,Low,3,1095.75,231.51,0.20,2015-12-19,New York
+CA-2014-100349,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Supplies,East,US,Same Day,High,1,18.05,-2.88,0.30,2014-03-27,Washington
+CA-2014-100350,PK-19075,Pete Kriz,Consumer,Technology,Machines,Central,APAC,Same Day,Critical,8,2520.88,106.84,0.10,2014-06-24,Virginia
+CA-2015-100351,AG-10270,Alejandro Grove,Home Office,Technology,Phones,South,APAC,First Class,Critical,3,1454.76,-778.19,0.45,2015-09-04,Virginia
+CA-2014-100352,PK-19075,Pete Kriz,Home Office,Furniture,Tables,East,APAC,First Class,Critical,5,930.30,-277.96,0.20,2014-01-11,Virginia
+CA-2015-100353,CG-12520,Claire Gute,Home Office,Technology,Phones,East,US,First Class,Medium,13,3134.95,933.64,0.00,2016-03-28,Pennsylvania
+CA-2015-100354,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Paper,South,EU,First Class,High,4,343.28,13.21,0.30,2014-08-14,Virginia
+CA-2015-100355,AG-10270,Alejandro Grove,Home Office,Office Supplies,Envelopes,South,APAC,Same Day,Medium,14,544.46,-60.85,0.10,2015-10-15,Illinois
+CA-2016-100356,CG-12520,Claire Gute,Corporate,Furniture,Bookcases,West,EU,Standard Class,Medium,9,143.55,-2.39,0.00,2014-05-09,California
+CA-2016-100357,MA-17560,Matt Abelman,Consumer,Furniture,Furnishings,Central,US,Second Class,Low,7,1114.61,165.72,0.30,2015-04-20,Florida
+CA-2014-100358,EB-13870,Emily Burns,Consumer,Furniture,Tables,East,LATAM,Same Day,Medium,3,300.42,39.42,0.20,2016-04-28,California
+CA-2015-100359,HP-14815,Harold Pawlan,Corporate,Office Supplies,Art,East,US,Standard Class,High,9,3012.03,22.10,0.10,2015-11-29,Ohio
+CA-2016-100360,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Envelopes,Central,US,Second Class,High,6,2665.92,886.76,0.10,2014-08-30,North Carolina
+CA-2016-100361,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Envelopes,East,APAC,Standard Class,Medium,1,484.57,-68.20,0.45,2015-05-02,Texas
+CA-2016-100362,MA-17560,Matt Abelman,Home Office,Furniture,Furnishings,West,EU,Same Day,Medium,13,4087.72,127.07,0.00,2014-06-07,Illinois
+CA-2015-100363,SN-20710,Stephanie Phelps,Home Office,Technology,Machines,East,APAC,Standard Class,Critical,13,5803.72,-1660.56,0.10,2015-01-22,Ohio
+CA-2015-100364,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Supplies,South,APAC,Second Class,Low,12,2971.20,-1570.85,0.45,2014-12-23,Virginia
+CA-2016-100365,AA-10315,Alex Avila,Home Office,Office Supplies,Fasteners,South,EU,Standard Class,High,14,1895.04,-198.69,0.20,2016-03-05,North Carolina
+CA-2015-100366,PK-19075,Pete Kriz,Home Office,Office Supplies,Art,East,APAC,First Class,Critical,11,5321.25,-2003.90,0.30,2015-12-01,Illinois
+CA-2014-100367,BH-11710,Brosina Hoffman,Consumer,Furniture,Bookcases,South,EU,Standard Class,Low,1,418.42,-76.94,0.10,2014-02-02,North Carolina
+CA-2014-100368,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Storage,West,US,Second Class,Critical,9,2824.83,-1366.20,0.45,2015-01-11,New York
+CA-2016-100369,TB-21520,Tracy Blumstein,Consumer,Technology,Accessories,Central,US,Standard Class,High,6,1687.32,57.90,0.30,2016-03-24,New York
+CA-2016-100370,HP-14815,Harold Pawlan,Home Office,Technology,Accessories,East,EU,Same Day,Low,2,727.92,-290.83,0.45,2014-07-17,North Carolina
+CA-2016-100371,SF-20065,Sandra Flanagan,Corporate,Technology,Phones,Central,EU,Same Day,High,12,4011.48,-367.35,0.00,2014-07-04,Illinois
+CA-2016-100372,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Labels,East,LATAM,First Class,High,7,2682.89,99.27,0.30,2014-11-28,Ohio
+CA-2014-100373,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Appliances,West,APAC,Second Class,Medium,12,265.92,-3.39,0.20,2015-06-15,Illinois
+CA-2014-100374,CG-12520,Claire Gute,Consumer,Technology,Machines,South,APAC,Second Class,Medium,9,2322.72,-111.84,0.45,2014-06-08,Florida
+CA-2016-100375,SF-20065,Sandra Flanagan,Consumer,Technology,Copiers,West,APAC,Same Day,Medium,4,527.36,-179.44,0.20,2015-02-14,Ohio
+CA-2014-100376,LC-16885,Lena Creighton,Corporate,Furniture,Furnishings,Central,LATAM,Same Day,Low,1,366.74,-147.43,0.45,2016-03-09,Washington
+CA-2014-100377,CV-12805,Cynthia Voltz,Corporate,Technology,Accessories,East,APAC,Second Class,Medium,11,4288.02,-1993.14,0.30,2015-06-21,California
+CA-2014-100378,EB-13870,Emily Burns,Corporate,Office Supplies,Supplies,West,LATAM,Standard Class,Critical,2,229.86,25.55,0.20,2014-06-01,Florida
+CA-2016-100379,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Supplies,South,LATAM,Second Class,Medium,7,2716.28,530.55,0.10,2015-05-08,Washington
+CA-2015-100380,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Paper,Central,APAC,Second Class,High,6,2063.70,-1221.22,0.45,2015-11-19,Illinois
+CA-2015-100381,RA-19885,Ruben Ausman,Home Office,Technology,Accessories,East,LATAM,Standard Class,Medium,13,2026.57,1.10,0.20,2016-04-02,Washington
+CA-2014-100382,SF-20065,Sandra Flanagan,Corporate,Furniture,Bookcases,West,APAC,Standard Class,High,2,742.18,235.13,0.10,2016-08-06,Ohio
+CA-2015-100383,MA-17560,Matt Abelman,Home Office,Furniture,Furnishings,South,EU,Standard Class,Critical,4,1485.24,-248.82,0.10,2015-06-20,North Carolina
+CA-2015-100384,GH-14410,Gary Hansen,Consumer,Furniture,Furnishings,South,US,Standard Class,Critical,3,104.25,22.20,0.10,2015-09-25,Florida
+CA-2016-100385,SF-20065,Sandra Flanagan,Home Office,Furniture,Bookcases,West,APAC,Same Day,Low,5,2171.85,-759.58,0.30,2015-01-25,Texas
+CA-2016-100386,HP-14815,Harold Pawlan,Corporate,Technology,Phones,Central,LATAM,Same Day,Medium,9,4171.86,-726.58,0.00,2016-08-02,California
+CA-2015-100387,SF-20065,Sandra Flanagan,Consumer,Technology,Machines,Central,LATAM,Standard Class,High,6,1886.94,655.52,0.10,2015-05-29,Washington
+CA-2016-100388,AA-10315,Alex Avila,Home Office,Office Supplies,Paper,East,LATAM,Second Class,Medium,11,802.34,-129.60,0.30,2015-11-26,Pennsylvania
+CA-2016-100389,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Machines,East,EU,First Class,Medium,8,2187.28,271.46,0.10,2015-08-18,Pennsylvania
+CA-2014-100390,AA-10315,Alex Avila,Corporate,Technology,Copiers,East,US,First Class,Critical,6,231.42,-7.73,0.45,2014-05-02,Pennsylvania
+CA-2016-100391,ZD-21925,Zuschuss Donatelli,Home Office,Office Supplies,Fasteners,Central,EU,Second Class,Medium,3,1171.98,-134.19,0.00,2014-01-27,California
+CA-2015-100392,SF-20065,Sandra Flanagan,Consumer,Furniture,Tables,South,LATAM,Same Day,Medium,3,760.95,-262.76,0.45,2015-10-28,Texas
+CA-2015-100393,HP-14815,Harold Pawlan,Consumer,Furniture,Bookcases,East,EU,Standard Class,Medium,7,2684.15,1077.77,0.00,2016-08-31,Ohio
+CA-2014-100394,RA-19885,Ruben Ausman,Home Office,Office Supplies,Labels,South,APAC,Same Day,Low,14,3240.72,-71.58,0.10,2016-03-05,Virginia
+CA-2016-100395,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Storage,South,US,Second Class,High,14,6152.86,228.62,0.10,2015-02-10,Ohio
+CA-2016-100396,EB-13870,Emily Burns,Home Office,Office Supplies,Fasteners,East,LATAM,Same Day,Low,8,699.28,-1.02,0.20,2014-02-25,Virginia
+CA-2016-100397,BH-11710,Brosina Hoffman,Home Office,Furniture,Chairs,East,LATAM,Standard Class,High,7,1467.97,-710.21,0.30,2015-04-10,Illinois
+CA-2016-100398,CV-12805,Cynthia Voltz,Corporate,Technology,Copiers,West,LATAM,Second Class,Critical,12,4415.52,-555.44,0.00,2015-04-06,Virginia
+CA-2014-100399,EB-13870,Emily Burns,Home Office,Furniture,Chairs,West,LATAM,First Class,High,6,1709.52,-332.71,0.10,2014-05-29,Ohio
+CA-2015-100400,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Copiers,South,LATAM,Same Day,Low,2,899.56,-267.80,0.10,2016-02-23,North Carolina
+CA-2016-100401,MA-17560,Matt Abelman,Home Office,Furniture,Chairs,West,EU,First Class,Medium,10,3314.40,-773.59,0.30,2014-03-23,California
+CA-2016-100402,IM-15070,Irene Maddox,Home Office,Furniture,Bookcases,Central,APAC,Standard Class,Low,11,1955.36,498.60,0.10,2015-11-15,New York
+CA-2014-100403,EH-13945,Eric Hoffmann,Corporate,Furniture,Chairs,Central,US,Standard Class,High,11,1603.47,-445.79,0.45,2015-07-30,Illinois
+CA-2014-100404,SF-20065,Sandra Flanagan,Consumer,Office Supplies,Art,Central,APAC,Same Day,Medium,13,2814.89,-1710.89,0.45,2015-04-28,Washington
+CA-2016-100405,RA-19885,Ruben Ausman,Home Office,Furniture,Bookcases,Central,LATAM,First Class,High,10,3662.20,-30.50,0.45,2015-05-11,Virginia
+CA-2015-100406,LC-16885,Lena Creighton,Corporate,Technology,Machines,East,EU,First Class,Medium,3,927.21,-150.39,0.30,2015-10-10,California
+CA-2015-100407,BH-11710,Brosina Hoffman,Consumer,Furniture,Tables,Central,APAC,Second Class,Low,11,4393.18,965.26,0.10,2015-03-01,Washington
+CA-2014-100408,ZD-21925,Zuschuss Donatelli,Home Office,Office Supplies,Art,Central,APAC,Same Day,Low,5,768.20,-337.59,0.45,2014-01-07,Texas
+CA-2014-100409,HP-14815,Harold Pawlan,Corporate,Office Supplies,Labels,East,LATAM,First Class,Critical,11,2663.76,48.52,0.30,2015-10-24,Pennsylvania
+CA-2014-100410,DV-13045,Darrin Van Huff,Home Office,Technology,Machines,Central,APAC,Standard Class,Medium,10,3638.60,-142.40,0.20,2014-01-20,Florida
+CA-2014-100411,CG-12520,Claire Gute,Home Office,Office Supplies,Paper,West,APAC,First Class,Low,11,2964.17,210.87,0.10,2015-02-03,Florida
+CA-2014-100412,EH-13945,Eric Hoffmann,Consumer,Furniture,Tables,Central,US,Second Class,Low,4,755.72,-196.12,0.20,2014-11-06,Ohio
+CA-2016-100413,GH-14410,Gary Hansen,Corporate,Furniture,Tables,Central,EU,Standard Class,Medium,9,731.43,146.55,0.20,2016-01-21,Washington
+CA-2014-100414,DV-13045,Darrin Van Huff,Home Office,Office Supplies,Paper,West,APAC,Same Day,Low,12,5196.96,-1025.51,0.00,2016-08-12,New York
+CA-2015-100415,GH-14410,Gary Hansen,Consumer,Technology,Machines,East,APAC,First Class,High,1,290.89,4.44,0.20,2014-08-03,Ohio
+CA-2016-100416,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Binders,East,APAC,First Class,High,3,421.35,178.19,0.00,2015-07-28,Texas
+CA-2015-100417,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Copiers,East,US,Same Day,Low,3,120.81,-8.46,0.45,2015-07-08,New York
+CA-2016-100418,EB-13870,Emily Burns,Home Office,Furniture,Bookcases,South,APAC,First Class,High,7,1393.00,-98.44,0.45,2015-10-07,Washington
+CA-2016-100419,SN-20710,Stephanie Phelps,Home Office,Furniture,Tables,South,LATAM,Second Class,Medium,10,702.40,-306.79,0.30,2014-11-14,Texas
+CA-2015-100420,RA-19885,Ruben Ausman,Corporate,Office Supplies,Labels,South,US,Standard Class,Critical,7,670.32,75.55,0.20,2016-06-22,New York
+CA-2016-100421,SF-20065,Sandra Flanagan,Consumer,Office Supplies,Storage,South,US,First Class,Low,14,1253.70,-8.92,0.20,2014-05-11,Florida
+CA-2015-100422,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Paper,West,APAC,Second Class,Critical,10,2096.50,-1030.64,0.45,2014-06-12,Pennsylvania
+CA-2016-100423,LC-16885,Lena Creighton,Corporate,Office Supplies,Supplies,West,LATAM,First Class,Low,12,1462.80,410.44,0.00,2015-12-30,Ohio
+CA-2015-100424,IM-15070,Irene Maddox,Corporate,Office Supplies,Paper,West,US,Second Class,Medium,2,602.28,-89.51,0.45,2015-01-24,North Carolina
+CA-2016-100425,CV-12805,Cynthia Voltz,Corporate,Furniture,Chairs,East,EU,First Class,High,11,867.46,-399.49,0.45,2015-09-23,North Carolina
+CA-2014-100426,ZD-21925,Zuschuss Donatelli,Corporate,Office Supplies,Labels,West,APAC,Standard Class,Low,2,586.90,-5.18,0.45,2015-02-18,Virginia
+CA-2016-100427,SF-20065,Sandra Flanagan,Corporate,Furniture,Furnishings,South,LATAM,Same Day,Critical,14,286.16,-12.46,0.30,2015-02-08,Virginia
+CA-2015-100428,HP-14815,Harold Pawlan,Corporate,Technology,Copiers,East,APAC,Second Class,Medium,8,590.72,-236.30,0.45,2016-08-04,California
+CA-2014-100429,SO-20335,Sean O'Donnell,Consumer,Technology,Accessories,East,LATAM,Same Day,Critical,3,1086.18,-78.58,0.30,2016-09-25,North Carolina
+CA-2014-100430,IM-15070,Irene Maddox,Corporate,Office Supplies,Supplies,West,LATAM,Second Class,High,7,1947.82,-486.83,0.30,2014-08-20,Pennsylvania
+CA-2014-100431,SN-20710,Stephanie Phelps,Home Office,Technology,Machines,South,US,Second Class,High,1,489.23,-164.32,0.45,2015-01-13,Ohio
+CA-2016-100432,GH-14410,Gary Hansen,Corporate,Furniture,Bookcases,West,APAC,Standard Class,Critical,4,955.44,233.75,0.00,2015-07-07,Ohio
+CA-2016-100433,GH-14410,Gary Hansen,Home Office,Office Supplies,Labels,Central,APAC,Standard Class,Critical,7,1257.83,-266.68,0.20,2014-02-06,North Carolina
+CA-2014-100434,IM-15070,Irene Maddox,Consumer,Technology,Accessories,West,APAC,First Class,Medium,11,5447.53,-3444.23,0.45,2015-05-12,North Carolina
+CA-2016-100435,AG-10270,Alejandro Grove,Consumer,Office Supplies,Fasteners,South,APAC,Second Class,High,1,372.01,-199.58,0.45,2015-08-29,Washington
+CA-2014-100436,MA-17560,Matt Abelman,Corporate,Furniture,Bookcases,South,LATAM,Second Class,Critical,6,2952.72,257.19,0.10,2016-04-21,Texas
+CA-2015-100437,HP-14815,Harold Pawlan,Corporate,Technology,Machines,Central,LATAM,Second Class,Critical,1,322.92,-53.56,0.00,2015-04-21,Pennsylvania
+CA-2015-100438,MA-17560,Matt Abelman,Corporate,Office Supplies,Binders,Central,US,Standard Class,High,9,3922.11,-48.18,0.00,2016-03-27,Pennsylvania
+CA-2015-100439,RA-19885,Ruben Ausman,Corporate,Technology,Machines,East,EU,First Class,Medium,6,832.86,-28.34,0.00,2015-08-22,Illinois
+CA-2016-100440,SN-20710,Stephanie Phelps,Corporate,Furniture,Bookcases,Central,EU,First Class,High,14,540.96,-236.13,0.30,2014-04-17,Washington
+CA-2014-100441,DV-13045,Darrin Van Huff,Home Office,Furniture,Bookcases,West,US,Second Class,Critical,1,469.56,149.23,0.10,2015-10-16,North Carolina
+CA-2015-100442,IM-15070,Irene Maddox,Corporate,Furniture,Chairs,Central,APAC,Second Class,Low,5,754.05,162.28,0.00,2016-08-02,Florida
+CA-2014-100443,DV-13045,Darrin Van Huff,Corporate,Office Supplies,Paper,West,LATAM,Second Class,Critical,6,2988.00,660.78,0.20,2014-09-29,Texas
+CA-2014-100444,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Art,Central,US,Standard Class,Low,3,817.83,-292.82,0.30,2015-10-21,New York
+CA-2014-100445,LC-16885,Lena Creighton,Consumer,Technology,Machines,South,APAC,Second Class,High,13,2934.23,-1183.21,0.30,2015-10-18,Pennsylvania
+CA-2015-100446,LC-16885,Lena Creighton,Home Office,Furniture,Tables,South,US,First Class,High,8,1766.80,266.93,0.00,2014-01-04,Florida
+CA-2015-100447,EB-13870,Emily Burns,Home Office,Furniture,Bookcases,East,EU,Standard Class,Critical,6,1617.84,-562.53,0.20,2015-04-16,Washington
+CA-2016-100448,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Phones,East,EU,Standard Class,Medium,2,634.32,-53.14,0.20,2016-06-25,California
+CA-2016-100449,LC-16885,Lena Creighton,Corporate,Furniture,Tables,West,US,First Class,Low,7,253.26,-58.70,0.45,2015-05-27,Illinois
+CA-2016-100450,DV-13045,Darrin Van Huff,Consumer,Office Supplies,Art,East,US,Standard Class,Medium,4,1618.08,-569.66,0.45,2015-11-26,Ohio
+CA-2014-100451,CV-12805,Cynthia Voltz,Corporate,Furniture,Tables,West,LATAM,Second Class,Low,10,276.70,-80.43,0.10,2015-10-10,New York
+CA-2016-100452,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Envelopes,South,APAC,Standard Class,Medium,2,806.40,-226.38,0.30,2016-05-05,Illinois
+CA-2014-100453,HP-14815,Harold Pawlan,Home Office,Furniture,Chairs,Central,EU,Same Day,Medium,6,217.74,-67.11,0.20,2015-03-02,North Carolina
+CA-2014-100454,DV-13045,Darrin Van Huff,Corporate,Furniture,Bookcases,West,US,Standard Class,Medium,13,5517.85,-2237.57,0.45,2014-06-11,New York
+CA-2014-100455,CV-12805,Cynthia Voltz,Home Office,Technology,Machines,Central,LATAM,Same Day,Medium,7,2437.96,-121.82,0.30,2014-07-31,Texas
+CA-2016-100456,RA-19885,Ruben Ausman,Corporate,Technology,Accessories,Central,LATAM,Standard Class,Medium,10,941.00,-96.14,0.30,2014-04-01,Washington
+CA-2016-100457,BH-11710,Brosina Hoffman,Home Office,Technology,Accessories,East,APAC,Standard Class,Medium,10,1841.40,-589.43,0.45,2015-04-21,New York
+CA-2015-100458,AA-10315,Alex Avila,Consumer,Technology,Phones,South,APAC,First Class,Critical,8,738.24,-121.72,0.00,2015-01-08,California
+CA-2014-100459,BH-11710,Brosina Hoffman,Consumer,Technology,Accessories,South,APAC,Same Day,Medium,9,828.54,95.52,0.00,2014-04-29,Illinois
+CA-2014-100460,PK-19075,Pete Kriz,Consumer,Furniture,Furnishings,South,LATAM,Standard Class,Critical,4,214.16,14.01,0.30,2015-01-20,Texas
+CA-2016-100461,HP-14815,Harold Pawlan,Corporate,Technology,Phones,Central,EU,First Class,Medium,3,590.19,-1.46,0.10,2014-07-18,California
+CA-2015-100462,LC-16885,Lena Creighton,Consumer,Furniture,Furnishings,Central,EU,Second Class,Medium,3,180.00,-36.35,0.30,2014-06-25,New York
+CA-2015-100463,EH-13945,Eric Hoffmann,Consumer,Technology,Phones,South,EU,Second Class,High,14,6969.90,-2385.32,0.45,2015-04-19,Pennsylvania
+CA-2015-100464,LC-16885,Lena Creighton,Home Office,Furniture,Chairs,West,LATAM,Same Day,Critical,10,4496.30,616.53,0.30,2014-02-11,New York
+CA-2014-100465,TB-21520,Tracy Blumstein,Consumer,Office Supplies,Envelopes,Central,APAC,Second Class,Low,2,562.90,141.04,0.00,2015-02-21,California
+CA-2015-100466,MA-17560,Matt Abelman,Corporate,Technology,Machines,East,LATAM,Second Class,High,3,1059.42,-174.02,0.45,2014-01-25,Ohio
+CA-2015-100467,CV-12805,Cynthia Voltz,Corporate,Furniture,Bookcases,East,US,First Class,Low,7,3130.75,-171.88,0.20,2014-10-31,Virginia
+CA-2014-100468,SF-20065,Sandra Flanagan,Home Office,Furniture,Bookcases,West,EU,Second Class,High,7,1301.79,-811.58,0.45,2015-01-11,Washington
+CA-2014-100469,SN-20710,Stephanie Phelps,Home Office,Furniture,Tables,East,APAC,First Class,High,12,5638.56,-472.31,0.45,2015-12-21,Virginia
+CA-2014-100470,EH-13945,Eric Hoffmann,Corporate,Office Supplies,Appliances,Central,LATAM,First Class,Low,2,379.08,-69.73,0.30,2015-06-24,Washington
+CA-2014-100471,TB-21520,Tracy Blumstein,Consumer,Furniture,Bookcases,Central,US,Second Class,Critical,7,3146.36,701.22,0.20,2014-03-20,Texas
+CA-2015-100472,HP-14815,Harold Pawlan,Corporate,Technology,Accessories,South,US,First Class,Medium,5,1055.95,-46.86,0.45,2015-05-01,New York
+CA-2016-100473,CG-12520,Claire Gute,Home Office,Furniture,Furnishings,South,LATAM,First Class,Medium,7,2040.22,-171.39,0.20,2015-11-13,Florida
+CA-2014-100474,IM-15070,Irene Maddox,Corporate,Office Supplies,Envelopes,Central,LATAM,Second Class,Medium,8,1512.72,151.78,0.20,2014-02-18,Virginia
+CA-2014-100475,ZD-21925,Zuschuss Donatelli,Corporate,Furniture,Chairs,East,LATAM,First Class,High,14,4977.28,-971.49,0.10,2014-04-30,Texas
+CA-2016-100476,HP-14815,Harold Pawlan,Consumer,Technology,Accessories,Central,US,Standard Class,Critical,11,1780.79,-541.07,0.20,2015-04-05,Ohio
+CA-2016-100477,AA-10315,Alex Avila,Home Office,Office Supplies,Labels,Central,LATAM,First Class,Medium,3,21.39,-0.34,0.45,2014-12-06,North Carolina
+CA-2014-100478,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Art,West,LATAM,Second Class,Critical,12,2905.20,-317.76,0.00,2015-07-19,Illinois
+CA-2015-100479,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Appliances,West,US,Same Day,Low,10,3224.50,-992.56,0.45,2016-03-11,Virginia
+CA-2016-100480,EB-13870,Emily Burns,Corporate,Furniture,Tables,South,EU,Same Day,High,6,1821.42,-67.01,0.45,2016-07-19,Pennsylvania
+CA-2014-100481,SF-20065,Sandra Flanagan,Home Office,Furniture,Furnishings,South,LATAM,Same Day,High,6,1073.52,73.32,0.30,2014-03-31,Texas
+CA-2015-100482,EH-13945,Eric Hoffmann,Corporate,Technology,Phones,Central,US,Same Day,Low,3,1255.74,-745.97,0.45,2014-08-01,California
+CA-2014-100483,EH-13945,Eric Hoffmann,Consumer,Technology,Machines,East,LATAM,First Class,Critical,7,640.99,-24.58,0.30,2016-02-13,California
+CA-2014-100484,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Machines,Central,APAC,Same Day,Low,8,2254.72,-798.31,0.30,2016-03-21,Florida
+CA-2015-100485,EH-13945,Eric Hoffmann,Consumer,Furniture,Tables,Central,LATAM,Same Day,High,12,3890.04,-476.22,0.00,2014-10-11,Ohio
+CA-2014-100486,BH-11710,Brosina Hoffman,Corporate,Office Supplies,Supplies,South,EU,First Class,Medium,12,3477.12,-1022.79,0.20,2014-03-01,California
+CA-2016-100487,AG-10270,Alejandro Grove,Home Office,Office Supplies,Paper,West,EU,Second Class,Low,11,5021.39,-1849.56,0.20,2014-10-26,North Carolina
+CA-2016-100488,IM-15070,Irene Maddox,Corporate,Technology,Machines,West,APAC,Second Class,Low,14,2261.28,-505.51,0.20,2015-12-16,Texas
+CA-2014-100489,GH-14410,Gary Hansen,Consumer,Office Supplies,Labels,East,EU,Second Class,Low,13,3185.39,632.59,0.20,2014-06-16,Pennsylvania
+CA-2016-100490,TB-21520,Tracy Blumstein,Corporate,Furniture,Bookcases,East,LATAM,First Class,Medium,14,979.44,109.39,0.00,2014-11-16,Florida
+CA-2014-100491,CG-12520,Claire Gute,Consumer,Technology,Accessories,East,US,Same Day,Low,4,274.84,40.46,0.10,2014-11-11,New York
+CA-2016-100492,CG-12520,Claire Gute,Consumer,Office Supplies,Paper,South,US,First Class,Low,1,102.19,32.24,0.00,2015-06-10,New York
+CA-2016-100493,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Accessories,East,APAC,Standard Class,Low,13,686.01,273.08,0.00,2014-07-30,Texas
+CA-2014-100494,AG-10270,Alejandro Grove,Home Office,Technology,Machines,West,US,Standard Class,Medium,6,506.88,-72.22,0.45,2015-09-20,Washington
+CA-2016-100495,ZD-21925,Zuschuss Donatelli,Corporate,Furniture,Bookcases,Central,EU,Same Day,Low,12,646.20,192.77,0.10,2016-05-21,Texas
+CA-2014-100496,SF-20065,Sandra Flanagan,Corporate,Office Supplies,Paper,West,EU,Same Day,High,4,1038.20,-442.95,0.30,2014-11-18,Florida
+CA-2016-100497,SN-20710,Stephanie Phelps,Home Office,Technology,Accessories,Central,LATAM,Second Class,Critical,2,334.84,16.78,0.00,2015-04-13,Florida
+CA-2015-100498,EH-13945,Eric Hoffmann,Home Office,Furniture,Bookcases,West,LATAM,Same Day,Low,14,5630.94,-1596.13,0.20,2015-11-22,New York
+CA-2014-100499,AA-10315,Alex Avila,Consumer,Office Supplies,Paper,Central,EU,First Class,Medium,12,3567.96,1005.92,0.00,2016-07-02,North Carolina
+CA-2016-100500,EB-13870,Emily Burns,Home Office,Furniture,Chairs,Central,LATAM,First Class,Critical,14,3013.22,-961.11,0.30,2016-01-01,North Carolina
+CA-2015-100501,EB-13870,Emily Burns,Corporate,Office Supplies,Supplies,East,EU,Standard Class,Low,5,389.75,-167.51,0.30,2014-09-14,California
+CA-2016-100502,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Appliances,West,LATAM,Same Day,Medium,3,583.20,-175.38,0.20,2015-09-29,Florida
+CA-2014-100503,MA-17560,Matt Abelman,Corporate,Office Supplies,Supplies,West,LATAM,Same Day,High,5,1367.55,-403.01,0.45,2016-09-02,Pennsylvania
+CA-2015-100504,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Appliances,East,APAC,Same Day,Critical,1,92.55,16.20,0.20,2014-06-18,New York
+CA-2016-100505,LC-16885,Lena Creighton,Consumer,Technology,Phones,West,LATAM,First Class,Critical,11,3070.32,-853.74,0.45,2015-05-03,North Carolina
+CA-2014-100506,EB-13870,Emily Burns,Consumer,Technology,Machines,Central,APAC,Standard Class,High,13,6357.00,-2288.99,0.20,2015-08-28,Pennsylvania
+CA-2014-100507,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Labels,Central,US,Standard Class,High,6,1253.46,288.05,0.00,2014-09-11,New York
+CA-2016-100508,KB-16585,Ken Black,Home Office,Furniture,Bookcases,South,APAC,Standard Class,Critical,9,1497.87,-108.52,0.30,2015-03-09,North Carolina
+CA-2014-100509,CG-12520,Claire Gute,Home Office,Office Supplies,Paper,East,APAC,Same Day,High,10,1982.00,-1162.40,0.45,2015-05-16,Texas
+CA-2014-100510,RA-19885,Ruben Ausman,Corporate,Office Supplies,Labels,Central,US,First Class,Critical,7,734.09,254.18,0.00,2015-07-03,Washington
+CA-2014-100511,RA-19885,Ruben Ausman,Home Office,Technology,Accessories,South,LATAM,Second Class,High,12,5074.44,937.31,0.00,2014-10-07,New York
+CA-2015-100512,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Supplies,South,EU,Standard Class,Medium,13,1994.85,-890.34,0.45,2015-03-01,North Carolina
+CA-2015-100513,MA-17560,Matt Abelman,Home Office,Furniture,Tables,West,EU,First Class,Critical,5,2344.50,-291.17,0.45,2016-05-23,Texas
+CA-2014-100514,PK-19075,Pete Kriz,Home Office,Furniture,Furnishings,East,LATAM,First Class,High,14,3087.28,491.25,0.20,2016-07-22,Texas
+CA-2015-100515,AG-10270,Alejandro Grove,Corporate,Technology,Copiers,South,LATAM,Same Day,Low,7,861.35,-150.96,0.10,2014-09-09,Washington
+CA-2016-100516,IM-15070,Irene Maddox,Consumer,Office Supplies,Binders,South,US,Standard Class,Low,1,132.91,3.74,0.20,2014-06-30,Illinois
+CA-2016-100517,RA-19885,Ruben Ausman,Consumer,Office Supplies,Art,East,US,Standard Class,High,7,3142.30,182.20,0.00,2016-05-09,Ohio
+CA-2015-100518,SO-20335,Sean O'Donnell,Home Office,Furniture,Bookcases,East,LATAM,Second Class,Medium,13,5256.03,741.19,0.20,2016-01-25,New York
+CA-2015-100519,IM-15070,Irene Maddox,Home Office,Furniture,Furnishings,West,APAC,Same Day,Critical,8,1657.20,-1016.94,0.45,2015-07-01,Washington
+CA-2016-100520,AG-10270,Alejandro Grove,Consumer,Furniture,Furnishings,West,EU,First Class,Critical,8,2874.08,-1110.26,0.20,2016-09-17,Florida
+CA-2015-100521,CV-12805,Cynthia Voltz,Corporate,Technology,Machines,West,LATAM,First Class,High,13,4474.60,-386.97,0.45,2016-05-28,New York
+CA-2016-100522,PK-19075,Pete Kriz,Corporate,Office Supplies,Envelopes,West,APAC,Standard Class,Critical,14,6239.38,-559.18,0.30,2016-06-19,Ohio
+CA-2014-100523,EH-13945,Eric Hoffmann,Corporate,Office Supplies,Paper,South,APAC,Same Day,Low,14,765.80,117.94,0.10,2015-06-03,California
+CA-2016-100524,CV-12805,Cynthia Voltz,Corporate,Technology,Copiers,Central,US,Standard Class,Medium,11,2469.39,-735.88,0.10,2014-07-24,Washington
+CA-2015-100525,GH-14410,Gary Hansen,Corporate,Technology,Copiers,East,APAC,Second Class,High,14,4186.56,63.71,0.30,2014-11-24,Florida
+CA-2016-100526,HP-14815,Harold Pawlan,Consumer,Furniture,Tables,West,US,Second Class,Low,6,570.24,65.06,0.30,2016-06-24,Ohio
+CA-2014-100527,HP-14815,Harold Pawlan,Corporate,Office Supplies,Binders,East,US,Standard Class,Critical,1,203.51,-22.33,0.30,2014-06-02,Ohio
+CA-2015-100528,MA-17560,Matt Abelman,Consumer,Furniture,Chairs,South,EU,Second Class,High,12,1266.72,-269.59,0.20,2015-05-22,Washington
+CA-2016-100529,EH-13945,Eric Hoffmann,Corporate,Furniture,Tables,East,APAC,Same Day,Low,13,1004.12,235.45,0.20,2014-08-30,California
+CA-2015-100530,MA-17560,Matt Abelman,Home Office,Furniture,Furnishings,Central,US,Standard Class,Low,12,2421.48,396.32,0.10,2015-12-27,California
+CA-2014-100531,KB-16585,Ken Black,Consumer,Furniture,Tables,Central,LATAM,First Class,Critical,6,2990.34,-564.52,0.45,2016-04-09,Illinois
+CA-2015-100532,AA-10315,Alex Avila,Corporate,Technology,Accessories,East,US,First Class,Critical,10,937.90,25.73,0.10,2016-08-10,Texas
+CA-2015-100533,AG-10270,Alejandro Grove,Home Office,Furniture,Furnishings,Central,LATAM,First Class,High,1,489.37,32.59,0.30,2016-05-04,North Carolina
+CA-2014-100534,AG-10270,Alejandro Grove,Home Office,Technology,Machines,South,US,Second Class,Medium,7,3128.09,247.01,0.20,2015-05-19,California
+CA-2015-100535,PK-19075,Pete Kriz,Consumer,Furniture,Bookcases,South,APAC,Same Day,Critical,8,1070.48,-231.57,0.30,2016-07-05,Ohio
+CA-2014-100536,BH-11710,Brosina Hoffman,Home Office,Technology,Copiers,Central,EU,Standard Class,Medium,2,356.10,94.12,0.10,2014-07-04,Pennsylvania
+CA-2016-100537,SO-20335,Sean O'Donnell,Consumer,Furniture,Tables,South,APAC,Standard Class,High,11,568.48,-217.80,0.20,2015-11-29,Texas
+CA-2015-100538,CG-12520,Claire Gute,Home Office,Furniture,Tables,West,APAC,Standard Class,Critical,14,4974.34,-1019.06,0.30,2016-09-05,Illinois
+CA-2016-100539,LC-16885,Lena Creighton,Consumer,Furniture,Chairs,South,US,Same Day,High,14,407.40,-77.38,0.20,2014-02-26,Texas
+CA-2015-100540,PK-19075,Pete Kriz,Home Office,Office Supplies,Art,East,US,First Class,Critical,1,426.91,-20.27,0.10,2015-02-17,Pennsylvania
+CA-2015-100541,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Copiers,South,APAC,Same Day,Low,6,2006.58,-133.99,0.20,2015-05-17,Pennsylvania
+CA-2015-100542,SF-20065,Sandra Flanagan,Home Office,Technology,Copiers,East,EU,Same Day,Low,7,2220.33,-385.71,0.00,2014-12-16,Florida
+CA-2015-100543,TB-21520,Tracy Blumstein,Consumer,Office Supplies,Art,South,APAC,Standard Class,Low,13,3138.46,1066.20,0.10,2015-12-02,California
+CA-2015-100544,GH-14410,Gary Hansen,Home Office,Furniture,Tables,West,US,Standard Class,Critical,7,362.39,-44.09,0.45,2014-12-30,Texas
+CA-2015-100545,IM-15070,Irene Maddox,Home Office,Office Supplies,Appliances,South,APAC,First Class,Medium,2,422.08,-82.70,0.20,2016-01-12,Washington
+CA-2015-100546,IM-15070,Irene Maddox,Consumer,Furniture,Furnishings,West,EU,Same Day,Critical,14,4736.76,-723.09,0.30,2014-01-06,Pennsylvania
+CA-2016-100547,RA-19885,Ruben Ausman,Home Office,Technology,Phones,South,APAC,Standard Class,Medium,5,1555.80,-646.48,0.45,2015-11-21,Texas
+CA-2015-100548,CG-12520,Claire Gute,Home Office,Furniture,Bookcases,East,EU,Same Day,Medium,14,180.04,46.51,0.10,2014-08-03,New York
+CA-2016-100549,ZD-21925,Zuschuss Donatelli,Home Office,Office Supplies,Binders,South,LATAM,Same Day,Low,8,1710.64,-157.43,0.00,2014-06-06,Ohio
+CA-2014-100550,LC-16885,Lena Creighton,Home Office,Furniture,Chairs,South,LATAM,Same Day,High,5,1434.35,-669.70,0.30,2014-01-09,California
+CA-2015-100551,MA-17560,Matt Abelman,Consumer,Office Supplies,Storage,West,US,Same Day,High,9,2678.04,-112.66,0.45,2016-07-15,Virginia
+CA-2015-100552,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Paper,South,US,Second Class,High,8,503.12,-19.96,0.45,2014-12-22,Washington
+CA-2016-100553,MA-17560,Matt Abelman,Home Office,Office Supplies,Storage,South,EU,First Class,Critical,4,1025.12,-60.59,0.45,2014-12-14,Pennsylvania
+CA-2016-100554,CV-12805,Cynthia Voltz,Home Office,Technology,Machines,West,LATAM,Second Class,Medium,13,3104.40,323.47,0.10,2014-10-17,Washington
+CA-2016-100555,IM-15070,Irene Maddox,Consumer,Technology,Phones,West,APAC,First Class,High,2,795.54,-240.75,0.30,2014-08-03,Texas
+CA-2014-100556,IM-15070,Irene Maddox,Home Office,Technology,Accessories,East,LATAM,First Class,High,13,474.63,-202.15,0.30,2014-08-21,Illinois
+CA-2016-100557,DV-13045,Darrin Van Huff,Consumer,Technology,Machines,South,LATAM,Standard Class,Low,3,1282.32,-329.83,0.45,2014-04-17,North Carolina
+CA-2015-100558,RA-19885,Ruben Ausman,Consumer,Furniture,Bookcases,Central,LATAM,Same Day,Low,9,514.62,188.38,0.00,2016-07-21,Texas
+CA-2014-100559,CV-12805,Cynthia Voltz,Consumer,Office Supplies,Labels,South,APAC,First Class,Medium,14,1024.80,-14.94,0.10,2015-03-02,New York
+CA-2016-100560,AG-10270,Alejandro Grove,Corporate,Office Supplies,Paper,East,EU,Same Day,Critical,6,1899.42,-382.64,0.10,2016-02-11,Pennsylvania
+CA-2014-100561,TB-21520,Tracy Blumstein,Consumer,Technology,Machines,Central,APAC,Same Day,Medium,1,224.08,59.71,0.00,2015-06-14,Pennsylvania
+CA-2016-100562,DV-13045,Darrin Van Huff,Home Office,Office Supplies,Appliances,Central,LATAM,Same Day,High,11,5078.15,1455.56,0.10,2014-03-01,Illinois
+CA-2016-100563,SF-20065,Sandra Flanagan,Consumer,Furniture,Furnishings,South,APAC,Same Day,Medium,9,2764.35,429.00,0.10,2015-04-02,Florida
+CA-2015-100564,SO-20335,Sean O'Donnell,Consumer,Furniture,Furnishings,West,APAC,First Class,Medium,7,2547.44,97.58,0.10,2015-07-08,California
+CA-2014-100565,CG-12520,Claire Gute,Home Office,Technology,Machines,West,APAC,First Class,High,4,1667.80,120.47,0.20,2015-06-02,New York
+CA-2016-100566,DV-13045,Darrin Van Huff,Home Office,Technology,Accessories,East,APAC,First Class,High,8,1219.92,115.34,0.00,2014-08-30,North Carolina
+CA-2014-100567,AA-10315,Alex Avila,Corporate,Technology,Phones,South,US,Second Class,Critical,9,3330.63,43.63,0.00,2015-08-20,Pennsylvania
+CA-2015-100568,SO-20335,Sean O'Donnell,Home Office,Furniture,Bookcases,South,LATAM,First Class,Critical,7,3113.67,-1122.14,0.30,2014-03-21,Pennsylvania
+CA-2015-100569,TB-21520,Tracy Blumstein,Home Office,Technology,Phones,South,EU,Standard Class,Medium,12,5841.24,-1204.32,0.10,2014-05-11,Ohio
+CA-2014-100570,MA-17560,Matt Abelman,Consumer,Furniture,Chairs,Central,APAC,Standard Class,Medium,9,1690.38,322.93,0.00,2015-02-23,New York
+CA-2016-100571,SF-20065,Sandra Flanagan,Corporate,Office Supplies,Labels,West,APAC,First Class,Medium,5,752.60,236.53,0.00,2014-05-26,Texas
+CA-2015-100572,MA-17560,Matt Abelman,Home Office,Furniture,Bookcases,South,APAC,Same Day,Critical,9,1598.22,114.15,0.00,2015-08-10,North Carolina
+CA-2015-100573,AA-10315,Alex Avila,Consumer,Furniture,Tables,South,LATAM,Second Class,Critical,13,2960.36,-1193.50,0.30,2016-01-16,Illinois
+CA-2014-100574,SN-20710,Stephanie Phelps,Home Office,Furniture,Tables,Central,US,Standard Class,Medium,12,1707.60,619.64,0.00,2015-12-26,North Carolina
+CA-2014-100575,SN-20710,Stephanie Phelps,Home Office,Technology,Accessories,East,US,First Class,Medium,10,2632.70,-456.21,0.30,2014-01-20,Washington
+CA-2015-100576,LC-16885,Lena Creighton,Consumer,Office Supplies,Art,Central,LATAM,Second Class,Critical,13,3498.30,-485.67,0.20,2014-02-16,California
+CA-2014-100577,GH-14410,Gary Hansen,Consumer,Office Supplies,Paper,Central,US,Second Class,High,5,250.30,38.08,0.00,2014-10-20,Pennsylvania
+CA-2015-100578,IM-15070,Irene Maddox,Consumer,Furniture,Furnishings,South,APAC,First Class,Critical,3,55.35,-0.35,0.00,2014-04-12,New York
+CA-2016-100579,DV-13045,Darrin Van Huff,Corporate,Furniture,Chairs,West,APAC,Standard Class,High,13,3906.76,79.84,0.10,2016-02-10,Ohio
+CA-2015-100580,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Art,West,EU,Second Class,High,8,154.48,45.41,0.10,2014-01-20,North Carolina
+CA-2015-100581,EH-13945,Eric Hoffmann,Home Office,Office Supplies,Art,East,EU,Same Day,Critical,14,4476.08,934.93,0.10,2014-05-26,California
+CA-2015-100582,CG-12520,Claire Gute,Corporate,Office Supplies,Fasteners,Central,LATAM,First Class,Medium,11,5347.98,-860.42,0.00,2016-08-01,North Carolina
+CA-2015-100583,GH-14410,Gary Hansen,Home Office,Office Supplies,Appliances,West,EU,First Class,Critical,3,1112.70,-672.67,0.45,2014-04-02,Washington
+CA-2015-100584,RA-19885,Ruben Ausman,Corporate,Technology,Machines,East,APAC,First Class,Medium,11,5202.78,1231.84,0.20,2015-12-26,Ohio
+CA-2014-100585,RA-19885,Ruben Ausman,Home Office,Office Supplies,Appliances,East,LATAM,Same Day,Critical,12,854.28,167.19,0.00,2014-01-05,Virginia
+CA-2015-100586,SO-20335,Sean O'Donnell,Home Office,Technology,Accessories,Central,LATAM,Second Class,Low,9,182.88,-11.53,0.30,2014-12-28,New York
+CA-2016-100587,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Envelopes,East,US,First Class,Medium,8,77.04,22.57,0.00,2015-11-28,Washington
+CA-2016-100588,MA-17560,Matt Abelman,Corporate,Office Supplies,Appliances,West,APAC,Same Day,Medium,5,1244.75,-639.92,0.45,2014-07-20,Virginia
+CA-2016-100589,HP-14815,Harold Pawlan,Consumer,Technology,Copiers,Central,EU,Standard Class,High,2,592.28,-69.40,0.00,2016-08-13,Virginia
+CA-2015-100590,TB-21520,Tracy Blumstein,Corporate,Furniture,Tables,Central,US,Same Day,Critical,11,3719.98,1320.63,0.00,2014-11-27,Illinois
+CA-2014-100591,GH-14410,Gary Hansen,Corporate,Furniture,Chairs,East,APAC,Standard Class,Low,1,142.58,-21.95,0.30,2014-11-20,Washington
+CA-2014-100592,EH-13945,Eric Hoffmann,Consumer,Furniture,Chairs,South,LATAM,Standard Class,High,4,345.68,-124.15,0.20,2015-10-03,Florida
+CA-2014-100593,PK-19075,Pete Kriz,Consumer,Furniture,Tables,South,US,Same Day,Low,4,1918.44,640.88,0.00,2015-06-17,New York
+CA-2015-100594,DV-13045,Darrin Van Huff,Consumer,Furniture,Tables,Central,LATAM,Standard Class,Low,6,2673.54,825.38,0.00,2014-03-05,California
+CA-2014-100595,SN-20710,Stephanie Phelps,Home Office,Furniture,Furnishings,West,LATAM,Same Day,Critical,14,2713.48,546.08,0.00,2015-02-25,Pennsylvania
+CA-2016-100596,RA-19885,Ruben Ausman,Consumer,Technology,Accessories,West,US,Standard Class,Low,6,1963.26,186.80,0.00,2014-12-03,North Carolina
+CA-2016-100597,HP-14815,Harold Pawlan,Corporate,Technology,Copiers,East,EU,Second Class,Low,11,2825.90,-357.04,0.20,2016-01-13,California
+CA-2016-100598,AA-10315,Alex Avila,Consumer,Office Supplies,Paper,East,LATAM,First Class,High,9,4320.63,-854.31,0.20,2016-06-25,Florida
+CA-2015-100599,SF-20065,Sandra Flanagan,Consumer,Furniture,Chairs,East,EU,Standard Class,High,1,122.51,-11.25,0.45,2015-03-09,Washington
+CA-2016-100600,MA-17560,Matt Abelman,Corporate,Technology,Phones,South,APAC,Second Class,Low,10,3477.40,-980.76,0.45,2014-12-10,Ohio
+CA-2014-100601,DV-13045,Darrin Van Huff,Corporate,Office Supplies,Envelopes,Central,LATAM,Second Class,Critical,1,321.19,1.04,0.10,2014-08-07,Texas
+CA-2015-100602,CG-12520,Claire Gute,Consumer,Office Supplies,Appliances,Central,US,Standard Class,Medium,2,364.30,-209.52,0.45,2014-10-25,Washington
+CA-2014-100603,ZD-21925,Zuschuss Donatelli,Consumer,Furniture,Chairs,West,EU,First Class,Low,5,1804.10,272.23,0.20,2014-09-09,California
+CA-2015-100604,AA-10315,Alex Avila,Home Office,Office Supplies,Art,East,LATAM,Standard Class,Low,6,2810.28,-290.77,0.20,2015-01-14,Texas
+CA-2016-100605,AA-10315,Alex Avila,Consumer,Furniture,Chairs,West,EU,First Class,Medium,9,1729.89,-334.44,0.20,2015-03-16,Illinois
+CA-2015-100606,PK-19075,Pete Kriz,Consumer,Furniture,Furnishings,West,LATAM,Standard Class,Medium,14,946.40,-19.45,0.45,2016-06-26,Virginia
+CA-2016-100607,EB-13870,Emily Burns,Home Office,Technology,Machines,South,LATAM,Same Day,High,8,2094.80,-190.24,0.10,2015-01-18,North Carolina
+CA-2015-100608,EB-13870,Emily Burns,Consumer,Technology,Accessories,Central,LATAM,Same Day,Medium,4,454.68,-2.80,0.10,2014-08-29,Illinois
+CA-2014-100609,AG-10270,Alejandro Grove,Home Office,Technology,Accessories,West,LATAM,First Class,Critical,3,1131.15,-125.64,0.20,2014-12-27,Ohio
+CA-2014-100610,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Paper,East,APAC,Standard Class,High,6,2419.38,-538.40,0.20,2014-01-26,New York
+CA-2015-100611,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Accessories,East,APAC,Second Class,High,13,1843.79,-435.20,0.10,2014-03-15,Florida
+CA-2016-100612,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Machines,Central,US,First Class,High,4,1417.16,494.54,0.10,2016-02-10,Illinois
+CA-2014-100613,EB-13870,Emily Burns,Home Office,Office Supplies,Appliances,East,LATAM,Second Class,Critical,8,2630.24,690.58,0.10,2014-08-22,Ohio
+CA-2016-100614,KB-16585,Ken Black,Consumer,Furniture,Furnishings,Central,EU,Second Class,High,14,1371.72,-498.99,0.30,2015-04-06,California
+CA-2016-100615,MA-17560,Matt Abelman,Home Office,Technology,Machines,Central,APAC,Standard Class,Low,6,699.72,-37.96,0.30,2015-02-18,Texas
+CA-2014-100616,AA-10315,Alex Avila,Corporate,Office Supplies,Paper,West,APAC,Same Day,High,7,742.56,-340.53,0.30,2015-01-31,New York
+CA-2014-100617,IM-15070,Irene Maddox,Consumer,Furniture,Chairs,South,APAC,Second Class,Medium,1,414.11,-137.65,0.45,2014-07-11,Florida
+CA-2015-100618,GH-14410,Gary Hansen,Corporate,Furniture,Tables,East,US,Second Class,Critical,1,187.48,-16.56,0.00,2016-05-30,Ohio
+CA-2016-100619,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Envelopes,East,APAC,Second Class,Critical,3,1307.61,-155.70,0.20,2015-12-28,Florida
+CA-2016-100620,HP-14815,Harold Pawlan,Corporate,Furniture,Chairs,South,LATAM,Same Day,Low,8,293.36,-31.35,0.30,2014-09-10,New York
+CA-2014-100621,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Phones,East,EU,Same Day,Critical,6,2109.96,-307.61,0.20,2016-04-23,Pennsylvania
+CA-2014-100622,IM-15070,Irene Maddox,Corporate,Technology,Accessories,Central,US,Second Class,Critical,7,2455.81,-108.54,0.00,2016-06-10,Pennsylvania
+CA-2015-100623,SN-20710,Stephanie Phelps,Corporate,Furniture,Furnishings,East,APAC,Second Class,Low,2,757.84,-115.00,0.45,2014-11-30,Ohio
+CA-2014-100624,CG-12520,Claire Gute,Consumer,Furniture,Tables,Central,US,Second Class,High,7,1225.77,68.95,0.30,2015-02-11,Ohio
+CA-2014-100625,MA-17560,Matt Abelman,Corporate,Office Supplies,Art,Central,EU,Second Class,Low,2,552.94,90.59,0.10,2015-03-25,North Carolina
+CA-2014-100626,BH-11710,Brosina Hoffman,Home Office,Furniture,Furnishings,Central,EU,Same Day,High,2,539.30,-210.60,0.30,2015-11-19,Texas
+CA-2016-100627,HP-14815,Harold Pawlan,Home Office,Technology,Accessories,West,LATAM,First Class,Critical,11,2953.39,-139.16,0.30,2016-05-06,California
+CA-2014-100628,RA-19885,Ruben Ausman,Consumer,Furniture,Bookcases,West,US,Same Day,Low,13,2493.53,757.37,0.10,2015-01-19,California
+CA-2016-100629,KB-16585,Ken Black,Consumer,Furniture,Bookcases,East,US,Same Day,Low,4,1918.32,610.03,0.00,2016-04-30,Illinois
+CA-2014-100630,KB-16585,Ken Black,Consumer,Technology,Copiers,East,US,First Class,High,10,1075.20,-422.78,0.45,2015-03-15,Texas
+CA-2015-100631,CG-12520,Claire Gute,Home Office,Office Supplies,Labels,Central,US,Standard Class,Medium,1,197.65,-70.55,0.30,2015-11-05,Pennsylvania
+CA-2014-100632,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Phones,Central,LATAM,Second Class,High,2,715.40,-385.28,0.45,2016-09-09,Texas
+CA-2016-100633,CV-12805,Cynthia Voltz,Corporate,Technology,Machines,South,EU,Standard Class,Medium,14,4687.90,83.53,0.00,2015-09-16,California
+CA-2014-100634,RA-19885,Ruben Ausman,Corporate,Furniture,Furnishings,South,APAC,Second Class,Medium,4,1481.08,152.33,0.10,2014-03-03,Pennsylvania
+CA-2016-100635,HP-14815,Harold Pawlan,Corporate,Technology,Accessories,East,APAC,First Class,Low,4,1848.36,-13.75,0.45,2015-03-31,Virginia
+CA-2016-100636,EH-13945,Eric Hoffmann,Consumer,Technology,Machines,East,EU,Same Day,High,13,217.49,-38.54,0.20,2014-07-30,Texas
+CA-2016-100637,TB-21520,Tracy Blumstein,Consumer,Technology,Accessories,East,EU,Standard Class,Medium,2,871.16,365.78,0.00,2014-02-23,North Carolina
+CA-2014-100638,SN-20710,Stephanie Phelps,Consumer,Furniture,Chairs,South,EU,Second Class,High,9,393.21,-117.00,0.30,2016-01-09,Florida
+CA-2015-100639,LC-16885,Lena Creighton,Corporate,Office Supplies,Envelopes,South,EU,Same Day,Critical,5,2159.50,-967.43,0.30,2016-09-22,Pennsylvania
+CA-2015-100640,GH-14410,Gary Hansen,Consumer,Technology,Phones,Central,EU,Second Class,High,13,1068.08,-520.29,0.30,2015-01-26,Pennsylvania
+CA-2014-100641,TB-21520,Tracy Blumstein,Home Office,Office Supplies,Storage,South,EU,Second Class,Medium,5,953.50,-321.76,0.45,2014-12-08,California
+CA-2016-100642,CG-12520,Claire Gute,Corporate,Technology,Machines,South,LATAM,First Class,Low,8,1642.00,182.57,0.30,2016-09-20,Pennsylvania
+CA-2016-100643,DV-13045,Darrin Van Huff,Corporate,Furniture,Tables,South,APAC,Standard Class,Critical,10,853.70,104.25,0.30,2016-02-29,Pennsylvania
+CA-2014-100644,PK-19075,Pete Kriz,Home Office,Furniture,Tables,East,APAC,Same Day,Medium,1,461.13,4.67,0.20,2015-11-24,Florida
+CA-2015-100645,PK-19075,Pete Kriz,Corporate,Technology,Copiers,West,EU,Same Day,Medium,1,62.78,13.74,0.00,2016-07-27,Pennsylvania
+CA-2015-100646,AG-10270,Alejandro Grove,Home Office,Technology,Machines,West,US,First Class,Medium,9,4356.00,-518.57,0.30,2016-01-22,Florida
+CA-2014-100647,HP-14815,Harold Pawlan,Consumer,Technology,Phones,South,LATAM,First Class,Critical,12,1890.12,435.96,0.10,2014-01-02,Texas
+CA-2014-100648,IM-15070,Irene Maddox,Corporate,Office Supplies,Binders,East,EU,Second Class,Low,12,857.88,-327.46,0.30,2016-08-29,Texas
+CA-2014-100649,HP-14815,Harold Pawlan,Consumer,Office Supplies,Paper,Central,US,Same Day,Low,8,2522.24,-1460.43,0.45,2015-10-14,Florida
+CA-2014-100650,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Appliances,Central,US,Standard Class,Low,10,1212.20,-75.98,0.30,2014-04-14,Washington
+CA-2015-100651,GH-14410,Gary Hansen,Home Office,Furniture,Tables,South,APAC,First Class,High,10,2624.40,540.32,0.20,2015-04-30,Illinois
+CA-2014-100652,PK-19075,Pete Kriz,Consumer,Office Supplies,Paper,South,LATAM,Second Class,Low,7,2151.45,360.37,0.20,2016-04-05,North Carolina
+CA-2016-100653,BH-11710,Brosina Hoffman,Home Office,Technology,Machines,South,LATAM,Second Class,Low,12,4523.52,-273.77,0.10,2015-09-26,Illinois
+CA-2016-100654,CG-12520,Claire Gute,Corporate,Technology,Machines,South,US,First Class,Critical,14,387.10,15.74,0.20,2014-08-28,Ohio
+CA-2016-100655,BH-11710,Brosina Hoffman,Home Office,Technology,Phones,West,EU,Same Day,Low,5,1527.75,405.48,0.10,2016-06-16,Florida
+CA-2014-100656,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Binders,East,US,Standard Class,Critical,8,3822.00,-264.80,0.30,2014-09-04,California
+CA-2016-100657,IM-15070,Irene Maddox,Consumer,Office Supplies,Paper,East,LATAM,Standard Class,High,13,1869.14,61.41,0.20,2016-09-01,Washington
+CA-2016-100658,LC-16885,Lena Creighton,Corporate,Technology,Accessories,East,EU,First Class,Low,11,1923.90,-144.20,0.30,2016-03-14,Florida
+CA-2016-100659,SO-20335,Sean O'Donnell,Corporate,Furniture,Bookcases,East,APAC,Same Day,Low,6,2229.54,410.24,0.10,2014-04-29,Florida
+CA-2016-100660,DV-13045,Darrin Van Huff,Consumer,Technology,Copiers,East,US,Same Day,Low,14,2759.82,-806.51,0.30,2015-01-09,Virginia
+CA-2014-100661,TB-21520,Tracy Blumstein,Home Office,Office Supplies,Binders,Central,EU,Standard Class,High,14,6604.22,164.39,0.10,2015-04-12,Florida
+CA-2014-100662,GH-14410,Gary Hansen,Corporate,Technology,Accessories,Central,LATAM,Standard Class,High,5,2492.20,-845.15,0.45,2016-04-28,Texas
+CA-2015-100663,HP-14815,Harold Pawlan,Corporate,Technology,Copiers,East,US,Same Day,High,12,4430.16,1138.14,0.10,2016-01-15,Pennsylvania
+CA-2014-100664,MA-17560,Matt Abelman,Home Office,Office Supplies,Paper,South,US,Second Class,High,7,283.85,-61.44,0.20,2016-08-03,North Carolina
+CA-2015-100665,DV-13045,Darrin Van Huff,Corporate,Technology,Machines,East,EU,Second Class,Medium,8,2632.32,-1475.64,0.45,2015-12-14,California
+CA-2016-100666,SF-20065,Sandra Flanagan,Consumer,Technology,Accessories,West,US,First Class,Critical,11,4332.02,-239.30,0.10,2015-03-14,Texas
+CA-2014-100667,DV-13045,Darrin Van Huff,Consumer,Furniture,Furnishings,West,EU,Same Day,Critical,10,2197.40,236.29,0.10,2015-02-18,Florida
+CA-2016-100668,RA-19885,Ruben Ausman,Corporate,Furniture,Tables,Central,LATAM,First Class,Low,13,4516.72,1379.97,0.00,2016-06-04,New York
+CA-2016-100669,BH-11710,Brosina Hoffman,Home Office,Furniture,Bookcases,South,APAC,Standard Class,Medium,8,2580.00,-1299.78,0.45,2015-08-24,Pennsylvania
+CA-2016-100670,MA-17560,Matt Abelman,Consumer,Technology,Phones,South,US,Same Day,Critical,5,1439.25,16.41,0.00,2016-01-01,New York
+CA-2016-100671,GH-14410,Gary Hansen,Consumer,Technology,Accessories,West,LATAM,First Class,Low,13,4910.49,-405.45,0.00,2015-09-06,California
+CA-2014-100672,AA-10315,Alex Avila,Consumer,Technology,Copiers,West,APAC,First Class,Medium,11,932.80,-450.64,0.45,2016-02-11,Pennsylvania
+CA-2016-100673,CG-12520,Claire Gute,Home Office,Furniture,Furnishings,South,EU,Same Day,High,1,473.38,-29.35,0.45,2014-10-28,Virginia
+CA-2014-100674,SF-20065,Sandra Flanagan,Corporate,Technology,Copiers,East,EU,Second Class,High,12,648.12,-29.74,0.00,2014-07-12,Florida
+CA-2014-100675,AA-10315,Alex Avila,Corporate,Technology,Phones,South,US,First Class,Critical,2,554.36,-84.17,0.20,2016-07-14,Texas
+CA-2016-100676,SN-20710,Stephanie Phelps,Home Office,Furniture,Bookcases,East,LATAM,Second Class,High,11,4044.37,664.85,0.10,2015-08-01,Pennsylvania
+CA-2015-100677,EB-13870,Emily Burns,Consumer,Furniture,Chairs,Central,US,First Class,High,2,277.42,-160.49,0.45,2015-07-16,Florida
+CA-2014-100678,AA-10315,Alex Avila,Consumer,Furniture,Furnishings,Central,LATAM,Standard Class,High,1,53.48,-2.88,0.10,2014-04-18,North Carolina
+CA-2015-100679,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Machines,Central,LATAM,Same Day,Medium,10,540.40,-48.10,0.00,2016-08-27,Florida
+CA-2014-100680,CG-12520,Claire Gute,Home Office,Technology,Copiers,Central,EU,Same Day,Critical,11,743.05,-97.40,0.30,2014-10-01,Texas
+CA-2014-100681,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Storage,West,APAC,Same Day,High,9,1322.82,-213.79,0.30,2016-01-06,New York
+CA-2014-100682,CV-12805,Cynthia Voltz,Home Office,Furniture,Bookcases,Central,LATAM,Standard Class,Critical,12,1485.84,-137.70,0.00,2014-02-28,Virginia
+CA-2014-100683,AA-10315,Alex Avila,Home Office,Office Supplies,Storage,East,US,Same Day,High,9,3097.26,-608.23,0.45,2015-02-20,Washington
+CA-2016-100684,GH-14410,Gary Hansen,Consumer,Technology,Accessories,East,US,First Class,Medium,10,2270.80,314.37,0.10,2016-06-22,Virginia
+CA-2016-100685,SF-20065,Sandra Flanagan,Consumer,Furniture,Tables,West,APAC,First Class,Critical,8,1541.20,354.97,0.20,2014-12-13,Florida
+CA-2016-100686,AG-10270,Alejandro Grove,Home Office,Furniture,Bookcases,West,LATAM,Same Day,Low,12,3809.16,-1366.15,0.30,2014-11-09,Illinois
+CA-2016-100687,CG-12520,Claire Gute,Consumer,Technology,Phones,South,APAC,Standard Class,Low,6,916.08,-180.15,0.00,2016-06-30,Pennsylvania
+CA-2015-100688,MA-17560,Matt Abelman,Consumer,Furniture,Bookcases,East,APAC,Second Class,Critical,9,2336.31,-77.17,0.10,2016-07-24,Pennsylvania
+CA-2015-100689,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Labels,South,EU,Second Class,High,7,3126.48,-382.98,0.45,2014-04-22,Pennsylvania
+CA-2016-100690,CG-12520,Claire Gute,Corporate,Office Supplies,Envelopes,West,EU,Second Class,Critical,2,197.68,-22.36,0.00,2015-03-08,Florida
+CA-2015-100691,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Storage,South,EU,Standard Class,Low,9,2252.79,-200.10,0.10,2016-02-22,California
+CA-2015-100692,AA-10315,Alex Avila,Corporate,Furniture,Furnishings,West,LATAM,Same Day,High,9,105.84,-28.17,0.10,2016-04-29,Florida
+CA-2014-100693,MA-17560,Matt Abelman,Corporate,Furniture,Tables,East,LATAM,Second Class,Critical,4,1242.88,-656.91,0.45,2014-10-15,New York
+CA-2014-100694,GH-14410,Gary Hansen,Consumer,Technology,Copiers,East,LATAM,Standard Class,High,4,1985.24,-478.86,0.45,2014-06-02,Washington
+CA-2015-100695,AA-10315,Alex Avila,Home Office,Office Supplies,Appliances,East,EU,First Class,Critical,10,1038.20,49.03,0.00,2015-06-22,Ohio
+CA-2015-100696,DV-13045,Darrin Van Huff,Home Office,Technology,Phones,South,EU,First Class,Low,11,336.27,-8.40,0.00,2014-10-15,Texas
+CA-2016-100697,DV-13045,Darrin Van Huff,Consumer,Furniture,Bookcases,South,EU,First Class,Critical,11,4110.15,-470.79,0.10,2014-10-14,Illinois
+CA-2015-100698,KB-16585,Ken Black,Corporate,Office Supplies,Art,Central,APAC,Second Class,High,2,672.26,-100.30,0.45,2014-05-14,Washington
+CA-2016-100699,LC-16885,Lena Creighton,Consumer,Office Supplies,Art,East,LATAM,Standard Class,Low,2,139.18,-79.58,0.45,2015-08-24,Virginia
+CA-2014-100700,RA-19885,Ruben Ausman,Consumer,Office Supplies,Fasteners,East,LATAM,First Class,High,12,2876.76,134.67,0.10,2014-06-07,Illinois
+CA-2016-100701,TB-21520,Tracy Blumstein,Consumer,Technology,Accessories,East,APAC,Second Class,High,7,269.64,-43.02,0.30,2016-09-02,California
+CA-2016-100702,LC-16885,Lena Creighton,Consumer,Furniture,Chairs,East,LATAM,Same Day,Critical,12,4898.28,-269.15,0.30,2016-06-10,Pennsylvania
+CA-2014-100703,RA-19885,Ruben Ausman,Home Office,Office Supplies,Envelopes,South,APAC,First Class,Medium,3,20.34,-10.34,0.45,2015-12-15,Florida
+CA-2016-100704,AG-10270,Alejandro Grove,Consumer,Technology,Accessories,Central,EU,First Class,Low,3,347.55,-172.09,0.45,2014-02-10,Washington
+CA-2014-100705,HP-14815,Harold Pawlan,Home Office,Technology,Accessories,Central,EU,Same Day,High,1,326.08,-5.89,0.45,2014-11-29,Illinois
+CA-2014-100706,DV-13045,Darrin Van Huff,Home Office,Technology,Accessories,West,LATAM,First Class,Medium,14,2533.44,-722.34,0.20,2016-09-21,Ohio
+CA-2016-100707,PK-19075,Pete Kriz,Home Office,Office Supplies,Fasteners,South,APAC,Second Class,Critical,4,1171.68,-467.30,0.30,2014-08-26,New York
+CA-2016-100708,MA-17560,Matt Abelman,Consumer,Furniture,Tables,Central,US,First Class,Medium,3,1226.16,-217.33,0.10,2015-05-18,Texas
+CA-2016-100709,EB-13870,Emily Burns,Corporate,Technology,Copiers,West,EU,Standard Class,Low,2,152.08,-51.80,0.30,2016-07-19,Pennsylvania
+CA-2014-100710,EB-13870,Emily Burns,Corporate,Furniture,Bookcases,East,US,Standard Class,Low,14,163.94,-18.70,0.00,2016-02-28,Virginia
+CA-2014-100711,KB-16585,Ken Black,Corporate,Technology,Accessories,Central,LATAM,Second Class,Medium,4,295.68,-20.68,0.45,2016-04-15,California
+CA-2016-100712,SN-20710,Stephanie Phelps,Corporate,Technology,Machines,West,LATAM,Second Class,Low,11,3014.99,1013.64,0.00,2014-04-16,Washington
+CA-2016-100713,CG-12520,Claire Gute,Corporate,Furniture,Tables,West,LATAM,Second Class,Low,7,545.65,-138.15,0.20,2016-06-19,Washington
+CA-2014-100714,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Labels,East,EU,Same Day,High,2,619.54,21.26,0.00,2016-08-04,North Carolina
+CA-2015-100715,IM-15070,Irene Maddox,Consumer,Technology,Phones,Central,LATAM,First Class,High,3,1341.27,8.17,0.20,2014-10-21,New York
+CA-2015-100716,CG-12520,Claire Gute,Consumer,Furniture,Chairs,West,LATAM,First Class,Medium,6,468.90,-14.60,0.30,2016-03-15,New York
+CA-2016-100717,KB-16585,Ken Black,Corporate,Furniture,Chairs,Central,EU,Second Class,Critical,13,2542.54,-200.27,0.20,2015-05-08,Pennsylvania
+CA-2014-100718,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Supplies,South,EU,Standard Class,Medium,9,2239.56,-259.98,0.45,2015-01-29,Illinois
+CA-2015-100719,CG-12520,Claire Gute,Corporate,Furniture,Bookcases,East,APAC,Same Day,Medium,6,1688.40,504.14,0.10,2014-03-03,Virginia
+CA-2016-100720,EH-13945,Eric Hoffmann,Consumer,Furniture,Chairs,South,US,Same Day,High,14,1626.38,-363.98,0.10,2015-12-14,California
+CA-2014-100721,BH-11710,Brosina Hoffman,Consumer,Technology,Accessories,East,US,Standard Class,Critical,8,3356.24,-941.02,0.10,2015-01-10,Texas
+CA-2015-100722,IM-15070,Irene Maddox,Corporate,Office Supplies,Binders,West,APAC,Standard Class,Medium,12,3193.08,-301.36,0.20,2016-01-10,California
+CA-2015-100723,CV-12805,Cynthia Voltz,Home Office,Furniture,Chairs,Central,APAC,Second Class,Critical,9,759.33,31.32,0.30,2015-11-28,Texas
+CA-2015-100724,AG-10270,Alejandro Grove,Consumer,Furniture,Tables,West,LATAM,Same Day,High,3,1118.55,-109.19,0.30,2014-08-13,Pennsylvania
+CA-2014-100725,EB-13870,Emily Burns,Consumer,Furniture,Bookcases,Central,APAC,Standard Class,Medium,13,2455.44,-916.92,0.30,2014-04-22,Florida
+CA-2014-100726,IM-15070,Irene Maddox,Home Office,Technology,Accessories,East,US,Second Class,High,2,219.80,64.12,0.00,2014-11-13,New York
+CA-2014-100727,LC-16885,Lena Creighton,Corporate,Technology,Accessories,West,APAC,First Class,Critical,10,4933.10,-2320.07,0.30,2014-11-19,Virginia
+CA-2015-100728,HP-14815,Harold Pawlan,Corporate,Office Supplies,Paper,West,EU,Standard Class,Critical,12,2173.68,340.67,0.10,2014-04-10,Ohio
+CA-2014-100729,LC-16885,Lena Creighton,Home Office,Furniture,Furnishings,East,EU,Second Class,Medium,3,240.03,-107.73,0.30,2015-10-03,Virginia
+CA-2015-100730,GH-14410,Gary Hansen,Consumer,Technology,Machines,South,EU,Second Class,Low,8,3150.00,-664.50,0.20,2015-10-01,Texas
+CA-2016-100731,LC-16885,Lena Creighton,Consumer,Technology,Phones,South,US,Same Day,High,2,806.68,159.81,0.10,2014-11-13,Texas
+CA-2016-100732,ZD-21925,Zuschuss Donatelli,Corporate,Furniture,Bookcases,Central,LATAM,First Class,Critical,5,1451.85,-496.53,0.20,2014-07-03,Texas
+CA-2016-100733,BH-11710,Brosina Hoffman,Home Office,Technology,Phones,East,LATAM,First Class,High,1,184.92,-25.78,0.20,2016-05-27,Illinois
+CA-2014-100734,SO-20335,Sean O'Donnell,Home Office,Technology,Phones,East,US,Second Class,Low,9,2050.20,417.01,0.00,2015-10-22,Florida
+CA-2014-100735,EB-13870,Emily Burns,Corporate,Furniture,Tables,South,LATAM,Same Day,Low,14,575.68,39.26,0.30,2015-11-17,New York
+CA-2015-100736,IM-15070,Irene Maddox,Corporate,Technology,Accessories,South,EU,Same Day,Low,7,2696.89,-105.21,0.10,2014-03-08,Florida
+CA-2016-100737,TB-21520,Tracy Blumstein,Corporate,Furniture,Chairs,West,APAC,Same Day,Critical,8,616.24,-56.62,0.10,2014-02-02,Washington
+CA-2014-100738,DV-13045,Darrin Van Huff,Consumer,Furniture,Bookcases,West,APAC,Same Day,Low,13,4464.46,-1054.30,0.20,2014-06-30,Florida
+CA-2014-100739,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Supplies,Central,APAC,Second Class,Medium,4,1345.88,-377.32,0.20,2014-02-25,Illinois
+CA-2015-100740,EH-13945,Eric Hoffmann,Home Office,Office Supplies,Storage,South,US,Second Class,Low,9,3113.73,1020.16,0.10,2015-03-24,North Carolina
+CA-2015-100741,RA-19885,Ruben Ausman,Consumer,Furniture,Furnishings,South,APAC,Standard Class,Critical,11,5425.75,-2120.27,0.20,2016-07-07,Florida
+CA-2016-100742,GH-14410,Gary Hansen,Consumer,Technology,Accessories,West,EU,Second Class,Critical,8,3775.60,423.96,0.10,2015-10-17,Virginia
+CA-2014-100743,IM-15070,Irene Maddox,Corporate,Technology,Phones,Central,US,First Class,High,4,709.20,235.19,0.10,2015-08-14,Virginia
+CA-2016-100744,BH-11710,Brosina Hoffman,Corporate,Technology,Phones,Central,US,Second Class,Critical,11,5494.83,-1281.66,0.30,2014-12-27,Pennsylvania
+CA-2016-100745,SF-20065,Sandra Flanagan,Corporate,Furniture,Chairs,Central,US,Standard Class,Low,9,1986.84,296.65,0.20,2015-12-07,New York
+CA-2016-100746,CV-12805,Cynthia Voltz,Corporate,Furniture,Tables,West,APAC,Same Day,Medium,2,501.44,-23.72,0.45,2014-04-13,Washington
+CA-2015-100747,TB-21520,Tracy Blumstein,Corporate,Technology,Phones,South,US,First Class,Medium,2,203.60,24.00,0.30,2014-12-26,Virginia
+CA-2015-100748,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Fasteners,West,US,Second Class,High,5,2100.25,-130.96,0.30,2014-01-05,Virginia
+CA-2015-100749,RA-19885,Ruben Ausman,Consumer,Office Supplies,Labels,South,US,Same Day,Medium,3,1439.34,-493.42,0.30,2016-09-23,Pennsylvania
+CA-2014-100750,IM-15070,Irene Maddox,Home Office,Office Supplies,Labels,West,LATAM,First Class,Medium,9,750.87,-176.66,0.10,2016-03-31,Illinois
+CA-2016-100751,HP-14815,Harold Pawlan,Home Office,Furniture,Bookcases,West,LATAM,Standard Class,Medium,1,221.52,-121.95,0.45,2015-09-25,Ohio
+CA-2014-100752,CV-12805,Cynthia Voltz,Home Office,Technology,Machines,South,APAC,Standard Class,High,3,370.98,-39.69,0.10,2015-07-03,New York
+CA-2016-100753,AA-10315,Alex Avila,Consumer,Technology,Accessories,West,EU,First Class,High,11,5417.17,-692.83,0.00,2016-08-07,Texas
+CA-2014-100754,SO-20335,Sean O'Donnell,Corporate,Furniture,Tables,West,LATAM,Standard Class,Medium,14,2574.46,-118.37,0.10,2015-05-18,Pennsylvania
+CA-2016-100755,EB-13870,Emily Burns,Home Office,Office Supplies,Storage,West,US,First Class,High,13,1101.75,-433.44,0.20,2014-07-02,Ohio
+CA-2016-100756,RA-19885,Ruben Ausman,Consumer,Technology,Accessories,West,EU,Second Class,High,3,789.81,159.76,0.20,2014-07-17,New York
+CA-2014-100757,HP-14815,Harold Pawlan,Consumer,Furniture,Furnishings,Central,APAC,Same Day,Critical,3,341.34,-43.03,0.10,2015-05-09,Pennsylvania
+CA-2016-100758,GH-14410,Gary Hansen,Home Office,Office Supplies,Envelopes,Central,EU,Second Class,Critical,5,453.05,102.03,0.20,2014-04-16,Pennsylvania
+CA-2014-100759,TB-21520,Tracy Blumstein,Home Office,Office Supplies,Fasteners,Central,APAC,Standard Class,Critical,14,2278.92,443.80,0.00,2015-03-16,Texas
+CA-2016-100760,DV-13045,Darrin Van Huff,Corporate,Technology,Machines,South,US,Standard Class,Medium,10,2078.60,-234.16,0.45,2015-10-23,Illinois
+CA-2015-100761,EH-13945,Eric Hoffmann,Consumer,Furniture,Furnishings,West,APAC,Standard Class,High,4,163.84,-25.92,0.20,2016-03-09,Washington
+CA-2016-100762,TB-21520,Tracy Blumstein,Consumer,Technology,Machines,West,APAC,Standard Class,Critical,4,1132.04,-357.33,0.30,2014-08-06,Pennsylvania
+CA-2015-100763,KB-16585,Ken Black,Consumer,Office Supplies,Envelopes,West,LATAM,Second Class,High,4,118.32,-20.81,0.30,2014-10-09,North Carolina
+CA-2015-100764,EB-13870,Emily Burns,Corporate,Furniture,Bookcases,East,LATAM,Standard Class,Low,5,69.15,-0.54,0.45,2016-07-22,Illinois
+CA-2015-100765,CV-12805,Cynthia Voltz,Corporate,Furniture,Bookcases,South,US,First Class,Critical,8,416.64,-12.45,0.30,2014-10-09,North Carolina
+CA-2014-100766,DV-13045,Darrin Van Huff,Corporate,Office Supplies,Fasteners,West,US,Second Class,Low,12,5904.72,304.90,0.30,2016-09-17,California
+CA-2014-100767,AA-10315,Alex Avila,Home Office,Furniture,Furnishings,Central,US,Standard Class,High,14,4835.04,-1706.18,0.30,2014-04-01,California
+CA-2015-100768,BH-11710,Brosina Hoffman,Home Office,Furniture,Furnishings,East,EU,Same Day,Low,2,271.08,-36.72,0.45,2015-01-24,Texas
+CA-2016-100769,KB-16585,Ken Black,Corporate,Furniture,Tables,South,APAC,First Class,Critical,11,2487.76,346.16,0.00,2014-09-04,Washington
+CA-2016-100770,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Fasteners,East,US,Standard Class,Critical,12,551.76,-58.98,0.45,2014-09-06,California
+CA-2014-100771,HP-14815,Harold Pawlan,Home Office,Furniture,Chairs,Central,APAC,Same Day,Medium,8,3281.28,55.68,0.10,2014-12-15,Virginia
+CA-2014-100772,BH-11710,Brosina Hoffman,Corporate,Furniture,Chairs,East,US,First Class,Critical,6,1175.16,75.34,0.30,2015-06-10,Texas
+CA-2014-100773,ZD-21925,Zuschuss Donatelli,Corporate,Technology,Accessories,East,APAC,Standard Class,Critical,3,699.51,198.85,0.00,2014-09-04,Virginia
+CA-2014-100774,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Fasteners,South,APAC,Standard Class,Critical,2,927.66,28.18,0.00,2014-08-06,Florida
+CA-2015-100775,SF-20065,Sandra Flanagan,Consumer,Furniture,Bookcases,Central,LATAM,Same Day,Low,11,2137.85,-799.44,0.30,2014-07-13,California
+CA-2014-100776,CV-12805,Cynthia Voltz,Home Office,Furniture,Bookcases,West,APAC,Second Class,Critical,4,248.08,43.14,0.00,2014-09-02,Pennsylvania
+CA-2014-100777,EB-13870,Emily Burns,Corporate,Furniture,Chairs,Central,APAC,Standard Class,Low,12,4954.92,-387.17,0.20,2014-06-25,Texas
+CA-2014-100778,GH-14410,Gary Hansen,Consumer,Technology,Phones,East,APAC,Same Day,Medium,12,1873.68,-354.78,0.10,2015-11-29,California
+CA-2016-100779,MA-17560,Matt Abelman,Consumer,Office Supplies,Labels,Central,LATAM,Standard Class,Critical,1,92.87,16.05,0.20,2014-06-24,Washington
+CA-2016-100780,MA-17560,Matt Abelman,Consumer,Furniture,Bookcases,East,US,Standard Class,High,14,190.54,27.24,0.20,2015-06-22,Illinois
+CA-2014-100781,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Labels,Central,APAC,Same Day,Low,9,1191.42,-399.37,0.30,2015-04-15,Florida
+CA-2015-100782,GH-14410,Gary Hansen,Corporate,Technology,Accessories,West,EU,Same Day,High,3,1468.29,188.81,0.10,2014-05-26,Washington
+CA-2016-100783,SO-20335,Sean O'Donnell,Corporate,Furniture,Tables,East,APAC,First Class,High,11,642.73,109.36,0.20,2015-11-27,Pennsylvania
+CA-2016-100784,LC-16885,Lena Creighton,Consumer,Office Supplies,Fasteners,South,LATAM,First Class,High,5,496.65,-154.93,0.45,2014-12-18,New York
+CA-2016-100785,CG-12520,Claire Gute,Home Office,Office Supplies,Binders,East,APAC,Same Day,High,8,2736.48,-59.28,0.45,2015-10-01,New York
+CA-2015-100786,ZD-21925,Zuschuss Donatelli,Consumer,Furniture,Tables,South,APAC,Standard Class,Low,1,112.58,-64.14,0.45,2015-05-16,Florida
+CA-2016-100787,AA-10315,Alex Avila,Corporate,Office Supplies,Fasteners,East,EU,Same Day,Low,13,5592.73,-3071.67,0.45,2014-03-30,Florida
+CA-2014-100788,PK-19075,Pete Kriz,Corporate,Furniture,Tables,Central,APAC,Second Class,Critical,6,768.72,-173.22,0.30,2016-09-17,Illinois
+CA-2014-100789,LC-16885,Lena Creighton,Corporate,Furniture,Chairs,South,EU,Same Day,Critical,5,360.85,-187.75,0.45,2014-11-09,New York
+CA-2015-100790,AA-10315,Alex Avila,Corporate,Technology,Phones,South,LATAM,Standard Class,Low,12,1920.72,-183.53,0.20,2015-03-14,Pennsylvania
+CA-2016-100791,SO-20335,Sean O'Donnell,Home Office,Furniture,Furnishings,Central,US,Same Day,Medium,13,1626.43,-662.73,0.45,2015-09-28,Pennsylvania
+CA-2016-100792,CG-12520,Claire Gute,Consumer,Office Supplies,Supplies,Central,US,First Class,Critical,8,3363.20,-553.08,0.00,2016-04-29,Illinois
+CA-2015-100793,DV-13045,Darrin Van Huff,Consumer,Furniture,Bookcases,East,EU,First Class,High,12,1278.12,83.50,0.10,2016-09-17,California
+CA-2016-100794,MA-17560,Matt Abelman,Consumer,Technology,Copiers,East,EU,Standard Class,Critical,2,76.48,7.07,0.10,2014-05-04,California
+CA-2014-100795,GH-14410,Gary Hansen,Home Office,Office Supplies,Paper,Central,LATAM,Standard Class,Critical,1,463.39,-63.50,0.20,2014-07-08,Texas
+CA-2016-100796,CV-12805,Cynthia Voltz,Home Office,Furniture,Chairs,East,LATAM,Same Day,High,3,1230.54,-232.57,0.10,2016-01-30,Florida
+CA-2014-100797,BH-11710,Brosina Hoffman,Corporate,Technology,Phones,South,LATAM,Second Class,Low,6,2013.06,-501.69,0.30,2016-03-30,Florida
+CA-2016-100798,TB-21520,Tracy Blumstein,Home Office,Furniture,Tables,South,US,First Class,Medium,1,292.37,64.12,0.00,2016-07-03,Ohio
+CA-2016-100799,TB-21520,Tracy Blumstein,Home Office,Office Supplies,Appliances,South,US,Second Class,Medium,3,546.27,-280.23,0.45,2016-07-13,Illinois
+CA-2016-100800,CV-12805,Cynthia Voltz,Corporate,Technology,Machines,South,US,Same Day,Critical,8,2872.16,-342.01,0.10,2016-02-20,Ohio
+CA-2015-100801,RA-19885,Ruben Ausman,Consumer,Technology,Copiers,Central,APAC,Same Day,Low,10,3557.10,-519.31,0.45,2015-06-23,California
+CA-2015-100802,CG-12520,Claire Gute,Corporate,Technology,Copiers,East,EU,Standard Class,Medium,4,211.16,26.32,0.00,2015-11-27,Pennsylvania
+CA-2015-100803,EH-13945,Eric Hoffmann,Corporate,Furniture,Bookcases,West,EU,First Class,Low,10,1289.90,452.01,0.00,2014-03-16,Ohio
+CA-2014-100804,EB-13870,Emily Burns,Home Office,Furniture,Chairs,East,LATAM,Second Class,Low,4,519.92,-30.54,0.30,2014-08-19,North Carolina
+CA-2015-100805,CG-12520,Claire Gute,Home Office,Technology,Accessories,West,APAC,Second Class,Critical,4,85.80,24.08,0.10,2015-01-04,Washington
+CA-2014-100806,HP-14815,Harold Pawlan,Consumer,Technology,Phones,South,LATAM,Same Day,Low,9,1613.61,-105.14,0.45,2016-05-23,North Carolina
+CA-2015-100807,SO-20335,Sean O'Donnell,Consumer,Furniture,Furnishings,East,APAC,First Class,Critical,2,126.74,-33.78,0.10,2015-07-08,Illinois
+CA-2016-100808,SO-20335,Sean O'Donnell,Home Office,Furniture,Furnishings,Central,LATAM,Standard Class,Low,2,539.08,137.24,0.10,2016-08-12,North Carolina
+CA-2014-100809,MA-17560,Matt Abelman,Consumer,Office Supplies,Appliances,East,APAC,Standard Class,Medium,1,172.33,-46.47,0.20,2016-06-28,Ohio
+CA-2014-100810,SO-20335,Sean O'Donnell,Home Office,Technology,Accessories,South,EU,First Class,Low,6,2943.72,-327.35,0.30,2015-09-20,New York
+CA-2014-100811,DV-13045,Darrin Van Huff,Consumer,Office Supplies,Supplies,West,US,Second Class,Critical,4,1307.68,-247.89,0.30,2016-03-11,California
+CA-2016-100812,SN-20710,Stephanie Phelps,Consumer,Office Supplies,Appliances,West,LATAM,Standard Class,High,7,2688.07,-55.60,0.10,2015-03-14,Illinois
+CA-2015-100813,HP-14815,Harold Pawlan,Home Office,Office Supplies,Paper,West,US,Second Class,Low,1,122.89,22.44,0.00,2014-08-21,New York
+CA-2014-100814,DV-13045,Darrin Van Huff,Corporate,Furniture,Tables,East,LATAM,Same Day,Low,3,434.67,-75.07,0.20,2015-11-02,New York
+CA-2014-100815,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Supplies,Central,APAC,First Class,Medium,4,999.96,183.46,0.20,2016-05-29,Virginia
+CA-2016-100816,AG-10270,Alejandro Grove,Corporate,Office Supplies,Supplies,Central,US,Second Class,Medium,9,510.03,94.50,0.20,2015-12-24,Virginia
+CA-2016-100817,PK-19075,Pete Kriz,Corporate,Office Supplies,Supplies,South,US,Standard Class,Critical,4,263.04,-72.78,0.10,2014-08-29,California
+CA-2016-100818,AG-10270,Alejandro Grove,Corporate,Office Supplies,Paper,South,US,Same Day,Critical,5,2072.25,-334.01,0.00,2016-05-25,Ohio
+CA-2015-100819,DV-13045,Darrin Van Huff,Consumer,Furniture,Chairs,Central,US,First Class,High,7,674.03,-103.72,0.30,2015-11-08,North Carolina
+CA-2016-100820,HP-14815,Harold Pawlan,Home Office,Furniture,Furnishings,West,US,Same Day,High,12,4985.64,312.76,0.30,2016-03-12,Virginia
+CA-2014-100821,TB-21520,Tracy Blumstein,Consumer,Office Supplies,Supplies,West,APAC,First Class,Low,5,427.30,-83.85,0.30,2016-08-04,Washington
+CA-2016-100822,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Labels,West,US,First Class,High,10,2003.30,-945.01,0.45,2014-10-03,Florida
+CA-2015-100823,IM-15070,Irene Maddox,Home Office,Office Supplies,Storage,East,LATAM,Standard Class,Low,1,222.76,-106.02,0.30,2015-01-03,Florida
+CA-2015-100824,RA-19885,Ruben Ausman,Corporate,Technology,Machines,East,EU,Second Class,Medium,2,446.04,43.66,0.20,2014-10-10,North Carolina
+CA-2015-100825,CV-12805,Cynthia Voltz,Home Office,Furniture,Chairs,Central,US,Second Class,Low,2,658.06,95.34,0.10,2016-05-31,Florida
+CA-2014-100826,AG-10270,Alejandro Grove,Home Office,Furniture,Furnishings,South,US,Standard Class,Medium,9,3245.13,-1614.28,0.45,2014-04-22,Washington
+CA-2015-100827,KB-16585,Ken Black,Consumer,Technology,Machines,West,APAC,First Class,High,14,5771.22,-2617.79,0.30,2015-03-13,Pennsylvania
+CA-2014-100828,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Storage,West,US,Second Class,High,5,1564.25,-94.80,0.10,2014-10-25,Virginia
+CA-2014-100829,GH-14410,Gary Hansen,Corporate,Technology,Machines,West,US,Second Class,Critical,4,770.12,-484.26,0.45,2016-01-14,Virginia
+CA-2015-100830,BH-11710,Brosina Hoffman,Consumer,Technology,Accessories,Central,EU,First Class,Medium,10,2388.00,-744.53,0.45,2014-11-21,Illinois
+CA-2015-100831,PK-19075,Pete Kriz,Corporate,Office Supplies,Labels,West,APAC,Standard Class,High,12,5836.08,-62.71,0.10,2016-09-07,Ohio
+CA-2016-100832,RA-19885,Ruben Ausman,Consumer,Furniture,Tables,South,EU,First Class,High,13,2760.29,-308.92,0.45,2014-05-09,Illinois
+CA-2014-100833,KB-16585,Ken Black,Consumer,Furniture,Bookcases,South,US,Second Class,Low,7,1493.87,111.16,0.10,2015-10-10,Pennsylvania
+CA-2016-100834,AG-10270,Alejandro Grove,Consumer,Technology,Phones,West,EU,Same Day,Critical,12,659.88,225.68,0.00,2014-01-25,Illinois
+CA-2015-100835,AA-10315,Alex Avila,Home Office,Office Supplies,Supplies,West,US,Standard Class,High,4,1429.72,27.06,0.00,2016-04-24,Ohio
+CA-2014-100836,EH-13945,Eric Hoffmann,Home Office,Technology,Phones,East,US,Second Class,Low,12,5018.76,464.13,0.20,2015-12-18,North Carolina
+CA-2015-100837,LC-16885,Lena Creighton,Consumer,Office Supplies,Storage,East,APAC,Same Day,High,7,1145.34,35.09,0.10,2015-08-26,California
+CA-2014-100838,LC-16885,Lena Creighton,Consumer,Technology,Phones,East,LATAM,First Class,High,5,823.95,76.01,0.20,2016-09-03,New York
+CA-2014-100839,SF-20065,Sandra Flanagan,Corporate,Office Supplies,Binders,Central,US,Second Class,High,2,294.96,-63.33,0.30,2016-06-25,Texas
+CA-2016-100840,BH-11710,Brosina Hoffman,Consumer,Furniture,Chairs,West,LATAM,Standard Class,High,1,301.20,127.68,0.00,2015-07-07,Washington
+CA-2014-100841,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Phones,West,LATAM,Same Day,Critical,12,2702.28,649.02,0.10,2014-10-30,Florida
+CA-2014-100842,SO-20335,Sean O'Donnell,Home Office,Furniture,Furnishings,West,APAC,Second Class,High,12,4032.12,493.40,0.20,2016-02-02,Florida
+CA-2016-100843,TB-21520,Tracy Blumstein,Home Office,Technology,Accessories,Central,EU,Standard Class,Low,12,4146.36,338.74,0.00,2016-08-12,Washington
+CA-2015-100844,AA-10315,Alex Avila,Consumer,Technology,Phones,South,APAC,Second Class,Medium,14,6606.18,-842.71,0.10,2014-06-05,New York
+CA-2016-100845,GH-14410,Gary Hansen,Consumer,Technology,Copiers,West,LATAM,First Class,Critical,1,219.99,-30.24,0.30,2014-08-02,North Carolina
+CA-2014-100846,PK-19075,Pete Kriz,Corporate,Technology,Machines,South,LATAM,Same Day,High,8,2140.64,579.32,0.10,2016-05-10,Virginia
+CA-2015-100847,MA-17560,Matt Abelman,Consumer,Office Supplies,Art,South,US,Second Class,Critical,4,242.48,-30.86,0.20,2015-04-03,Illinois
+CA-2015-100848,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Paper,South,EU,Standard Class,High,12,820.68,37.82,0.30,2016-06-03,Florida
+CA-2015-100849,GH-14410,Gary Hansen,Corporate,Furniture,Tables,South,LATAM,Same Day,High,1,283.32,-65.15,0.20,2014-11-22,California
+CA-2014-100850,AG-10270,Alejandro Grove,Home Office,Office Supplies,Envelopes,East,EU,Standard Class,High,6,1919.70,1.02,0.00,2015-02-24,Texas
+CA-2015-100851,RA-19885,Ruben Ausman,Corporate,Technology,Accessories,West,US,Second Class,High,12,185.40,-81.82,0.30,2015-12-23,Virginia
+CA-2015-100852,HP-14815,Harold Pawlan,Corporate,Furniture,Tables,South,EU,Second Class,Low,14,5044.48,609.55,0.20,2016-07-21,California
+CA-2015-100853,CG-12520,Claire Gute,Consumer,Technology,Accessories,East,EU,Standard Class,High,9,1817.82,-858.95,0.30,2014-10-17,New York
+CA-2014-100854,EB-13870,Emily Burns,Home Office,Technology,Phones,South,US,Standard Class,Medium,3,1230.18,197.18,0.20,2014-03-20,New York
+CA-2016-100855,LC-16885,Lena Creighton,Home Office,Office Supplies,Envelopes,West,APAC,First Class,Critical,14,4267.48,469.86,0.20,2015-03-12,Washington
+CA-2016-100856,BH-11710,Brosina Hoffman,Corporate,Office Supplies,Storage,South,APAC,Second Class,Critical,7,1044.12,-57.99,0.00,2015-02-21,California
+CA-2014-100857,MA-17560,Matt Abelman,Corporate,Technology,Phones,East,LATAM,First Class,Critical,6,2295.24,215.70,0.00,2015-08-15,North Carolina
+CA-2014-100858,BH-11710,Brosina Hoffman,Corporate,Technology,Machines,East,US,Second Class,Critical,6,457.02,-63.07,0.00,2014-06-23,North Carolina
+CA-2015-100859,MA-17560,Matt Abelman,Consumer,Technology,Copiers,West,APAC,Same Day,Low,1,384.87,-50.92,0.20,2016-01-29,Florida
+CA-2015-100860,HP-14815,Harold Pawlan,Home Office,Technology,Phones,West,US,Same Day,Low,9,2271.69,-206.28,0.10,2015-12-27,Pennsylvania
+CA-2014-100861,AA-10315,Alex Avila,Consumer,Furniture,Chairs,South,LATAM,Second Class,Critical,9,3377.97,-580.03,0.10,2016-06-09,Texas
+CA-2016-100862,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Paper,Central,APAC,Second Class,Medium,1,151.89,22.36,0.30,2016-01-08,Florida
+CA-2015-100863,GH-14410,Gary Hansen,Corporate,Technology,Copiers,East,APAC,Second Class,Medium,13,4016.09,-250.62,0.20,2014-09-15,Virginia
+CA-2014-100864,MA-17560,Matt Abelman,Corporate,Furniture,Furnishings,East,EU,Standard Class,Critical,7,656.04,-299.43,0.30,2016-09-27,Illinois
+CA-2014-100865,BH-11710,Brosina Hoffman,Corporate,Furniture,Tables,West,EU,First Class,High,10,824.40,11.23,0.20,2016-06-23,Pennsylvania
+CA-2016-100866,LC-16885,Lena Creighton,Home Office,Technology,Machines,East,US,Second Class,Low,6,1884.78,202.24,0.30,2015-07-29,Washington
+CA-2015-100867,AG-10270,Alejandro Grove,Corporate,Furniture,Furnishings,Central,LATAM,Second Class,Medium,10,556.50,-149.28,0.45,2016-02-24,California
+CA-2014-100868,PK-19075,Pete Kriz,Corporate,Furniture,Bookcases,West,US,Second Class,Critical,13,4022.07,-775.73,0.10,2016-06-14,Pennsylvania
+CA-2015-100869,MA-17560,Matt Abelman,Home Office,Office Supplies,Fasteners,South,APAC,First Class,High,9,3430.80,219.89,0.10,2015-01-22,Virginia
+CA-2015-100870,SO-20335,Sean O'Donnell,Home Office,Technology,Copiers,South,LATAM,First Class,Low,3,1419.06,88.52,0.20,2016-05-10,Virginia
+CA-2016-100871,EH-13945,Eric Hoffmann,Corporate,Technology,Machines,South,EU,Second Class,Critical,3,52.56,8.20,0.20,2016-02-29,Illinois
+CA-2015-100872,IM-15070,Irene Maddox,Corporate,Technology,Accessories,West,APAC,First Class,Low,4,895.32,-468.54,0.45,2015-08-24,North Carolina
+CA-2015-100873,AG-10270,Alejandro Grove,Corporate,Furniture,Furnishings,West,US,Same Day,Critical,11,2661.67,1190.38,0.00,2015-12-23,Ohio
+CA-2016-100874,IM-15070,Irene Maddox,Consumer,Office Supplies,Supplies,East,EU,Standard Class,Critical,13,733.46,-279.64,0.20,2016-07-04,New York
+CA-2014-100875,DV-13045,Darrin Van Huff,Home Office,Office Supplies,Appliances,West,APAC,First Class,Medium,6,319.50,-150.05,0.45,2016-05-23,North Carolina
+CA-2016-100876,SF-20065,Sandra Flanagan,Consumer,Technology,Accessories,Central,US,Second Class,Critical,11,2250.27,-355.05,0.00,2016-04-24,California
+CA-2014-100877,AG-10270,Alejandro Grove,Corporate,Technology,Copiers,Central,APAC,Standard Class,High,12,3062.52,345.90,0.10,2016-05-12,Ohio
+CA-2014-100878,LC-16885,Lena Creighton,Home Office,Technology,Accessories,West,EU,First Class,Low,10,4654.90,-579.21,0.00,2014-04-03,Texas
+CA-2016-100879,CG-12520,Claire Gute,Consumer,Furniture,Furnishings,East,APAC,Standard Class,Critical,8,361.84,-36.16,0.10,2015-11-29,Florida
+CA-2014-100880,IM-15070,Irene Maddox,Consumer,Office Supplies,Binders,Central,APAC,Same Day,High,10,1611.90,391.58,0.10,2014-10-07,New York
+CA-2016-100881,MA-17560,Matt Abelman,Consumer,Office Supplies,Labels,West,LATAM,Second Class,Medium,6,2323.92,-831.30,0.45,2015-10-09,Pennsylvania
+CA-2015-100882,SF-20065,Sandra Flanagan,Consumer,Technology,Machines,East,APAC,Second Class,Critical,4,697.52,-203.29,0.45,2016-01-31,Florida
+CA-2015-100883,DV-13045,Darrin Van Huff,Home Office,Furniture,Chairs,West,APAC,Standard Class,High,8,593.68,-261.25,0.45,2015-08-01,California
+CA-2015-100884,IM-15070,Irene Maddox,Consumer,Office Supplies,Storage,South,EU,Standard Class,Critical,6,1029.90,-80.72,0.00,2015-01-02,North Carolina
+CA-2016-100885,TB-21520,Tracy Blumstein,Corporate,Technology,Phones,South,LATAM,First Class,Low,12,2432.04,-330.34,0.10,2015-01-18,Washington
+CA-2014-100886,GH-14410,Gary Hansen,Home Office,Furniture,Tables,East,APAC,Second Class,Medium,7,2717.19,-1058.38,0.45,2014-01-30,Texas
+CA-2015-100887,KB-16585,Ken Black,Consumer,Furniture,Bookcases,South,US,Second Class,Medium,5,1987.35,439.14,0.10,2015-04-15,Texas
+CA-2014-100888,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Art,Central,US,Same Day,Medium,3,365.73,-5.94,0.10,2016-01-12,Illinois
+CA-2015-100889,BH-11710,Brosina Hoffman,Corporate,Office Supplies,Supplies,East,US,Same Day,Medium,11,2200.55,645.51,0.10,2015-11-16,Illinois
+CA-2014-100890,AA-10315,Alex Avila,Corporate,Office Supplies,Labels,South,US,Second Class,Medium,5,2054.00,-230.03,0.30,2015-07-01,Washington
+CA-2014-100891,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Labels,East,EU,Same Day,Medium,9,3712.50,-967.25,0.45,2015-02-12,California
+CA-2015-100892,HP-14815,Harold Pawlan,Corporate,Office Supplies,Paper,South,US,First Class,Critical,2,346.20,-8.06,0.10,2014-10-19,Texas
+CA-2014-100893,IM-15070,Irene Maddox,Home Office,Office Supplies,Supplies,South,US,Second Class,High,14,807.52,20.26,0.00,2016-01-21,Texas
+CA-2015-100894,LC-16885,Lena Creighton,Corporate,Technology,Phones,West,APAC,Same Day,High,11,2530.77,-189.86,0.30,2015-11-18,New York
+CA-2015-100895,RA-19885,Ruben Ausman,Consumer,Office Supplies,Supplies,East,LATAM,Same Day,Low,6,2349.60,349.41,0.20,2016-09-22,Texas
+CA-2015-100896,CG-12520,Claire Gute,Consumer,Office Supplies,Fasteners,South,APAC,Standard Class,Low,4,1039.48,-184.03,0.45,2015-04-11,Ohio
+CA-2015-100897,TB-21520,Tracy Blumstein,Consumer,Office Supplies,Appliances,Central,EU,First Class,High,10,3447.60,-425.07,0.20,2015-11-23,Pennsylvania
+CA-2014-100898,CG-12520,Claire Gute,Home Office,Office Supplies,Labels,South,EU,Second Class,Low,5,1599.05,-923.30,0.45,2016-01-20,Virginia
+CA-2016-100899,BH-11710,Brosina Hoffman,Home Office,Furniture,Chairs,East,LATAM,Standard Class,Low,11,2741.86,-481.19,0.20,2015-04-15,Illinois
+CA-2014-100900,SF-20065,Sandra Flanagan,Corporate,Furniture,Chairs,Central,LATAM,Same Day,Low,10,4885.40,235.69,0.00,2016-01-13,Texas
+CA-2015-100901,AG-10270,Alejandro Grove,Corporate,Technology,Accessories,East,US,First Class,Critical,14,6392.54,2019.21,0.00,2015-08-08,Washington
+CA-2014-100902,EH-13945,Eric Hoffmann,Home Office,Office Supplies,Binders,Central,APAC,Standard Class,Critical,5,1266.35,244.41,0.00,2016-07-20,Washington
+CA-2015-100903,CG-12520,Claire Gute,Consumer,Office Supplies,Binders,East,EU,Standard Class,High,5,685.95,-93.52,0.45,2015-10-13,Washington
+CA-2016-100904,SO-20335,Sean O'Donnell,Corporate,Technology,Machines,South,LATAM,Standard Class,High,12,4289.52,-505.54,0.30,2015-10-13,Illinois
+CA-2014-100905,KB-16585,Ken Black,Home Office,Office Supplies,Storage,South,APAC,Same Day,Low,3,700.98,-254.52,0.30,2015-12-16,North Carolina
+CA-2015-100906,SO-20335,Sean O'Donnell,Corporate,Technology,Phones,Central,APAC,Same Day,Critical,9,4432.95,-288.55,0.00,2015-06-27,California
+CA-2014-100907,AA-10315,Alex Avila,Corporate,Technology,Copiers,South,EU,Same Day,Medium,10,1790.60,-411.83,0.30,2016-02-23,Pennsylvania
+CA-2014-100908,RA-19885,Ruben Ausman,Home Office,Furniture,Bookcases,South,LATAM,First Class,Medium,7,791.42,135.32,0.00,2014-07-02,Pennsylvania
+CA-2016-100909,RA-19885,Ruben Ausman,Home Office,Office Supplies,Labels,Central,LATAM,Second Class,Critical,13,2402.01,556.67,0.00,2015-12-05,Ohio
+CA-2016-100910,TB-21520,Tracy Blumstein,Corporate,Office Supplies,Storage,South,EU,Standard Class,Critical,3,1387.02,-55.43,0.10,2014-01-04,North Carolina
+CA-2016-100911,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Paper,West,LATAM,Standard Class,High,7,689.43,139.45,0.00,2014-05-22,North Carolina
+CA-2016-100912,PK-19075,Pete Kriz,Corporate,Furniture,Tables,East,EU,Same Day,High,11,550.33,-212.00,0.20,2015-09-08,Washington
+CA-2016-100913,IM-15070,Irene Maddox,Corporate,Office Supplies,Envelopes,South,EU,Same Day,Medium,6,423.96,161.69,0.00,2014-07-31,Texas
+CA-2014-100914,TB-21520,Tracy Blumstein,Consumer,Technology,Accessories,South,US,Standard Class,Low,13,3951.74,659.37,0.20,2016-07-19,Pennsylvania
+CA-2014-100915,GH-14410,Gary Hansen,Home Office,Office Supplies,Paper,West,LATAM,Same Day,Low,2,785.22,136.77,0.20,2015-07-05,Florida
+CA-2015-100916,EB-13870,Emily Burns,Consumer,Technology,Accessories,West,EU,First Class,Low,6,1216.32,-293.10,0.45,2015-03-27,Texas
+CA-2015-100917,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Labels,West,LATAM,Same Day,Medium,3,1370.76,-498.20,0.30,2014-04-10,Florida
+CA-2014-100918,KB-16585,Ken Black,Consumer,Office Supplies,Storage,East,APAC,Standard Class,Medium,6,2368.50,-72.59,0.20,2015-09-01,Illinois
+CA-2015-100919,LC-16885,Lena Creighton,Home Office,Office Supplies,Fasteners,South,APAC,Second Class,Medium,5,2363.35,162.99,0.10,2014-11-09,Texas
+CA-2015-100920,RA-19885,Ruben Ausman,Consumer,Office Supplies,Paper,West,APAC,First Class,Critical,5,1601.00,565.31,0.00,2015-08-21,Ohio
+CA-2015-100921,RA-19885,Ruben Ausman,Corporate,Furniture,Furnishings,East,LATAM,Second Class,Critical,11,903.76,-402.81,0.45,2015-01-19,Pennsylvania
+CA-2016-100922,CG-12520,Claire Gute,Home Office,Technology,Accessories,West,EU,First Class,Critical,6,697.74,-107.59,0.10,2014-10-12,Ohio
+CA-2014-100923,LC-16885,Lena Creighton,Corporate,Technology,Accessories,West,LATAM,Standard Class,High,14,5241.60,-347.06,0.45,2016-01-30,Virginia
+CA-2014-100924,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Supplies,East,EU,First Class,Medium,9,3816.63,-316.02,0.45,2016-09-20,Washington
+CA-2014-100925,PK-19075,Pete Kriz,Home Office,Technology,Phones,East,US,Second Class,High,3,74.76,-35.68,0.45,2014-10-12,California
+CA-2014-100926,HP-14815,Harold Pawlan,Corporate,Furniture,Chairs,West,EU,Same Day,Low,10,3820.30,-757.27,0.30,2015-07-04,Ohio
+CA-2016-100927,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Envelopes,South,US,Same Day,Medium,2,546.94,48.62,0.10,2014-11-04,North Carolina
+CA-2016-100928,CV-12805,Cynthia Voltz,Consumer,Technology,Phones,Central,LATAM,First Class,High,1,129.62,-14.14,0.30,2015-05-20,Florida
+CA-2014-100929,SN-20710,Stephanie Phelps,Consumer,Furniture,Furnishings,South,US,First Class,Critical,5,1702.65,-764.96,0.45,2015-03-27,Ohio
+CA-2015-100930,IM-15070,Irene Maddox,Corporate,Furniture,Bookcases,East,EU,Standard Class,Medium,13,2845.05,-963.14,0.20,2016-06-01,Washington
+CA-2016-100931,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Machines,East,APAC,Second Class,Medium,6,2306.28,-998.86,0.30,2014-11-04,Pennsylvania
+CA-2015-100932,IM-15070,Irene Maddox,Home Office,Furniture,Chairs,Central,EU,First Class,Critical,6,2871.42,-216.02,0.30,2016-03-18,Florida
+CA-2016-100933,SF-20065,Sandra Flanagan,Corporate,Furniture,Furnishings,South,US,Same Day,Low,6,2188.32,-235.66,0.20,2015-03-12,Pennsylvania
+CA-2014-100934,SF-20065,Sandra Flanagan,Home Office,Technology,Copiers,Central,APAC,First Class,Low,8,3077.52,1021.88,0.00,2014-07-27,Illinois
+CA-2016-100935,EH-13945,Eric Hoffmann,Corporate,Office Supplies,Labels,Central,US,Standard Class,Medium,9,2539.71,554.57,0.10,2015-09-25,Texas
+CA-2016-100936,KB-16585,Ken Black,Home Office,Technology,Phones,South,EU,First Class,Critical,12,3582.12,1102.57,0.00,2015-02-04,California
+CA-2015-100937,BH-11710,Brosina Hoffman,Consumer,Furniture,Furnishings,West,APAC,Same Day,Medium,5,1356.30,136.10,0.30,2014-04-24,Texas
+CA-2016-100938,LC-16885,Lena Creighton,Corporate,Office Supplies,Envelopes,Central,US,Second Class,Low,9,437.04,-37.98,0.10,2015-07-14,Illinois
+CA-2014-100939,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Envelopes,Central,APAC,Standard Class,Medium,3,492.09,-0.24,0.10,2014-12-08,New York
+CA-2016-100940,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Paper,West,LATAM,Standard Class,High,7,2828.00,963.18,0.00,2014-03-03,Virginia
+CA-2016-100941,MA-17560,Matt Abelman,Consumer,Office Supplies,Labels,East,US,Same Day,Medium,11,420.42,70.40,0.00,2016-09-24,New York
+CA-2014-100942,EH-13945,Eric Hoffmann,Home Office,Office Supplies,Storage,Central,LATAM,Same Day,Low,8,3561.84,437.35,0.10,2014-03-16,Pennsylvania
+CA-2015-100943,LC-16885,Lena Creighton,Consumer,Office Supplies,Appliances,Central,EU,First Class,Critical,10,4149.70,-806.91,0.00,2014-11-27,Washington
+CA-2014-100944,LC-16885,Lena Creighton,Home Office,Office Supplies,Binders,West,EU,First Class,Low,4,1550.52,-154.26,0.10,2014-04-14,Illinois
+CA-2014-100945,KB-16585,Ken Black,Corporate,Furniture,Chairs,West,EU,Same Day,Low,4,619.80,89.35,0.30,2014-08-27,Pennsylvania
+CA-2015-100946,CG-12520,Claire Gute,Home Office,Office Supplies,Envelopes,West,US,Second Class,Low,7,205.52,-49.43,0.30,2014-07-30,Texas
+CA-2014-100947,HP-14815,Harold Pawlan,Home Office,Furniture,Tables,Central,LATAM,First Class,Low,12,3652.80,-475.47,0.20,2014-08-04,Ohio
+CA-2015-100948,CG-12520,Claire Gute,Consumer,Furniture,Tables,South,APAC,Second Class,Low,13,2767.83,84.54,0.00,2016-08-26,Pennsylvania
+CA-2014-100949,MA-17560,Matt Abelman,Consumer,Furniture,Furnishings,West,EU,Second Class,Medium,12,3905.28,-1446.94,0.20,2016-05-17,Ohio
+CA-2014-100950,DV-13045,Darrin Van Huff,Corporate,Furniture,Chairs,East,EU,Second Class,Medium,14,5197.22,-823.20,0.20,2015-03-01,Illinois
+CA-2015-100951,BH-11710,Brosina Hoffman,Home Office,Furniture,Bookcases,Central,US,Standard Class,High,8,848.16,-79.34,0.30,2016-07-19,California
+CA-2016-100952,MA-17560,Matt Abelman,Consumer,Furniture,Chairs,East,US,Standard Class,High,7,196.14,-0.86,0.30,2016-01-10,Washington
+CA-2016-100953,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Art,East,US,First Class,Critical,2,969.04,134.88,0.30,2016-05-26,Ohio
+CA-2015-100954,AG-10270,Alejandro Grove,Corporate,Furniture,Furnishings,East,EU,Second Class,Medium,11,2995.19,-645.52,0.45,2014-04-09,Texas
+CA-2014-100955,PK-19075,Pete Kriz,Consumer,Technology,Accessories,East,APAC,Second Class,High,12,623.04,-197.20,0.30,2015-09-22,Illinois
+CA-2014-100956,TB-21520,Tracy Blumstein,Home Office,Technology,Machines,West,LATAM,Standard Class,Medium,13,5853.51,-735.71,0.20,2015-11-09,Texas
+CA-2016-100957,CG-12520,Claire Gute,Corporate,Furniture,Bookcases,South,APAC,Second Class,Critical,14,5577.74,-234.84,0.10,2014-01-12,Ohio
+CA-2015-100958,HP-14815,Harold Pawlan,Corporate,Office Supplies,Fasteners,East,APAC,First Class,Critical,9,2004.57,52.22,0.20,2015-06-11,Virginia
+CA-2015-100959,TB-21520,Tracy Blumstein,Corporate,Technology,Accessories,West,EU,Standard Class,Medium,11,4717.13,-2260.16,0.45,2016-03-11,Ohio
+CA-2014-100960,BH-11710,Brosina Hoffman,Home Office,Furniture,Furnishings,East,LATAM,Second Class,Medium,3,1311.87,-138.84,0.20,2015-07-21,Washington
+CA-2016-100961,CG-12520,Claire Gute,Consumer,Furniture,Furnishings,Central,EU,Second Class,High,9,2722.14,179.32,0.10,2015-06-28,Texas
+CA-2016-100962,BH-11710,Brosina Hoffman,Consumer,Technology,Copiers,South,EU,First Class,Low,11,3508.78,-1764.68,0.45,2016-08-10,Pennsylvania
+CA-2015-100963,ZD-21925,Zuschuss Donatelli,Consumer,Office Supplies,Supplies,West,APAC,First Class,Medium,7,3131.80,-910.57,0.30,2016-01-09,North Carolina
+CA-2014-100964,RA-19885,Ruben Ausman,Corporate,Furniture,Bookcases,East,LATAM,Same Day,Medium,13,2705.82,34.11,0.10,2014-06-14,Washington
+CA-2016-100965,SF-20065,Sandra Flanagan,Home Office,Furniture,Chairs,East,EU,Same Day,Medium,5,372.60,-156.40,0.30,2016-01-28,Florida
+CA-2015-100966,KB-16585,Ken Black,Consumer,Furniture,Bookcases,South,APAC,Standard Class,Critical,9,1431.18,431.61,0.00,2015-09-05,Texas
+CA-2015-100967,SO-20335,Sean O'Donnell,Consumer,Technology,Machines,South,LATAM,Second Class,Critical,5,2375.00,113.94,0.00,2016-07-01,Florida
+CA-2015-100968,PK-19075,Pete Kriz,Consumer,Technology,Accessories,South,LATAM,Same Day,Low,2,997.62,-26.11,0.45,2016-06-04,New York
+CA-2015-100969,AG-10270,Alejandro Grove,Corporate,Technology,Machines,West,US,Standard Class,Critical,5,1609.65,-204.80,0.20,2016-05-06,Washington
+CA-2016-100970,LC-16885,Lena Creighton,Corporate,Office Supplies,Envelopes,South,LATAM,Standard Class,Low,10,2197.10,-730.37,0.20,2016-03-10,North Carolina
+CA-2016-100971,CV-12805,Cynthia Voltz,Home Office,Furniture,Bookcases,South,LATAM,Standard Class,High,2,967.06,-63.39,0.10,2015-11-20,Ohio
+CA-2014-100972,TB-21520,Tracy Blumstein,Home Office,Technology,Accessories,East,US,First Class,Low,7,2852.57,-185.72,0.30,2014-01-27,Florida
+CA-2015-100973,EH-13945,Eric Hoffmann,Consumer,Furniture,Tables,Central,LATAM,Standard Class,High,14,6244.28,823.87,0.20,2014-12-19,Ohio
+CA-2015-100974,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Binders,East,LATAM,Standard Class,High,4,1125.80,-257.37,0.45,2016-01-29,Illinois
+CA-2016-100975,RA-19885,Ruben Ausman,Corporate,Technology,Copiers,Central,LATAM,Second Class,Critical,6,2491.20,982.06,0.00,2014-04-03,Washington
+CA-2014-100976,AG-10270,Alejandro Grove,Consumer,Technology,Phones,Central,US,Standard Class,Medium,6,1030.92,84.80,0.30,2016-02-12,North Carolina
+CA-2014-100977,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Machines,West,US,Same Day,High,13,3668.08,-151.56,0.10,2015-12-14,Texas
+CA-2016-100978,KB-16585,Ken Black,Corporate,Technology,Machines,West,APAC,Second Class,Critical,7,495.95,-214.57,0.30,2016-09-06,California
+CA-2016-100979,PK-19075,Pete Kriz,Consumer,Technology,Copiers,East,EU,Same Day,Medium,11,5460.18,662.98,0.00,2016-05-03,Texas
+CA-2016-100980,CG-12520,Claire Gute,Home Office,Office Supplies,Envelopes,East,LATAM,Second Class,Critical,1,429.48,19.18,0.30,2015-03-01,North Carolina
+CA-2015-100981,EB-13870,Emily Burns,Corporate,Technology,Machines,Central,EU,First Class,High,12,4792.92,585.82,0.20,2014-09-27,New York
+CA-2016-100982,AA-10315,Alex Avila,Home Office,Office Supplies,Envelopes,South,APAC,Standard Class,Medium,13,3528.85,-837.03,0.10,2016-07-28,Illinois
+CA-2015-100983,CV-12805,Cynthia Voltz,Home Office,Technology,Copiers,South,US,Second Class,Low,8,1105.76,109.64,0.00,2015-03-25,Virginia
+CA-2014-100984,TB-21520,Tracy Blumstein,Home Office,Technology,Accessories,Central,APAC,Standard Class,Critical,6,1445.58,-373.75,0.10,2014-12-29,Pennsylvania
+CA-2015-100985,AA-10315,Alex Avila,Consumer,Office Supplies,Envelopes,South,EU,First Class,Low,11,2516.80,-495.35,0.45,2014-11-08,North Carolina
+CA-2015-100986,DV-13045,Darrin Van Huff,Home Office,Technology,Machines,East,EU,Second Class,Medium,10,642.40,127.84,0.00,2015-06-27,Texas
+CA-2016-100987,CG-12520,Claire Gute,Home Office,Technology,Phones,South,LATAM,Same Day,Critical,12,769.80,-106.84,0.00,2015-02-18,Texas
+CA-2014-100988,KB-16585,Ken Black,Consumer,Furniture,Bookcases,Central,LATAM,Second Class,Medium,5,904.00,64.54,0.30,2015-05-27,Illinois
+CA-2016-100989,CV-12805,Cynthia Voltz,Consumer,Technology,Accessories,West,APAC,Standard Class,Medium,6,1371.66,192.74,0.00,2014-01-21,California
+CA-2016-100990,GH-14410,Gary Hansen,Corporate,Furniture,Bookcases,West,EU,Second Class,Critical,6,1172.70,375.29,0.00,2015-08-05,Texas
+CA-2014-100991,SN-20710,Stephanie Phelps,Corporate,Furniture,Furnishings,East,EU,Same Day,Low,2,873.38,78.44,0.10,2015-08-11,North Carolina
+CA-2014-100992,DV-13045,Darrin Van Huff,Home Office,Technology,Accessories,East,US,Same Day,Medium,13,6076.85,-2005.03,0.20,2015-12-01,North Carolina
+CA-2015-100993,AA-10315,Alex Avila,Consumer,Technology,Machines,West,APAC,Second Class,High,8,3717.28,-406.48,0.45,2016-03-13,Texas
+CA-2015-100994,PK-19075,Pete Kriz,Home Office,Office Supplies,Envelopes,West,US,First Class,Critical,13,2666.56,-965.01,0.20,2016-08-01,Virginia
+CA-2015-100995,CV-12805,Cynthia Voltz,Corporate,Furniture,Furnishings,South,LATAM,Standard Class,Critical,6,432.36,-47.38,0.10,2015-10-04,California
+CA-2015-100996,MA-17560,Matt Abelman,Home Office,Furniture,Furnishings,West,US,Second Class,Low,9,2201.67,-663.07,0.30,2016-03-16,Florida
+CA-2015-100997,LC-16885,Lena Creighton,Corporate,Technology,Copiers,East,APAC,Standard Class,Critical,11,1762.86,259.65,0.00,2014-02-18,Virginia
+CA-2014-100998,GH-14410,Gary Hansen,Consumer,Furniture,Furnishings,Central,US,Second Class,Critical,11,3862.10,-910.98,0.10,2016-08-30,Washington
+CA-2015-100999,LC-16885,Lena Creighton,Consumer,Technology,Accessories,East,APAC,Second Class,Critical,1,461.43,131.60,0.10,2014-04-30,Washington
+CA-2015-101000,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Appliances,Central,EU,First Class,Critical,3,225.39,23.47,0.10,2014-09-22,California
+CA-2015-101001,EH-13945,Eric Hoffmann,Home Office,Office Supplies,Paper,West,LATAM,Standard Class,Critical,5,2110.50,487.25,0.10,2015-05-15,Texas
+CA-2015-101002,PK-19075,Pete Kriz,Consumer,Furniture,Bookcases,Central,LATAM,First Class,High,2,167.34,-76.44,0.30,2015-07-04,Florida
+CA-2015-101003,LC-16885,Lena Creighton,Consumer,Office Supplies,Art,East,US,Same Day,Critical,13,833.30,264.69,0.10,2015-07-23,New York
+CA-2014-101004,BH-11710,Brosina Hoffman,Consumer,Furniture,Bookcases,South,APAC,Same Day,Medium,14,2759.26,815.78,0.00,2016-04-05,Ohio
+CA-2014-101005,RA-19885,Ruben Ausman,Corporate,Furniture,Chairs,Central,EU,First Class,Critical,13,1419.08,-527.27,0.20,2014-01-15,Washington
+CA-2014-101006,CV-12805,Cynthia Voltz,Home Office,Furniture,Tables,East,APAC,Same Day,Low,7,565.46,-40.35,0.20,2014-08-19,Ohio
+CA-2014-101007,SO-20335,Sean O'Donnell,Home Office,Furniture,Furnishings,West,LATAM,Standard Class,Medium,9,762.66,-17.76,0.45,2014-02-28,Illinois
+CA-2014-101008,SF-20065,Sandra Flanagan,Corporate,Furniture,Chairs,West,EU,Standard Class,Low,2,687.48,32.85,0.00,2015-07-31,California
+CA-2014-101009,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Paper,South,APAC,First Class,Critical,5,1721.90,-357.66,0.30,2016-02-06,Ohio
+CA-2015-101010,AA-10315,Alex Avila,Corporate,Office Supplies,Supplies,East,APAC,Standard Class,Critical,6,694.80,9.80,0.20,2014-06-28,Florida
+CA-2014-101011,AA-10315,Alex Avila,Home Office,Furniture,Tables,Central,EU,Same Day,Critical,7,2497.53,-240.78,0.45,2015-02-16,Pennsylvania
+CA-2016-101012,TB-21520,Tracy Blumstein,Corporate,Technology,Phones,East,EU,Second Class,Medium,8,3811.44,-1005.02,0.30,2014-11-30,Washington
+CA-2014-101013,LC-16885,Lena Creighton,Corporate,Furniture,Furnishings,East,LATAM,Standard Class,Critical,8,2210.88,-566.80,0.30,2014-11-11,Florida
+CA-2015-101014,RA-19885,Ruben Ausman,Home Office,Office Supplies,Appliances,South,EU,Same Day,Low,4,450.00,-32.20,0.45,2015-11-07,Washington
+CA-2015-101015,EB-13870,Emily Burns,Home Office,Technology,Copiers,East,EU,Same Day,High,5,2459.50,-368.91,0.45,2015-10-19,Ohio
+CA-2016-101016,PK-19075,Pete Kriz,Home Office,Technology,Copiers,West,US,Standard Class,Low,13,6057.61,-19.79,0.20,2016-02-21,California
+CA-2014-101017,CG-12520,Claire Gute,Corporate,Furniture,Furnishings,West,APAC,First Class,Critical,14,693.28,-185.83,0.20,2014-06-04,Ohio
+CA-2014-101018,KB-16585,Ken Black,Consumer,Technology,Copiers,South,US,Same Day,Medium,5,775.50,-423.52,0.45,2016-06-20,Virginia
+CA-2014-101019,SN-20710,Stephanie Phelps,Corporate,Technology,Phones,West,US,Second Class,Critical,12,5900.76,1973.69,0.10,2015-11-11,Ohio
+CA-2016-101020,EB-13870,Emily Burns,Consumer,Office Supplies,Binders,South,US,Same Day,High,13,193.44,39.68,0.20,2015-08-22,Illinois
+CA-2014-101021,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Art,East,APAC,First Class,Low,3,215.40,8.68,0.20,2016-07-27,Illinois
+CA-2015-101022,RA-19885,Ruben Ausman,Consumer,Office Supplies,Appliances,Central,US,Same Day,High,10,4460.70,645.04,0.30,2015-01-09,Texas
+CA-2014-101023,DV-13045,Darrin Van Huff,Corporate,Technology,Copiers,South,US,First Class,Low,12,1881.36,277.50,0.30,2014-12-12,Texas
+CA-2016-101024,RA-19885,Ruben Ausman,Home Office,Furniture,Bookcases,Central,LATAM,First Class,High,5,967.15,-244.68,0.30,2014-02-06,Virginia
+CA-2015-101025,EH-13945,Eric Hoffmann,Corporate,Office Supplies,Labels,West,LATAM,Standard Class,High,3,1415.22,-57.96,0.20,2015-05-16,Virginia
+CA-2014-101026,BH-11710,Brosina Hoffman,Consumer,Furniture,Chairs,East,US,Standard Class,Low,13,4968.86,-1250.32,0.10,2015-01-18,California
+CA-2016-101027,KB-16585,Ken Black,Consumer,Technology,Accessories,West,US,Second Class,Medium,3,880.38,-79.10,0.30,2014-12-05,New York
+CA-2014-101028,IM-15070,Irene Maddox,Corporate,Furniture,Bookcases,Central,EU,Same Day,Medium,1,219.32,-35.83,0.10,2016-01-05,Ohio
+CA-2015-101029,RA-19885,Ruben Ausman,Consumer,Technology,Copiers,West,US,Second Class,Medium,8,1180.72,-103.60,0.45,2014-03-04,Florida
+CA-2015-101030,AA-10315,Alex Avila,Consumer,Technology,Copiers,East,LATAM,First Class,Critical,12,796.68,-61.88,0.00,2016-05-18,Virginia
+CA-2014-101031,CV-12805,Cynthia Voltz,Home Office,Office Supplies,Envelopes,Central,APAC,Second Class,Low,7,904.54,70.59,0.20,2015-06-28,California
+CA-2016-101032,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Labels,West,US,First Class,High,12,418.80,-187.64,0.30,2016-02-22,North Carolina
+CA-2015-101033,SO-20335,Sean O'Donnell,Corporate,Technology,Machines,South,APAC,Same Day,High,12,5047.92,-1348.94,0.30,2016-04-10,Virginia
+CA-2015-101034,HP-14815,Harold Pawlan,Corporate,Furniture,Chairs,South,LATAM,Same Day,Medium,1,346.98,-68.63,0.30,2015-04-18,Texas
+CA-2016-101035,EB-13870,Emily Burns,Consumer,Office Supplies,Appliances,South,APAC,Standard Class,Critical,14,1036.28,-157.57,0.20,2016-06-10,Texas
+CA-2015-101036,AA-10315,Alex Avila,Consumer,Technology,Copiers,West,LATAM,Same Day,Medium,4,207.80,-40.11,0.30,2014-10-05,Florida
+CA-2014-101037,SN-20710,Stephanie Phelps,Corporate,Office Supplies,Envelopes,West,APAC,Standard Class,Low,4,983.32,-215.00,0.30,2016-08-28,Illinois
+CA-2015-101038,MA-17560,Matt Abelman,Consumer,Technology,Machines,Central,EU,First Class,High,3,364.20,8.14,0.30,2015-03-03,North Carolina
+CA-2016-101039,EH-13945,Eric Hoffmann,Consumer,Technology,Accessories,Central,LATAM,Standard Class,Low,10,690.70,-123.14,0.20,2015-01-18,Ohio
+CA-2015-101040,SF-20065,Sandra Flanagan,Home Office,Office Supplies,Envelopes,South,APAC,First Class,High,4,1890.28,551.20,0.10,2016-07-13,Washington
+CA-2015-101041,AA-10315,Alex Avila,Home Office,Office Supplies,Envelopes,South,US,First Class,Low,12,3581.40,818.92,0.10,2014-09-13,Pennsylvania
+CA-2016-101042,AA-10315,Alex Avila,Corporate,Technology,Machines,West,LATAM,Same Day,Medium,2,533.94,-57.83,0.30,2016-07-01,Florida
+CA-2016-101043,AA-10315,Alex Avila,Corporate,Office Supplies,Appliances,East,APAC,First Class,Critical,8,1016.48,12.90,0.00,2016-04-24,Illinois
+CA-2016-101044,RA-19885,Ruben Ausman,Consumer,Technology,Copiers,Central,US,Second Class,High,14,5688.34,1834.61,0.10,2015-09-04,Washington
+CA-2016-101045,EB-13870,Emily Burns,Home Office,Office Supplies,Appliances,South,US,First Class,Critical,5,670.95,-72.15,0.10,2014-01-30,Texas
+CA-2015-101046,TB-21520,Tracy Blumstein,Corporate,Technology,Phones,Central,EU,Same Day,High,9,744.30,-5.21,0.30,2014-04-21,Texas
+CA-2014-101047,LC-16885,Lena Creighton,Corporate,Furniture,Furnishings,South,US,Same Day,High,1,66.34,-2.71,0.20,2015-01-13,Pennsylvania
+CA-2016-101048,IM-15070,Irene Maddox,Consumer,Office Supplies,Appliances,East,LATAM,Standard Class,Low,11,1595.44,-252.53,0.45,2014-02-10,Texas
+CA-2014-101049,AA-10315,Alex Avila,Corporate,Furniture,Chairs,Central,US,Same Day,Critical,12,1455.96,337.79,0.20,2014-12-13,Virginia
+CA-2014-101050,DV-13045,Darrin Van Huff,Corporate,Technology,Phones,East,US,First Class,Medium,11,4355.12,245.03,0.10,2014-04-02,Washington
+CA-2014-101051,DV-13045,Darrin Van Huff,Consumer,Technology,Accessories,East,EU,First Class,High,1,323.24,3.60,0.10,2014-02-13,Pennsylvania
+CA-2016-101052,CV-12805,Cynthia Voltz,Home Office,Technology,Phones,South,US,Standard Class,Medium,1,257.57,-20.62,0.20,2015-11-17,North Carolina
+CA-2015-101053,DV-13045,Darrin Van Huff,Home Office,Furniture,Chairs,East,LATAM,Second Class,Medium,10,2482.80,139.50,0.20,2015-08-19,Virginia
+CA-2014-101054,CG-12520,Claire Gute,Home Office,Technology,Machines,Central,APAC,Second Class,High,5,1401.75,-557.23,0.45,2016-05-04,Florida
+CA-2016-101055,EB-13870,Emily Burns,Corporate,Furniture,Furnishings,East,EU,Standard Class,Low,8,154.08,-3.23,0.45,2015-11-19,Pennsylvania
+CA-2014-101056,BH-11710,Brosina Hoffman,Home Office,Technology,Copiers,Central,APAC,Same Day,Low,4,1524.32,215.55,0.20,2015-11-22,Washington
+CA-2015-101057,LC-16885,Lena Creighton,Consumer,Office Supplies,Envelopes,South,LATAM,First Class,Critical,9,151.11,-8.96,0.00,2014-07-05,Pennsylvania
+CA-2014-101058,RA-19885,Ruben Ausman,Consumer,Furniture,Tables,West,US,Standard Class,Low,8,2260.88,263.96,0.20,2015-11-15,California
+CA-2014-101059,AG-10270,Alejandro Grove,Corporate,Furniture,Furnishings,East,EU,Same Day,High,8,1550.40,-39.09,0.45,2014-04-10,New York
+CA-2015-101060,AG-10270,Alejandro Grove,Consumer,Office Supplies,Appliances,West,US,Same Day,Medium,5,1931.85,-7.08,0.00,2014-09-27,California
+CA-2015-101061,BH-11710,Brosina Hoffman,Consumer,Furniture,Chairs,South,US,Second Class,Medium,8,3484.40,-690.97,0.45,2014-10-07,New York
+CA-2014-101062,EB-13870,Emily Burns,Consumer,Technology,Phones,West,US,First Class,High,1,23.39,0.93,0.30,2015-02-27,Ohio
+CA-2014-101063,HP-14815,Harold Pawlan,Home Office,Office Supplies,Appliances,West,LATAM,Same Day,Medium,11,1535.82,-226.33,0.10,2015-04-04,California
+CA-2016-101064,ZD-21925,Zuschuss Donatelli,Corporate,Office Supplies,Art,East,APAC,First Class,Critical,10,1868.10,-272.77,0.30,2015-01-18,Texas
+CA-2015-101065,LC-16885,Lena Creighton,Home Office,Office Supplies,Labels,South,APAC,Same Day,Low,8,3934.72,-1196.31,0.20,2015-11-20,North Carolina
+CA-2016-101066,AG-10270,Alejandro Grove,Consumer,Furniture,Furnishings,West,APAC,Second Class,High,6,1947.00,-19.65,0.30,2016-06-01,Virginia
+CA-2014-101067,CV-12805,Cynthia Voltz,Home Office,Technology,Copiers,South,US,Same Day,Low,14,5605.18,1878.86,0.10,2016-03-22,Virginia
+CA-2016-101068,SN-20710,Stephanie Phelps,Consumer,Furniture,Bookcases,Central,LATAM,Standard Class,High,10,70.00,-15.26,0.45,2014-06-18,Illinois
+CA-2015-101069,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Supplies,West,EU,Same Day,Medium,11,4516.38,339.01,0.10,2016-02-07,Washington
+CA-2014-101070,CG-12520,Claire Gute,Corporate,Technology,Accessories,Central,EU,Standard Class,Medium,8,611.68,153.97,0.00,2014-11-10,California
+CA-2014-101071,CG-12520,Claire Gute,Corporate,Furniture,Furnishings,Central,LATAM,Standard Class,High,2,215.02,-33.64,0.00,2015-04-09,Illinois
+CA-2016-101072,EB-13870,Emily Burns,Home Office,Office Supplies,Envelopes,West,LATAM,Standard Class,Critical,5,1085.60,-56.76,0.45,2015-10-13,Illinois
+CA-2014-101073,SF-20065,Sandra Flanagan,Corporate,Furniture,Furnishings,Central,LATAM,Standard Class,Critical,12,2873.16,-30.47,0.30,2016-02-28,California
+CA-2016-101074,MA-17560,Matt Abelman,Home Office,Furniture,Tables,West,LATAM,Same Day,High,5,1370.75,-55.51,0.00,2016-04-30,Washington
+CA-2014-101075,RA-19885,Ruben Ausman,Consumer,Office Supplies,Appliances,East,US,Same Day,Low,6,950.16,-341.33,0.30,2015-02-25,Virginia
+CA-2015-101076,IM-15070,Irene Maddox,Home Office,Office Supplies,Fasteners,West,LATAM,Second Class,Critical,12,3416.40,-769.01,0.45,2014-02-19,Florida
+CA-2014-101077,IM-15070,Irene Maddox,Consumer,Furniture,Furnishings,South,LATAM,Second Class,Low,10,1690.50,416.58,0.00,2016-09-18,Pennsylvania
+CA-2016-101078,CV-12805,Cynthia Voltz,Corporate,Furniture,Tables,East,LATAM,Standard Class,Low,1,154.63,-12.21,0.10,2015-12-01,Texas
+CA-2016-101079,AA-10315,Alex Avila,Corporate,Furniture,Bookcases,West,LATAM,Same Day,Low,8,2004.72,-975.60,0.30,2015-06-22,Florida
+CA-2015-101080,EH-13945,Eric Hoffmann,Corporate,Technology,Phones,South,EU,Second Class,Low,2,74.52,12.71,0.20,2015-11-12,California
+CA-2015-101081,IM-15070,Irene Maddox,Consumer,Furniture,Chairs,East,LATAM,Standard Class,Low,11,1125.08,-458.29,0.45,2014-09-27,Washington
+CA-2016-101082,HP-14815,Harold Pawlan,Consumer,Furniture,Furnishings,West,APAC,Standard Class,High,3,1123.77,-553.71,0.30,2014-03-03,Texas
+CA-2014-101083,KB-16585,Ken Black,Consumer,Furniture,Tables,South,US,Second Class,Medium,13,1439.23,-272.19,0.30,2014-08-08,Virginia
+CA-2016-101084,AA-10315,Alex Avila,Corporate,Furniture,Tables,Central,EU,First Class,Critical,9,4454.82,748.42,0.00,2014-09-10,California
+CA-2015-101085,EH-13945,Eric Hoffmann,Corporate,Furniture,Furnishings,South,EU,Second Class,Critical,13,2604.42,355.70,0.10,2016-08-11,North Carolina
+CA-2015-101086,GH-14410,Gary Hansen,Home Office,Office Supplies,Binders,West,LATAM,Standard Class,Low,4,1205.96,-92.69,0.20,2014-03-18,Texas
+CA-2015-101087,CV-12805,Cynthia Voltz,Corporate,Furniture,Furnishings,Central,APAC,Same Day,Critical,5,998.35,-77.26,0.30,2016-07-28,Pennsylvania
+CA-2016-101088,LC-16885,Lena Creighton,Home Office,Technology,Copiers,West,APAC,First Class,High,8,1374.80,184.08,0.30,2015-06-30,Florida
+CA-2014-101089,RA-19885,Ruben Ausman,Corporate,Technology,Copiers,Central,EU,First Class,Critical,6,2782.68,527.85,0.20,2015-08-03,Florida
+CA-2016-101090,AG-10270,Alejandro Grove,Corporate,Technology,Phones,East,APAC,First Class,Medium,11,3643.86,-259.23,0.45,2014-05-23,Ohio
+CA-2016-101091,LC-16885,Lena Creighton,Home Office,Technology,Copiers,Central,EU,Same Day,High,2,727.34,10.97,0.20,2014-07-30,Washington
+CA-2014-101092,EB-13870,Emily Burns,Corporate,Office Supplies,Fasteners,West,LATAM,Same Day,Low,10,2322.40,-708.05,0.20,2015-09-13,New York
+CA-2016-101093,HP-14815,Harold Pawlan,Home Office,Office Supplies,Storage,South,EU,First Class,Low,8,3741.60,-1012.74,0.45,2014-10-11,Pennsylvania
+CA-2014-101094,CV-12805,Cynthia Voltz,Corporate,Office Supplies,Art,West,US,Standard Class,High,8,1771.20,-570.97,0.20,2014-07-05,New York
+CA-2016-101095,SN-20710,Stephanie Phelps,Home Office,Technology,Machines,West,US,Standard Class,High,3,1179.06,-432.50,0.30,2016-07-01,North Carolina
+CA-2015-101096,AG-10270,Alejandro Grove,Home Office,Office Supplies,Paper,Central,EU,Second Class,Low,4,476.36,-122.72,0.45,2016-02-09,Virginia
+CA-2014-101097,LC-16885,Lena Creighton,Consumer,Office Supplies,Envelopes,West,APAC,Same Day,Low,3,1211.49,-445.78,0.30,2015-09-24,New York
+CA-2014-101098,PK-19075,Pete Kriz,Corporate,Office Supplies,Envelopes,West,US,Second Class,High,4,929.84,260.10,0.10,2016-07-28,Pennsylvania
+CA-2016-101099,LC-16885,Lena Creighton,Corporate,Technology,Phones,South,EU,Same Day,Critical,8,885.04,310.41,0.00,2015-02-23,California
+CA-2015-101100,SN-20710,Stephanie Phelps,Home Office,Office Supplies,Envelopes,South,LATAM,Second Class,High,11,2731.30,-1167.66,0.45,2014-01-22,Texas
+CA-2015-101101,SO-20335,Sean O'Donnell,Corporate,Technology,Phones,East,APAC,Second Class,Critical,3,1185.27,-187.68,0.10,2014-12-28,North Carolina
+CA-2015-101102,MA-17560,Matt Abelman,Home Office,Furniture,Chairs,Central,APAC,Same Day,Low,11,3853.30,-140.66,0.30,2014-01-23,Ohio
+CA-2015-101103,EH-13945,Eric Hoffmann,Corporate,Technology,Phones,South,EU,Second Class,Medium,7,344.96,-59.90,0.20,2014-10-03,North Carolina
+CA-2014-101104,CV-12805,Cynthia Voltz,Consumer,Technology,Copiers,East,US,Standard Class,High,14,321.58,-84.58,0.30,2016-02-18,New York
+CA-2014-101105,GH-14410,Gary Hansen,Consumer,Office Supplies,Storage,South,APAC,Second Class,Low,3,450.33,-143.64,0.30,2016-07-26,Washington
+CA-2015-101106,SO-20335,Sean O'Donnell,Consumer,Technology,Accessories,East,US,Second Class,Low,10,3290.40,-370.64,0.10,2015-04-27,New York
+CA-2016-101107,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Binders,East,EU,Second Class,Low,9,598.05,-83.89,0.30,2015-01-13,Illinois
+CA-2014-101108,IM-15070,Irene Maddox,Consumer,Office Supplies,Supplies,West,LATAM,Second Class,Medium,14,213.64,-14.60,0.45,2015-02-08,Washington
+CA-2014-101109,RA-19885,Ruben Ausman,Consumer,Office Supplies,Fasteners,West,US,Same Day,Medium,8,1013.36,163.80,0.10,2016-01-01,California
+CA-2015-101110,ZD-21925,Zuschuss Donatelli,Home Office,Office Supplies,Supplies,South,APAC,Same Day,High,13,3217.89,-457.89,0.30,2016-01-14,Virginia
+CA-2015-101111,EH-13945,Eric Hoffmann,Consumer,Furniture,Tables,South,LATAM,Same Day,High,3,1210.20,-305.31,0.10,2015-01-12,Illinois
+CA-2014-101112,CG-12520,Claire Gute,Corporate,Office Supplies,Storage,East,APAC,Same Day,Medium,4,1505.60,-25.45,0.10,2015-10-16,Texas
+CA-2014-101113,CG-12520,Claire Gute,Corporate,Furniture,Tables,East,LATAM,Standard Class,Medium,5,1229.75,-45.04,0.30,2015-01-16,Texas
+CA-2016-101114,CV-12805,Cynthia Voltz,Corporate,Furniture,Furnishings,West,APAC,First Class,Critical,6,187.74,17.10,0.30,2016-06-27,California
+CA-2014-101115,MA-17560,Matt Abelman,Home Office,Furniture,Furnishings,Central,US,Standard Class,Medium,6,604.62,-327.79,0.45,2014-04-14,Virginia
+CA-2015-101116,SF-20065,Sandra Flanagan,Corporate,Furniture,Tables,Central,US,Standard Class,Critical,7,1192.45,-418.32,0.45,2015-09-29,Ohio
+CA-2014-101117,EH-13945,Eric Hoffmann,Corporate,Technology,Accessories,Central,LATAM,First Class,Medium,11,4298.36,-1380.35,0.45,2016-09-18,Texas
+CA-2014-101118,HP-14815,Harold Pawlan,Consumer,Furniture,Tables,South,EU,Same Day,Medium,5,1001.15,-171.59,0.00,2014-01-13,Pennsylvania
+CA-2015-101119,SN-20710,Stephanie Phelps,Home Office,Technology,Machines,South,US,Second Class,Critical,4,21.12,-1.98,0.00,2014-02-08,Texas
+CA-2015-101120,MA-17560,Matt Abelman,Corporate,Furniture,Bookcases,Central,APAC,Second Class,High,11,2557.61,2.35,0.20,2015-01-17,North Carolina
+CA-2015-101121,PK-19075,Pete Kriz,Home Office,Furniture,Bookcases,South,US,First Class,High,7,1709.96,360.73,0.20,2014-11-04,New York
+CA-2014-101122,AA-10315,Alex Avila,Home Office,Technology,Copiers,Central,LATAM,Same Day,Critical,14,5499.48,10.04,0.10,2014-06-06,North Carolina
+CA-2014-101123,KB-16585,Ken Black,Corporate,Office Supplies,Art,West,LATAM,Same Day,Critical,4,341.64,39.81,0.30,2015-11-10,Texas
+CA-2015-101124,EH-13945,Eric Hoffmann,Corporate,Office Supplies,Appliances,East,LATAM,Same Day,Medium,6,2814.66,0.58,0.00,2015-05-14,Florida
+CA-2014-101125,PK-19075,Pete Kriz,Consumer,Technology,Copiers,West,US,Standard Class,Medium,6,502.80,-7.17,0.20,2016-05-23,Virginia
+CA-2015-101126,EH-13945,Eric Hoffmann,Consumer,Office Supplies,Art,West,EU,First Class,High,13,5265.13,1814.86,0.10,2014-01-03,Illinois
+CA-2014-101127,LC-16885,Lena Creighton,Consumer,Furniture,Bookcases,West,EU,Second Class,Critical,3,1340.94,-449.24,0.20,2015-08-20,Ohio
+CA-2014-101128,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Fasteners,South,APAC,Second Class,Low,10,4192.40,1428.23,0.00,2014-10-19,Ohio
+CA-2015-101129,RA-19885,Ruben Ausman,Corporate,Furniture,Furnishings,Central,APAC,First Class,Critical,1,199.73,6.44,0.20,2015-12-13,Pennsylvania
+CA-2014-101130,PK-19075,Pete Kriz,Consumer,Office Supplies,Labels,West,EU,Standard Class,Critical,4,496.56,78.01,0.10,2014-02-07,Texas
+CA-2015-101131,AA-10315,Alex Avila,Corporate,Technology,Accessories,South,US,First Class,Medium,5,1931.65,-45.34,0.20,2016-01-06,Ohio
+CA-2015-101132,CV-12805,Cynthia Voltz,Corporate,Furniture,Furnishings,East,LATAM,Same Day,Critical,3,595.32,-212.57,0.20,2014-02-02,Illinois
+CA-2016-101133,TB-21520,Tracy Blumstein,Home Office,Furniture,Furnishings,East,US,Second Class,High,12,5802.24,-417.98,0.30,2016-09-08,Pennsylvania
+CA-2015-101134,SO-20335,Sean O'Donnell,Corporate,Office Supplies,Labels,East,EU,Same Day,Low,3,77.40,-11.14,0.10,2015-09-11,California
+CA-2016-101135,CV-12805,Cynthia Voltz,Consumer,Office Supplies,Labels,East,EU,First Class,High,13,4021.68,-1601.52,0.20,2015-05-10,Virginia
+CA-2016-101136,EB-13870,Emily Burns,Home Office,Technology,Copiers,Central,LATAM,Standard Class,High,7,2702.07,258.64,0.00,2016-01-07,Illinois
+CA-2016-101137,CG-12520,Claire Gute,Home Office,Office Supplies,Art,East,APAC,Second Class,Critical,8,3325.04,345.41,0.30,2016-07-25,Florida
+CA-2014-101138,ZD-21925,Zuschuss Donatelli,Home Office,Technology,Accessories,East,US,Second Class,Critical,14,1660.26,-804.91,0.45,2014-09-29,Washington
+CA-2016-101139,EB-13870,Emily Burns,Corporate,Furniture,Tables,West,APAC,Standard Class,Critical,1,479.53,-24.98,0.20,2016-07-10,North Carolina
+CA-2016-101140,HP-14815,Harold Pawlan,Home Office,Technology,Machines,Central,EU,Second Class,Low,13,810.68,244.55,0.10,2015-02-03,Pennsylvania
+CA-2015-101141,SO-20335,Sean O'Donnell,Consumer,Office Supplies,Envelopes,Central,APAC,Same Day,Medium,8,121.92,37.21,0.10,2016-01-19,Pennsylvania
+CA-2016-101142,HP-14815,Harold Pawlan,Home Office,Technology,Copiers,West,US,Second Class,Low,6,319.86,-63.60,0.20,2015-07-10,California
+CA-2016-101143,PK-19075,Pete Kriz,Corporate,Furniture,Furnishings,West,LATAM,First Class,Low,3,183.36,-51.45,0.30,2015-05-28,Illinois
+CA-2014-101144,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Binders,West,US,Second Class,Medium,7,2829.89,-101.28,0.45,2016-01-13,Illinois
+CA-2015-101145,IM-15070,Irene Maddox,Corporate,Technology,Copiers,West,LATAM,Second Class,Medium,8,3964.80,-1509.15,0.20,2016-05-23,Washington
+CA-2014-101146,RA-19885,Ruben Ausman,Home Office,Technology,Phones,South,LATAM,Same Day,High,13,3838.25,1667.68,0.00,2016-02-02,Illinois
+CA-2015-101147,HP-14815,Harold Pawlan,Home Office,Furniture,Bookcases,Central,LATAM,Standard Class,High,8,784.80,-328.81,0.45,2015-11-12,Ohio
+CA-2015-101148,SO-20335,Sean O'Donnell,Home Office,Furniture,Bookcases,Central,US,Standard Class,High,10,2626.50,486.89,0.00,2015-04-30,Washington
+CA-2016-101149,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Phones,Central,LATAM,Second Class,High,5,121.35,-19.94,0.00,2014-11-04,Illinois
+CA-2015-101150,EH-13945,Eric Hoffmann,Corporate,Furniture,Furnishings,East,US,Second Class,Low,2,503.30,-68.21,0.20,2014-01-27,Illinois
+CA-2016-101151,BH-11710,Brosina Hoffman,Consumer,Furniture,Furnishings,East,US,First Class,High,13,2212.86,-179.90,0.00,2014-08-06,Virginia
+CA-2014-101152,SN-20710,Stephanie Phelps,Corporate,Furniture,Furnishings,South,US,First Class,High,9,2975.94,1136.70,0.00,2016-02-10,California
+CA-2015-101153,AA-10315,Alex Avila,Corporate,Furniture,Bookcases,West,APAC,Second Class,Medium,10,69.80,-32.97,0.30,2016-04-08,New York
+CA-2015-101154,KB-16585,Ken Black,Consumer,Furniture,Chairs,East,EU,Second Class,Critical,11,5054.39,1061.65,0.00,2014-01-18,California
+CA-2016-101155,GH-14410,Gary Hansen,Corporate,Office Supplies,Envelopes,East,APAC,First Class,Medium,8,2208.32,175.16,0.00,2015-09-20,Pennsylvania
+CA-2016-101156,LC-16885,Lena Creighton,Home Office,Office Supplies,Fasteners,South,US,Standard Class,Critical,5,641.35,166.42,0.00,2014-09-19,North Carolina
+CA-2014-101157,HP-14815,Harold Pawlan,Home Office,Technology,Machines,East,EU,Standard Class,Medium,12,821.40,188.42,0.10,2015-08-18,Washington
+CA-2016-101158,DV-13045,Darrin Van Huff,Consumer,Technology,Accessories,East,US,Standard Class,Critical,11,2204.29,-265.05,0.10,2014-04-26,New York
+CA-2015-101159,KB-16585,Ken Black,Corporate,Furniture,Tables,Central,LATAM,Second Class,Medium,3,233.28,85.08,0.00,2014-11-29,Washington
+CA-2015-101160,EB-13870,Emily Burns,Corporate,Office Supplies,Envelopes,West,APAC,Standard Class,Critical,14,4684.40,86.40,0.10,2016-08-29,Ohio
+CA-2015-101161,IM-15070,Irene Maddox,Consumer,Furniture,Bookcases,Central,APAC,Second Class,Critical,12,2784.96,-744.99,0.20,2014-04-24,California
+CA-2014-101162,MA-17560,Matt Abelman,Home Office,Technology,Accessories,Central,LATAM,Same Day,High,10,2299.40,43.14,0.20,2015-04-06,Texas
+CA-2014-101163,MA-17560,Matt Abelman,Home Office,Furniture,Tables,East,US,First Class,High,3,40.47,4.83,0.10,2015-01-29,Virginia
+CA-2015-101164,AG-10270,Alejandro Grove,Consumer,Technology,Accessories,West,US,Second Class,High,5,2158.45,-281.35,0.45,2016-02-04,Florida
+CA-2014-101165,PK-19075,Pete Kriz,Corporate,Technology,Copiers,South,APAC,Standard Class,Critical,11,2761.33,-1788.81,0.45,2016-09-08,Washington
+CA-2016-101166,IM-15070,Irene Maddox,Consumer,Furniture,Furnishings,South,APAC,Standard Class,Critical,12,4599.12,241.07,0.20,2014-10-06,Ohio
+CA-2014-101167,RA-19885,Ruben Ausman,Home Office,Furniture,Chairs,Central,LATAM,Second Class,Critical,6,166.02,-27.90,0.20,2016-02-17,Virginia
+CA-2014-101168,CG-12520,Claire Gute,Consumer,Technology,Accessories,South,LATAM,Standard Class,Low,2,569.50,-85.23,0.10,2016-06-06,Virginia
+CA-2015-101169,TB-21520,Tracy Blumstein,Consumer,Technology,Copiers,South,US,First Class,Critical,4,1481.28,-87.29,0.10,2014-02-07,Washington
+CA-2016-101170,SO-20335,Sean O'Donnell,Home Office,Office Supplies,Envelopes,East,US,Same Day,High,10,638.00,72.87,0.20,2015-07-04,Virginia
+CA-2015-101171,IM-15070,Irene Maddox,Consumer,Technology,Accessories,West,EU,First Class,Low,14,3462.62,752.15,0.10,2016-06-27,Pennsylvania
+CA-2016-101172,SF-20065,Sandra Flanagan,Consumer,Office Supplies,Storage,Central,EU,Second Class,Medium,9,3145.41,881.61,0.00,2015-10-05,Washington
+CA-2014-101173,DV-13045,Darrin Van Huff,Home Office,Technology,Copiers,South,EU,Second Class,Low,4,1658.00,-354.47,0.10,2015-04-17,New York
+CA-2014-101174,HP-14815,Harold Pawlan,Corporate,Office Supplies,Fasteners,South,US,Second Class,High,14,4829.30,710.61,0.10,2016-05-03,California
+CA-2015-101175,SN-20710,Stephanie Phelps,Consumer,Furniture,Tables,South,EU,Second Class,High,2,93.98,-15.26,0.10,2014-06-07,Virginia
+CA-2014-101176,SN-20710,Stephanie Phelps,Corporate,Technology,Machines,South,EU,Same Day,High,8,663.28,-201.40,0.45,2015-08-04,Illinois
+CA-2015-101177,AG-10270,Alejandro Grove,Home Office,Technology,Copiers,South,US,Standard Class,Medium,12,4801.92,-347.78,0.00,2014-10-30,California
+CA-2014-101178,PK-19075,Pete Kriz,Consumer,Technology,Accessories,East,EU,Second Class,Medium,9,2180.34,-407.52,0.45,2016-04-16,California
+CA-2014-101179,GH-14410,Gary Hansen,Corporate,Technology,Accessories,Central,APAC,Second Class,Medium,4,1087.24,22.20,0.00,2015-07-05,California
+CA-2016-101180,EH-13945,Eric Hoffmann,Consumer,Office Supplies,Envelopes,South,US,Same Day,Low,3,1207.26,186.16,0.10,2014-04-02,Illinois
+CA-2014-101181,TB-21520,Tracy Blumstein,Home Office,Furniture,Furnishings,West,US,Standard Class,High,14,2410.10,717.15,0.00,2016-03-09,Texas
+CA-2015-101182,CV-12805,Cynthia Voltz,Home Office,Technology,Accessories,Central,US,Standard Class,Medium,2,691.08,82.59,0.30,2014-04-11,Illinois
+CA-2014-101183,KB-16585,Ken Black,Consumer,Office Supplies,Art,East,LATAM,First Class,Critical,13,5948.28,530.25,0.20,2014-09-25,Virginia
+CA-2015-101184,SO-20335,Sean O'Donnell,Corporate,Furniture,Chairs,South,US,Same Day,Critical,14,5359.20,-1317.96,0.45,2014-02-13,California
+CA-2015-101185,DV-13045,Darrin Van Huff,Consumer,Technology,Accessories,Central,APAC,Second Class,Critical,1,332.71,-18.09,0.10,2015-10-14,Pennsylvania
+CA-2015-101186,LC-16885,Lena Creighton,Home Office,Furniture,Chairs,West,APAC,First Class,Medium,7,552.23,-37.22,0.20,2014-11-26,North Carolina
+CA-2014-101187,EB-13870,Emily Burns,Corporate,Technology,Accessories,South,APAC,Standard Class,Medium,9,3227.13,-1502.31,0.30,2014-08-01,Texas
+CA-2016-101188,SO-20335,Sean O'Donnell,Consumer,Furniture,Furnishings,West,APAC,First Class,Medium,13,367.38,133.14,0.00,2014-09-16,Virginia
+CA-2015-101189,MA-17560,Matt Abelman,Corporate,Office Supplies,Envelopes,East,EU,Standard Class,Medium,9,908.64,39.44,0.10,2014-03-07,Pennsylvania
+CA-2016-101190,RA-19885,Ruben Ausman,Corporate,Technology,Machines,South,APAC,Second Class,Low,12,1074.96,-247.92,0.45,2015-11-14,Washington
+CA-2015-101191,EH-13945,Eric Hoffmann,Corporate,Technology,Copiers,West,LATAM,Standard Class,Critical,6,2175.06,-804.60,0.45,2014-04-17,Florida
+CA-2014-101192,CV-12805,Cynthia Voltz,Consumer,Office Supplies,Binders,South,EU,First Class,High,6,2840.04,262.64,0.20,2016-06-06,Virginia
+CA-2015-101193,IM-15070,Irene Maddox,Corporate,Office Supplies,Envelopes,South,APAC,First Class,Low,14,6386.24,1498.42,0.00,2015-04-27,Washington
+CA-2015-101194,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Envelopes,East,LATAM,Standard Class,High,9,3151.98,-1683.17,0.45,2014-10-10,California
+CA-2015-101195,ZD-21925,Zuschuss Donatelli,Consumer,Technology,Accessories,Central,APAC,Standard Class,Critical,14,2089.22,617.82,0.10,2014-08-02,Washington
+CA-2014-101196,AA-10315,Alex Avila,Home Office,Furniture,Bookcases,West,EU,Second Class,Low,2,714.20,-112.82,0.30,2016-01-09,Washington
+CA-2014-101197,MA-17560,Matt Abelman,Home Office,Furniture,Chairs,West,US,Same Day,High,7,2266.53,-622.19,0.10,2015-02-21,Pennsylvania
+CA-2014-101198,BH-11710,Brosina Hoffman,Consumer,Office Supplies,Supplies,East,EU,Standard Class,Low,14,2891.84,-525.78,0.45,2015-06-22,North Carolina
+CA-2014-101199,BH-11710,Brosina Hoffman,Home Office,Office Supplies,Paper,South,APAC,Same Day,Critical,2,554.24,-171.53,0.45,2014-01-14,Florida
