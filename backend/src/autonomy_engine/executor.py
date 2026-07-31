@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 #: capped and the cap is reported in the result rather than applied silently.
 #: With ~99k rows behind it, this cap is load-bearing rather than theoretical --
 #: it is also why summarize_transactions exists.
-QUERY_ROW_LIMIT: Final[int] = 1000
+QUERY_ROW_LIMIT: Final[int] = 100
 
 ExecutionStatus = Literal["success", "failed", "skipped"]
 
@@ -296,11 +296,14 @@ def _run_query(
     criteria = _parse_criteria(parameters.get("filter"))
     matched = data_store.select(criteria)
     
-    try:
-        limit = int(parameters.get("limit", 25))
-    except (ValueError, TypeError):
-        limit = 25
-        
+    if "limit" in parameters and parameters["limit"] is not None:
+        try:
+            limit = int(parameters["limit"])
+        except (ValueError, TypeError):
+            limit = QUERY_ROW_LIMIT
+    else:
+        limit = QUERY_ROW_LIMIT
+
     limit = min(limit, QUERY_ROW_LIMIT)
     
     rows = matched[:limit]

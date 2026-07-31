@@ -20,13 +20,21 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
-from autonomy_engine import audit_store, confirmation, executor, risk_scorer
-from autonomy_engine.agent_actions import (
+from autonomy_engine import (
+    adaptive_calibration as calibration,
+    approval_manager as confirmation,
+    audit_repository as audit_store,
+    executor,
+    risk_evaluator as risk_scorer,
+)
+from autonomy_engine.action_proposer import (
     AgentActionError,
+    ClarificationRequest,
     propose_action,
+    reassess_action,
 )
 from autonomy_engine.logging_config import configure_logging
-from autonomy_engine.risk_scorer import RiskAssessment, build_assessment, route_action
+from autonomy_engine.risk_evaluator import RiskAssessment, build_assessment, route_action
 
 configure_logging()
 logger = logging.getLogger("autonomy_engine")
@@ -74,6 +82,7 @@ app.add_middleware(
 class ProposeRequest(BaseModel):
     user_request: str = Field(min_length=1)
     session_id: str = Field(min_length=1)
+    clarification: str | None = None
 
 
 class ResolveConfirmationRequest(BaseModel):
@@ -215,17 +224,41 @@ async def propose(body: ProposeRequest, request: Request) -> dict:
     request.state.session_id = body.session_id
 
     context: dict[str, object] = {}
+    if body.clarification:
+        context["clarification"] = body.clarification
 
     action = propose_action(body.user_request, context)
+
+    if isinstance(action, ClarificationRequest):
+        return {
+            "routing_decision": "needs_clarification",
+            "question": action.question,
+            "why": action.why,
+            "options": action.options,
+        }
 
     # Ground the band in what the action really touches.
     # preflight is strictly read-only — safe on an action a human may reject.
     scope = executor.preflight(action.tool_name, action.parameters)
 
+    if executor.is_scope_mismatch(action.data_scope, scope.actual_rows):
+        logger.info(
+            "data scope mismatch (claimed %d vs actual %d); triggering reassessment",
+            action.data_scope,
+            scope.actual_rows,
+        )
+        action = reassess_action(action, scope.actual_rows)
+
     assessment = build_assessment(action.to_risk_factors()).with_measured_scope(
         scope.actual_rows
     )
     decision = route_action(assessment)
+
+    # Adaptive threshold calibration runs BEFORE blast-radius floor.
+    decision, cal_note = calibration.apply_calibration(decision, action.action_type)
+    if cal_note:
+        logger.info("adaptive threshold calibration nudged routing: %s", cal_note)
+        assessment = assessment.with_override(cal_note)
 
     # Blast-radius floor — can only escalate, never lower supervision.
     decision, floor_note = risk_scorer.apply_blast_radius_floor(
@@ -291,6 +324,8 @@ async def resolve_confirmation_endpoint(
     record = confirmation.resolve_confirmation(confirmation_id, body.decision, body.reviewer)
     request.state.session_id = record.get("session_id")
     request.state.routing_decision = record.get("routing_decision")
+    if record.get("action_type"):
+        calibration.record_signal(record["action_type"], positive=(body.decision == "confirm"))
     return _resolution_payload(record)
 
 
@@ -302,11 +337,25 @@ async def resolve_review_endpoint(
     record = confirmation.resolve_review(review_id, body.decision, body.reviewer)
     request.state.session_id = record.get("session_id")
     request.state.routing_decision = record.get("routing_decision")
+    if record.get("action_type"):
+        calibration.record_signal(record["action_type"], positive=(body.decision == "approve"))
     return _resolution_payload(record)
+
+
+@app.get("/audit")
+@app.get("/audit/all")
+async def all_audit_trail() -> dict:
+    """Return all audit records across all sessions, newest first."""
+    records = audit_store.list_all_audit_records()
+    return {
+        "count": len(records),
+        "actions": [_trail_entry(record) for record in records],
+    }
 
 
 @app.get("/audit/{session_id}")
 async def audit_trail(session_id: str, request: Request) -> dict:
+
     """The full, human-readable audit trail for a session."""
     request.state.session_id = session_id
     trail = audit_store.get_audit_trail(session_id)
@@ -321,6 +370,43 @@ async def health() -> dict:
     """Liveness probe: reports whether DynamoDB is reachable."""
     reachable = audit_store.is_reachable()
     return {"status": "ok", "dynamodb": "reachable" if reachable else "unreachable"}
+
+
+@app.get("/calibration")
+async def get_calibration() -> dict:
+    """Return current adaptive threshold calibration data per action_type."""
+    return calibration.snapshot()
+
+
+@app.get("/metrics")
+async def get_metrics() -> dict:
+    """Return aggregate metrics across all audit records."""
+    records = audit_store.list_all_audit_records()
+    total = len(records)
+    autonomous = sum(1 for r in records if r.get("routing_decision") == "autonomous")
+    confirm = sum(1 for r in records if r.get("routing_decision") == "confirm")
+    full_review = sum(1 for r in records if r.get("routing_decision") == "full_review")
+    return {
+        "total_requests": total,
+        "routing_breakdown": {
+            "autonomous": autonomous,
+            "confirm": confirm,
+            "full_review": full_review,
+        },
+        "policy_version": audit_store.POLICY_VERSION,
+    }
+
+
+@app.get("/policy/status")
+async def get_policy_status() -> dict:
+    """Return current policy parameters, risk band definitions, and safety floor limits."""
+    return {
+        "policy_version": audit_store.POLICY_VERSION,
+        "autonomous_max_mutation_rows": risk_scorer.AUTONOMOUS_MAX_MUTATION_ROWS,
+        "confirm_max_mutation_rows": risk_scorer.CONFIRM_MAX_MUTATION_ROWS,
+        "band_severity_ranges": risk_scorer.BAND_SEVERITY_RANGES,
+        "min_signals_for_calibration_shift": calibration.MIN_SIGNALS_FOR_SHIFT,
+    }
 
 
 # --------------------------------------------------------------------------

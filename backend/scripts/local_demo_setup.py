@@ -24,7 +24,7 @@ def main() -> None:
         print("DYNAMODB_ENDPOINT_URL not set", file=sys.stderr)
         sys.exit(1)
 
-    from autonomy_engine.audit_store import table_name
+    from autonomy_engine.audit_repository import table_name
 
     name = table_name()
     dynamodb = boto3.resource(

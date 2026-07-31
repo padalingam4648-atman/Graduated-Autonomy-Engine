@@ -20,10 +20,10 @@ from fastapi.testclient import TestClient
 # load_dotenv() on import, which would re-inject the developer's real
 # DYNAMODB_ENDPOINT_URL *after* aws_env deleted it, and the app would then try
 # to reach a live DynamoDB instead of moto.
-from autonomy_engine import data_store, executor, risk_scorer
-from autonomy_engine.agent_actions import AgentAction
+from autonomy_engine import data_store, executor, risk_evaluator as risk_scorer
+from autonomy_engine.action_proposer import AgentAction
 from autonomy_engine.main import app
-from autonomy_engine.risk_scorer import apply_blast_radius_floor, scope_floor
+from autonomy_engine.risk_evaluator import apply_blast_radius_floor, scope_floor
 from tests.conftest import SEED_ROW_COUNT
 
 LEVELS = ("autonomous", "confirm", "full_review")
@@ -190,7 +190,7 @@ def test_edit_size_thresholds(rows, expected):
 
 def test_an_override_is_recorded_not_silent():
     """An override nobody can see afterwards is barely better than none."""
-    from autonomy_engine.risk_scorer import RiskFactors, build_assessment
+    from autonomy_engine.risk_evaluator import RiskFactors, build_assessment
 
     assessment = build_assessment(
         RiskFactors(
@@ -330,7 +330,7 @@ def test_a_wrong_estimate_triggers_a_rejudgement(client):
 def test_an_accurate_estimate_is_not_rejudged(client):
     """Re-judging costs an LLM round trip; it should only happen when the
     premise was actually wrong."""
-    from autonomy_engine.agent_actions import AgentAction
+    from autonomy_engine.action_proposer import AgentAction
 
     exact = data_store.count_matching(
         [data_store.Criterion(field="category", operator="equals", value="Clothing")]

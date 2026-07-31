@@ -9,7 +9,7 @@ from unittest.mock import patch
 import pytest
 from fastapi.testclient import TestClient
 
-from autonomy_engine.agent_actions import AgentAction, AgentActionError, ClarificationRequest
+from autonomy_engine.action_proposer import AgentAction, AgentActionError, ClarificationRequest
 from autonomy_engine.main import app
 
 SESSION = "sess-web-001"

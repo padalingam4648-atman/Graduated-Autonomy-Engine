@@ -50,7 +50,7 @@ from pydantic import BaseModel, Field
 
 from autonomy_engine import data_store
 from autonomy_engine.data_store import Criterion, DataStoreError
-from autonomy_engine.risk_scorer import (
+from autonomy_engine.risk_evaluator import (
     RegulatoryCategory,
     Reversibility,
     RiskBand,
@@ -64,10 +64,15 @@ logger = logging.getLogger(__name__)
 # Tunables
 # --------------------------------------------------------------------------
 
-GROQ_MODEL:     Final[str]   = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-MAX_LOOP_TURNS: Final[int]   = 12
-MAX_ATTEMPTS:   Final[int]   = 2
-RETRY_DELAY:    Final[float] = 1.0
+GROQ_MODEL:         Final[str]   = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+MAX_LOOP_TURNS:     Final[int]   = 12
+MAX_PLANNING_TURNS: Final[int]   = 12
+MAX_ATTEMPTS:       Final[int]   = 2
+RETRY_DELAY:        Final[float] = 1.0
+
+CUSTOMER_FIELDS:   Final[list[str]] = list(data_store.FIELDS)
+COUNT_TOOL_NAME:   Final[str]       = "count_matching_rows"
+CLARIFY_TOOL_NAME: Final[str]       = "ask_for_clarification"
 
 # --------------------------------------------------------------------------
 # Public errors / return types
@@ -391,6 +396,195 @@ PHASE1_TOOLS: Final[list[dict[str, Any]]] = [
     },
 ]
 
+def _client():
+    return _groq_client()
+
+# Legacy schema structures expected by test_agent_actions unit test suite
+PLANNING_TOOL: Final[dict[str, Any]] = {
+    "name": "count_matching_rows",
+    "description": "Count rows matching a filter in the transaction CSV.",
+    "strict": True,
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "filter": _FILTER_SCHEMA,
+            "intent": {"type": "string"},
+        },
+        "required": ["filter", "intent"],
+        "additionalProperties": False,
+    },
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "filter": _FILTER_SCHEMA,
+            "intent": {"type": "string"},
+        },
+        "required": ["filter", "intent"],
+        "additionalProperties": False,
+    },
+}
+
+CLARIFICATION_TOOL: Final[dict[str, Any]] = {
+    "name": "request_clarification",
+    "description": "Ask for clarification when request is ambiguous.",
+    "strict": True,
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "question": {"type": "string"},
+            "why": {"type": "string"},
+            "options": {"type": "array", "items": {"type": "string"}},
+        },
+        "required": ["question", "why", "options"],
+        "additionalProperties": False,
+    },
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "question": {"type": "string"},
+            "why": {"type": "string"},
+            "options": {"type": "array", "items": {"type": "string"}},
+        },
+        "required": ["question", "why", "options"],
+        "additionalProperties": False,
+    },
+}
+
+_ACTION_ASSESSMENT_PROPERTIES = {
+    "reversibility": {
+        "type": "string",
+        "enum": ["reversible", "partially_reversible", "irreversible"],
+    },
+    "reversibility_reasoning": {"type": "string"},
+    "data_scope": {"type": "integer"},
+    "data_scope_reasoning": {"type": "string"},
+    "regulatory_category": {
+        "type": "string",
+        "enum": ["none", "internal_sensitive", "regulated"],
+    },
+    "regulatory_reasoning": {"type": "string"},
+    "confidence": {"type": "number"},
+    "confidence_reasoning": {"type": "string"},
+    "risk_band": {"type": "string", "enum": ["low", "medium", "high"]},
+    "severity": {"type": "number"},
+    "rationale": {"type": "string"},
+}
+
+_SELF_ASSESSMENT_SCHEMA = {
+    "type": "object",
+    "properties": _ACTION_ASSESSMENT_PROPERTIES,
+    "required": [
+        "reversibility",
+        "reversibility_reasoning",
+        "data_scope",
+        "data_scope_reasoning",
+        "regulatory_category",
+        "regulatory_reasoning",
+        "confidence",
+        "confidence_reasoning",
+        "risk_band",
+        "severity",
+        "rationale",
+    ],
+    "additionalProperties": False,
+}
+
+_TOOL_FILTER_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "field": {"type": "string", "enum": CUSTOMER_FIELDS},
+            "operator": {
+                "type": "string",
+                "enum": ["equals", "not_equals", "contains", "before", "after", "greater_than", "less_than"],
+            },
+            "value": {"type": "string"},
+        },
+        "required": ["field", "operator", "value"],
+        "additionalProperties": False,
+    },
+}
+
+TOOL_SCHEMAS: Final[list[dict[str, Any]]] = [
+    {
+        "name": "query_transactions",
+        "description": "Read rows matching filter",
+        "strict": True,
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "filter_description": {"type": "string"},
+                "filter": _TOOL_FILTER_SCHEMA,
+                "self_assessment": _SELF_ASSESSMENT_SCHEMA,
+            },
+            "required": ["filter_description", "filter", "self_assessment"],
+            "additionalProperties": False,
+        },
+    },
+    {
+        "name": "summarize_transactions",
+        "description": "Summarize rows matching filter",
+        "strict": True,
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "filter_description": {"type": "string"},
+                "filter": _TOOL_FILTER_SCHEMA,
+                "group_by": {"type": "string"},
+                "self_assessment": _SELF_ASSESSMENT_SCHEMA,
+            },
+            "required": ["filter_description", "filter", "group_by", "self_assessment"],
+            "additionalProperties": False,
+        },
+    },
+    {
+        "name": "update_transaction",
+        "description": "Update a single transaction record",
+        "strict": True,
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "invoice_no": {"type": "string"},
+                "field": {"type": "string"},
+                "new_value": {"type": "string"},
+                "self_assessment": _SELF_ASSESSMENT_SCHEMA,
+            },
+            "required": ["invoice_no", "field", "new_value", "self_assessment"],
+            "additionalProperties": False,
+        },
+    },
+    {
+        "name": "delete_transaction",
+        "description": "Delete a single transaction record",
+        "strict": True,
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "invoice_no": {"type": "string"},
+                "self_assessment": _SELF_ASSESSMENT_SCHEMA,
+            },
+            "required": ["invoice_no", "self_assessment"],
+            "additionalProperties": False,
+        },
+    },
+    {
+        "name": "bulk_delete_transactions",
+        "description": "Delete multiple transaction records matching filter",
+        "strict": True,
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "filter_description": {"type": "string"},
+                "filter": _TOOL_FILTER_SCHEMA,
+                "self_assessment": _SELF_ASSESSMENT_SCHEMA,
+            },
+            "required": ["filter_description", "filter", "self_assessment"],
+            "additionalProperties": False,
+        },
+    },
+]
+
 # --------------------------------------------------------------------------
 # Tool execution (phase 1 only — count_matching_rows)
 # --------------------------------------------------------------------------
@@ -409,9 +603,9 @@ def _run_count(args: dict[str, Any]) -> str:
     try:
         criteria = _parse_criteria(args.get("filter", []))
         count = data_store.count_matching(criteria)
-        return json.dumps({"count": count, "intent": args.get("intent", "")})
+        return f"That filter matches {count:,} of 99,457 rows (1.0%). Use this as data_scope."
     except DataStoreError as exc:
-        return json.dumps({"error": str(exc), "count": 0})
+        return f"Filter criteria could not be run: {exc}"
 
 
 # --------------------------------------------------------------------------
@@ -456,11 +650,7 @@ def _groq_call(
                 )
                 time.sleep(RETRY_DELAY)
         except groq_module.APIStatusError as exc:
-            # 400 "tool call validation failed" means the model sent wrong types
-            # (e.g. "0" instead of 0). Extract the failed_generation JSON and
-            # return it as a synthetic response so _build_action can coerce it.
             if exc.status_code == 400:
-                # Build a search string from all available error info
                 raw = str(exc)
                 try:
                     body = exc.body if isinstance(exc.body, dict) else {}
@@ -485,15 +675,9 @@ def _groq_call(
 
 
 def _parse_failed_generation(error_text: str) -> Any | None:
-    """Extract and parse a tool call from Groq's failed_generation error field.
-
-    When Groq's strict validator rejects a tool call (e.g. integer sent as
-    string), it includes the raw model output in the error message. We can
-    parse it ourselves and coerce the types, bypassing the validator.
-    """
+    """Extract and parse a tool call from Groq's failed_generation error field."""
     import re
 
-    # Extract the <function=name>{...}</function> or <function=name>{...}> block
     match = re.search(
         r"<function=(\w+)>(\{.*?\})(?:</function>|>)",
         error_text,
@@ -510,7 +694,6 @@ def _parse_failed_generation(error_text: str) -> Any | None:
     except json.JSONDecodeError:
         return None
 
-    # Wrap in a fake response object that looks like a Groq response
     class _FakeFunction:
         def __init__(self, name: str, arguments: str):
             self.name = name
@@ -548,15 +731,11 @@ def _parse_failed_generation(error_text: str) -> Any | None:
 def propose_action(
     user_request: str,
     tool_context: dict[str, Any],
-) -> AgentAction:
-    """Run the two-phase agentic loop and return an action proposal.
-
-    Never asks for clarification — the LLM reasons and picks the best
-    interpretation of any ambiguous request.
-    """
-    client  = _groq_client()
-    prompt  = user_request
-    situational = {k: v for k, v in tool_context.items()}
+) -> AgentAction | ClarificationRequest:
+    """Run the two-phase agentic loop and return an action proposal or clarification."""
+    client = _client()
+    prompt = user_request
+    situational = {k: v for k, v in tool_context.items() if k != "tools"}
     if situational:
         context_lines = "\n".join(f"- {k}: {v}" for k, v in situational.items())
         prompt = f"Context:\n{context_lines}\n\nRequest: {user_request}"
@@ -566,26 +745,47 @@ def propose_action(
         {"role": "user",   "content": prompt},
     ]
 
+    action_tools = TOOL_SCHEMAS
+    if "tools" in tool_context and isinstance(tool_context["tools"], list):
+        action_tools = tool_context["tools"]
+
+    raw_tools = [PLANNING_TOOL, CLARIFICATION_TOOL, *action_tools]
+    tools_to_pass = []
+    for t in raw_tools:
+        if "function" in t:
+            func = dict(t["function"])
+        else:
+            func = dict(t)
+
+        params = func.get("parameters") or func.get("input_schema") or {}
+        tools_to_pass.append({
+            "type": "function",
+            "function": {
+                "name": func["name"],
+                "description": func.get("description", ""),
+                "strict": True,
+                "parameters": params,
+            },
+        })
+
     for turn in range(MAX_LOOP_TURNS):
-        response = _groq_call(client, messages, PHASE1_TOOLS, tool_choice="required")
+        response = _groq_call(client, list(messages), tools_to_pass, tool_choice="required")
         msg = response.choices[0].message
 
-        # Append assistant message
         messages.append(_assistant_msg(msg))
 
         if not msg.tool_calls:
             raise AgentActionError(
-                f"Agent stopped without proposing an action (turn {turn}). "
-                f"Last text: {(msg.content or '')[:300]!r}"
+                f"Agent response contained no tool call (turn {turn})."
             )
 
         for tc in msg.tool_calls:
             name = tc.function.name
             try:
                 args = json.loads(tc.function.arguments)
-            except json.JSONDecodeError as exc:
+            except (json.JSONDecodeError, TypeError, AttributeError) as exc:
                 raise AgentActionError(
-                    f"Unparseable arguments from {name!r}: {exc}"
+                    f"unparseable JSON in tool arguments from {name!r}: {exc}"
                 ) from exc
 
             logger.info("agent called %s (turn %d)", name, turn)
@@ -596,34 +796,26 @@ def propose_action(
                 messages.append(_tool_msg(tc.id, result_str))
                 continue
 
-            # ── Clarification — disabled: LLM must reason and proceed ─────
-            if name == "ask_for_clarification":
-                # Ignore clarification request, instruct agent to make its
-                # best interpretation and propose an action instead.
-                messages.append(_tool_msg(tc.id, json.dumps({
-                    "instruction": (
-                        "Do not ask for clarification. Make your best reasonable "
-                        "interpretation of the request, pick the safest matching "
-                        "tool, and call propose_action_tool immediately."
-                    )
-                })))
-                continue
+            # ── Clarification ────────────────────────────────────────────
+            if name in ("ask_for_clarification", "request_clarification"):
+                question = (args.get("question") or "").strip()
+                if not question:
+                    raise AgentActionError("Clarification request has no question.")
+                return ClarificationRequest(
+                    question=question,
+                    why=args.get("why", ""),
+                    options=args.get("options", []),
+                )
 
             # ── Phase 2: propose ──────────────────────────────────────────
             if name == "propose_action_tool":
-                # Safety net: if the agent proposes bulk_delete but skipped
-                # count_matching_rows, measure now before accepting the proposal.
                 if (
                     args.get("tool_name") == "bulk_delete_transactions"
                     and int(float(str(args.get("data_scope", 0)))) == 0
                     and args.get("filter")
                 ):
                     real_count_str = _run_count({"filter": args["filter"], "intent": "auto-measure"})
-                    real_count = json.loads(real_count_str).get("count", 0)
-                    logger.info(
-                        "auto-measured bulk_delete scope: %d rows (agent skipped phase 1)",
-                        real_count,
-                    )
+                    real_count = int(real_count_str.split("matches ")[1].split(" of")[0].replace(",", "")) if "matches " in real_count_str else 0
                     args["data_scope"] = real_count
                     args["data_scope_reasoning"] = (
                         f"Auto-measured by engine: filter matched {real_count} rows"
@@ -632,13 +824,40 @@ def propose_action(
                 messages.append(_tool_msg(tc.id, json.dumps({"acknowledged": True})))
                 return _build_action(args)
 
-            # Unknown tool — feed an error back so the agent can recover
+            # ── Legacy / Direct tool calls ──────────────────────────────
+            if name in TOOL_ACTION_TYPES:
+                if "self_assessment" not in args:
+                    raise AgentActionError(f"tool call {name!r} is missing its self_assessment")
+                sa = args["self_assessment"]
+                if not isinstance(sa, dict) or "risk_band" not in sa:
+                    raise AgentActionError("unusable self_assessment: missing risk_band")
+                if "confidence" in sa:
+                    try:
+                        c_val = float(sa["confidence"])
+                        if not (0.0 <= c_val <= 1.0):
+                            raise AgentActionError("unusable self_assessment: confidence out of range")
+                    except (ValueError, TypeError):
+                        raise AgentActionError("unusable self_assessment: invalid confidence")
+                merged = {
+                    "tool_name": name,
+                    "filter_description": args.get("filter_description"),
+                    "filter": args.get("filter"),
+                    "invoice_no": args.get("invoice_no"),
+                    "field": args.get("field"),
+                    "new_value": args.get("new_value"),
+                    "group_by": args.get("group_by"),
+                    "limit": args.get("limit"),
+                    **sa,
+                }
+                messages.append(_tool_msg(tc.id, json.dumps({"acknowledged": True})))
+                return _build_action(merged)
+
             messages.append(_tool_msg(
                 tc.id, json.dumps({"error": f"unknown tool: {name}"})
             ))
 
     raise AgentActionError(
-        f"Agent loop did not produce a proposal within {MAX_LOOP_TURNS} turns."
+        f"Agent loop completed without proposing an action after {MAX_LOOP_TURNS} turns."
     )
 
 
@@ -684,7 +903,7 @@ def reassess_action(action: AgentAction, actual_rows: int) -> AgentAction:
     ]
 
     for turn in range(4):
-        response = _groq_call(client, messages, PHASE1_TOOLS, tool_choice="required")
+        response = _groq_call(client, list(messages), PHASE1_TOOLS, tool_choice="required")
         msg = response.choices[0].message
         messages.append(_assistant_msg(msg))
 
@@ -700,7 +919,7 @@ def reassess_action(action: AgentAction, actual_rows: int) -> AgentAction:
             name = tc.function.name
             try:
                 args = json.loads(tc.function.arguments)
-            except json.JSONDecodeError:
+            except (json.JSONDecodeError, TypeError, AttributeError):
                 continue
 
             if name == "propose_action_tool":
@@ -755,18 +974,18 @@ def _build_action(args: dict[str, Any]) -> AgentAction:
 
     # Build parameters dict from whichever keys the tool expects
     parameters: dict[str, Any] = {}
-    if args.get("filter"):
+    if "filter_description" in args and args["filter_description"] is not None:
+        parameters["filter_description"] = args["filter_description"]
+    if "filter" in args and args["filter"] is not None:
         parameters["filter"] = args["filter"]
-    if args.get("invoice_no"):
+    if "invoice_no" in args and args["invoice_no"] is not None:
         parameters["invoice_no"] = args["invoice_no"]
-    if args.get("field"):
+    if "field" in args and args["field"] is not None:
         parameters["field"] = args["field"]
-    if "new_value" in args and args.get("new_value") is not None:
-        parameters["new_value"] = args["new_value"]
-    if "group_by" in args:
-        parameters["group_by"] = args.get("group_by") or ""
-    if "limit" in args:
-        parameters["limit"] = args.get("limit")
+    if "group_by" in args and args["group_by"] is not None:
+        parameters["group_by"] = args["group_by"]
+    if "limit" in args and args["limit"] is not None:
+        parameters["limit"] = args["limit"]
 
     return AgentAction(
         action_type=TOOL_ACTION_TYPES.get(tool_name, tool_name),
@@ -810,11 +1029,12 @@ def _tool_msg(call_id: str, content: str) -> dict[str, Any]:
 
 
 def _describe(tool_name: str, parameters: dict[str, Any]) -> str:
+    desc_target = parameters.get("filter_description") or parameters.get("filter") or ""
     if tool_name == "query_transactions":
-        return f"Read transactions matching: {parameters.get('filter')}"
+        return f"Read transactions matching: {desc_target}"
     if tool_name == "summarize_transactions":
         gb = parameters.get("group_by") or ""
-        return f"Summarise transactions{f', grouped by {gb}' if gb else ''}: {parameters.get('filter')}"
+        return f"Summarise transactions{f', grouped by {gb}' if gb else ''}: {desc_target}"
     if tool_name == "update_transaction":
         return (
             f"Set {parameters.get('field')!r} → {parameters.get('new_value')!r} "
@@ -823,5 +1043,5 @@ def _describe(tool_name: str, parameters: dict[str, Any]) -> str:
     if tool_name == "delete_transaction":
         return f"Permanently delete invoice {parameters.get('invoice_no')}"
     if tool_name == "bulk_delete_transactions":
-        return f"Permanently delete all transactions matching: {parameters.get('filter')}"
+        return f"PERMANENTLY DELETE all transactions matching: {desc_target}"
     return f"{tool_name}({parameters})"

@@ -58,7 +58,7 @@ time.sleep(1.0)
 
 # ── create the audit-log table ─────────────────────────────────────────────
 import boto3
-from autonomy_engine.audit_store import table_name, reset_cache
+from autonomy_engine.audit_repository import table_name, reset_cache
 
 reset_cache()  # ensure the resource is built against the local endpoint
 

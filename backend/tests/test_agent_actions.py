@@ -19,7 +19,7 @@ from unittest.mock import MagicMock, patch
 import groq
 import pytest
 
-from autonomy_engine.agent_actions import (
+from autonomy_engine.action_proposer import (
     CLARIFICATION_TOOL,
     CUSTOMER_FIELDS,
     PLANNING_TOOL,
@@ -29,7 +29,7 @@ from autonomy_engine.agent_actions import (
     ClarificationRequest,
     propose_action,
 )
-from autonomy_engine.risk_scorer import build_assessment, route_action
+from autonomy_engine.risk_evaluator import build_assessment, route_action
 
 requires_api_key = pytest.mark.skipif(
     not os.getenv("GROQ_API_KEY"),
@@ -182,7 +182,7 @@ def test_tool_schemas_are_closed(tool):
 # --------------------------------------------------------------------------
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_parses_a_read_action(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _fake_response(
         _tool_call(
@@ -200,7 +200,7 @@ def test_parses_a_read_action(mock_client):
     assert "customer 12345" in action.description
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_parses_a_single_record_update(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _fake_response(
         _tool_call(
@@ -224,7 +224,7 @@ def test_parses_a_single_record_update(mock_client):
     assert "payment_method" in action.description
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_parses_a_bulk_delete(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _fake_response(
         _tool_call(
@@ -246,7 +246,7 @@ def test_parses_a_bulk_delete(mock_client):
     assert "PERMANENTLY DELETE" in action.description
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_tool_context_is_passed_as_prompt_context(mock_client):
     create = mock_client.return_value.chat.completions.create
     create.return_value = _fake_response(
@@ -273,7 +273,7 @@ def test_tool_context_is_passed_as_prompt_context(mock_client):
     ]
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_tool_context_can_override_the_tool_set(mock_client):
     create = mock_client.return_value.chat.completions.create
     create.return_value = _fake_response(
@@ -295,7 +295,7 @@ def test_tool_context_can_override_the_tool_set(mock_client):
     ]
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_agent_must_choose_a_tool(mock_client):
     create = mock_client.return_value.chat.completions.create
     create.return_value = _fake_response(
@@ -308,7 +308,7 @@ def test_agent_must_choose_a_tool(mock_client):
     assert create.call_args.kwargs["tool_choice"] == "required"
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_banding_is_deterministic(mock_client):
     """Temperature 0: the same request must route the same way twice, or a
     reviewer cannot trust what the band means."""
@@ -328,14 +328,14 @@ def test_banding_is_deterministic(mock_client):
 # --------------------------------------------------------------------------
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_no_tool_call_raises_rather_than_returning_an_unscored_action(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _no_tool_response()
     with pytest.raises(AgentActionError, match="no tool call"):
         propose_action("Do something vague", {})
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_unparseable_arguments_raise(mock_client):
     """A truncated or malformed JSON argument blob must not become a half-read
     action -- there is no safe way to guess what the missing half said."""
@@ -349,7 +349,7 @@ def test_unparseable_arguments_raise(mock_client):
         propose_action("Look up a customer", {})
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_missing_self_assessment_raises(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _fake_response(
         _tool_call("query_transactions", {"filter_description": "x"})
@@ -358,7 +358,7 @@ def test_missing_self_assessment_raises(mock_client):
         propose_action("Look up a customer", {})
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_out_of_range_confidence_raises(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _fake_response(
         _tool_call(
@@ -370,7 +370,7 @@ def test_out_of_range_confidence_raises(mock_client):
         propose_action("Look up a customer", {})
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_missing_risk_band_raises_rather_than_defaulting(mock_client):
     """A missing band must never quietly become 'low' -- it is the routing
     decision, so absent means unroutable, not permissive."""
@@ -387,7 +387,7 @@ def test_missing_risk_band_raises_rather_than_defaulting(mock_client):
 
 
 @patch("autonomy_engine.agent_actions.time.sleep")
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_transient_failure_is_retried_once_then_succeeds(mock_client, mock_sleep):
     create = mock_client.return_value.chat.completions.create
     create.side_effect = [
@@ -406,7 +406,7 @@ def test_transient_failure_is_retried_once_then_succeeds(mock_client, mock_sleep
 
 
 @patch("autonomy_engine.agent_actions.time.sleep")
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_two_transient_failures_raise_a_clear_error(mock_client, mock_sleep):
     create = mock_client.return_value.chat.completions.create
     create.side_effect = groq.APIConnectionError(request=MagicMock())
@@ -416,7 +416,7 @@ def test_two_transient_failures_raise_a_clear_error(mock_client, mock_sleep):
 
 
 @patch("autonomy_engine.agent_actions.time.sleep")
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_rate_limit_is_retried(mock_client, mock_sleep):
     """The free tier rate-limits, so this is the failure most likely to be hit
     in practice -- it must be retried rather than surfaced as a dead end."""
@@ -438,7 +438,7 @@ def test_rate_limit_is_retried(mock_client, mock_sleep):
 
 
 @patch("autonomy_engine.agent_actions.time.sleep")
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_bad_request_is_not_retried(mock_client, mock_sleep):
     """A 400 will fail identically on retry -- surface it immediately."""
     create = mock_client.return_value.chat.completions.create
@@ -505,7 +505,7 @@ def _tool_result_text(create_mock, call_index=1):
     return messages[-1]["content"]
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_agent_can_count_before_committing(mock_client):
     """Two turns: ask how many rows match, then propose with that number."""
     create = mock_client.return_value.chat.completions.create
@@ -539,7 +539,7 @@ def test_agent_can_count_before_committing(mock_client):
     assert "matches" in result_text and "rows" in result_text
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_the_count_is_measured_from_the_data(mock_client):
     """The number handed back is the real one, not an echo of anything the model said."""
     from autonomy_engine import data_store
@@ -568,7 +568,7 @@ def test_the_count_is_measured_from_the_data(mock_client):
     assert f"{expected:,}" in _tool_result_text(create)
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_a_bad_filter_is_handed_back_for_correction(mock_client):
     """A malformed filter should become something the agent can see and fix, not
     a failed request -- catching it here is what stops it reaching a deletion."""
@@ -594,10 +594,10 @@ def test_a_bad_filter_is_handed_back_for_correction(mock_client):
     assert "could not be run" in _tool_result_text(create)
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_endless_counting_fails_loudly(mock_client):
     """An agent that never commits must not hang the request path."""
-    from autonomy_engine.agent_actions import MAX_PLANNING_TURNS
+    from autonomy_engine.action_proposer import MAX_PLANNING_TURNS
 
     create = mock_client.return_value.chat.completions.create
     create.return_value = _fake_response(_tool_call("count_matching_rows", {"filter": []}))
@@ -616,7 +616,7 @@ def test_the_lookup_tool_needs_no_risk_assessment():
 
 def test_the_lookup_tool_is_not_an_action():
     """It must never appear in the audit vocabulary or the executor's handlers."""
-    from autonomy_engine.agent_actions import COUNT_TOOL_NAME, TOOL_ACTION_TYPES
+    from autonomy_engine.action_proposer import COUNT_TOOL_NAME, TOOL_ACTION_TYPES
     from autonomy_engine.executor import _HANDLERS
 
     assert COUNT_TOOL_NAME not in TOOL_ACTION_TYPES
@@ -635,7 +635,7 @@ def test_the_lookup_tool_is_not_an_action():
 # --------------------------------------------------------------------------
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_agent_can_ask_instead_of_proposing(mock_client):
     mock_client.return_value.chat.completions.create.return_value = _fake_response(
         _tool_call(
@@ -656,7 +656,7 @@ def test_agent_can_ask_instead_of_proposing(mock_client):
     assert outcome.options == ["quantity of 0", "a specific date range"]
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_a_clarification_is_not_an_action(mock_client):
     """It carries nothing that could be executed, routed, or rolled back. The
     type is the guarantee: there is no tool_name or band to act on."""
@@ -674,7 +674,7 @@ def test_a_clarification_is_not_an_action(mock_client):
     assert not hasattr(outcome, "risk_band")
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_an_empty_question_is_rejected(mock_client):
     """A blank clarification would stall the user with nothing to answer, which
     is a worse failure than a loud error."""
@@ -685,7 +685,7 @@ def test_an_empty_question_is_rejected(mock_client):
         propose_action("Do something", {})
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_clarification_survives_missing_optional_fields(mock_client):
     """A question with no suggested answers and no stated reason is still a
     usable question -- it should not be thrown away over its trimmings."""
@@ -700,7 +700,7 @@ def test_clarification_survives_missing_optional_fields(mock_client):
     assert outcome.options == []
 
 
-@patch("autonomy_engine.agent_actions._client")
+@patch("autonomy_engine.action_proposer._client")
 def test_agent_can_count_then_ask(mock_client):
     """Looking something up and then deciding you still cannot tell is a
     legitimate route to a question, not a loop failure."""
@@ -730,7 +730,7 @@ def test_the_clarification_tool_needs_no_risk_assessment():
 def test_the_clarification_tool_is_not_an_action():
     """Like the lookup tool, it must never reach the audit vocabulary or the
     executor -- there is nothing for either of them to do with it."""
-    from autonomy_engine.agent_actions import CLARIFY_TOOL_NAME, TOOL_ACTION_TYPES
+    from autonomy_engine.action_proposer import CLARIFY_TOOL_NAME, TOOL_ACTION_TYPES
     from autonomy_engine.executor import _HANDLERS
 
     assert CLARIFY_TOOL_NAME not in TOOL_ACTION_TYPES

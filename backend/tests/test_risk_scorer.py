@@ -8,7 +8,7 @@ and the model's reasoning survives into the breakdown a reviewer reads.
 
 import pytest
 
-from autonomy_engine.risk_scorer import (
+from autonomy_engine.risk_evaluator import (
     BAND_SEVERITY_RANGES,
     BAND_TO_LEVEL,
     RiskFactors,

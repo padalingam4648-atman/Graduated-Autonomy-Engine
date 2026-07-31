@@ -7,9 +7,9 @@ import json
 
 import pytest
 
-from autonomy_engine import audit_store, confirmation
-from autonomy_engine.agent_actions import AgentAction
-from autonomy_engine.risk_scorer import RiskFactors, build_assessment
+from autonomy_engine import audit_repository as audit_store, approval_manager as confirmation
+from autonomy_engine.action_proposer import AgentAction
+from autonomy_engine.risk_evaluator import RiskFactors, build_assessment
 
 SESSION = "sess-demo-001"
 

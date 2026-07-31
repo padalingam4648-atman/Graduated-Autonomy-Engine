@@ -68,6 +68,7 @@ ROUTING_CONFIRM: Final[str] = "confirm"
 ROUTING_FULL_REVIEW: Final[str] = "full_review"
 
 _ID_SEPARATOR: Final[str] = "|"
+POLICY_VERSION: Final[str] = "v1.2-sentinel"
 
 
 # --------------------------------------------------------------------------
@@ -292,6 +293,8 @@ def write_audit_record(
         "routing_decision": routing_decision,
         "status": status,
         "reviewer": reviewer,
+        "policy_version": "v1.2-sentinel",
+        "eval_timestamp": ts,
     }
     if description is not None:
         item["description"] = description
@@ -555,3 +558,15 @@ def list_pending_confirmations() -> list[dict[str, Any]]:
 def list_pending_reviews() -> list[dict[str, Any]]:
     """High-risk actions blocked pending full human review."""
     return _list_pending(ROUTING_FULL_REVIEW)
+
+
+def list_all_audit_records(limit: int = 200) -> list[dict[str, Any]]:
+    """Scan and return all audit records, newest first."""
+    try:
+        response = _table().scan()
+    except ClientError as exc:
+        raise AuditStoreError(f"failed to scan audit table: {exc}") from exc
+    records = [_hydrate(item) for item in response.get("Items", [])]
+    records = sorted(records, key=lambda r: r.get("timestamp", ""), reverse=True)
+    return records[:limit]
+

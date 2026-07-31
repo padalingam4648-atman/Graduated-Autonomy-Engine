@@ -27,10 +27,10 @@ from __future__ import annotations
 
 from typing import Any, Final
 
-from autonomy_engine import audit_store, executor
-from autonomy_engine.agent_actions import AgentAction
+from autonomy_engine import audit_repository as audit_store, executor
+from autonomy_engine.action_proposer import AgentAction
 from autonomy_engine.executor import ExecutionResult
-from autonomy_engine.risk_scorer import RiskAssessment
+from autonomy_engine.risk_evaluator import RiskAssessment
 
 #: Decisions each queue accepts, mapped to the status they write.
 CONFIRMATION_DECISIONS: Final[dict[str, str]] = {

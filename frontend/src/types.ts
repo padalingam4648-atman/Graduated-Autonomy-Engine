@@ -78,6 +78,8 @@ export interface ResolveResponse {
 export interface AuditEntry {
   record_id: string;
   timestamp: string;
+  session_id?: string;
+  tool_name?: string;
   action_type: string | null;
   description: string | null;
   routing_decision: RoutingDecision | null;
@@ -87,6 +89,17 @@ export interface AuditEntry {
   risk_breakdown: Record<string, string> | null;
   execution_status: ExecutionStatus | null;
   execution_detail: string | null;
+  reversibility?: string;
+  reversibility_reasoning?: string;
+  data_scope?: number;
+  data_scope_reasoning?: string;
+  regulatory_category?: string;
+  regulatory_reasoning?: string;
+  confidence?: number;
+  confidence_reasoning?: string;
+  rationale?: string;
+  detail?: string;
+  snapshot_path?: string;
 }
 
 export interface AuditTrailResponse {

@@ -91,6 +91,22 @@ export { BASE_URL as apiBaseUrl };
 import type { DashboardStatsResponse, DashboardRecentResponse, AuditEntry } from "./types";
 
 export async function getAllAuditLogs(): Promise<AuditEntry[]> {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 4000);
+    const res = await request<{ count: number; actions: AuditEntry[] }>("/audit/all", {
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    if (res && Array.isArray(res.actions)) {
+      return res.actions.sort(
+        (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+      );
+    }
+  } catch (err) {
+    console.warn("Falling back to session-based audit fetch", err);
+  }
+
   const sessions = JSON.parse(localStorage.getItem("autonomy_sessions") || "[]");
   if (sessions.length === 0) return [];
   
@@ -103,12 +119,10 @@ export async function getAllAuditLogs(): Promise<AuditEntry[]> {
   
   for (const res of results) {
     if (res && res.actions) {
-      // Cast is needed because the backend type uses dict, but AuditEntry is more specific
       allActions = allActions.concat(res.actions as unknown as AuditEntry[]);
     }
   }
   
-  // Sort descending (newest first)
   return allActions.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 }
 

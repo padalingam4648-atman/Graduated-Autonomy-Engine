@@ -305,6 +305,6 @@ def test_unknown_tool_raises_rather_than_failing_quietly():
 
 def test_every_declared_tool_has_a_handler():
     """The guard above only helps if the two lists actually agree."""
-    from autonomy_engine.agent_actions import TOOL_SCHEMAS
+    from autonomy_engine.action_proposer import TOOL_SCHEMAS
 
     assert {t["name"] for t in TOOL_SCHEMAS} == set(executor._HANDLERS)

@@ -142,7 +142,7 @@ def main() -> None:
 
         if status == PASS:
             passed += 1
-            print(f"  Status: ✓ PASS")
+            print(f"  Status: [PASS]")
             result = propose_action(case.query, {})
             if isinstance(result, ClarificationRequest):
                 print(f"  Question: {result.question}")
@@ -155,7 +155,7 @@ def main() -> None:
                 print(f"  Rationale: {result.rationale}")
         else:
             failed += 1
-            print(f"  Status: ✗ FAIL")
+            print(f"  Status: [FAIL]")
             for f in failures:
                 print(f"    - {f}")
 

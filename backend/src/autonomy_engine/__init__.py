@@ -1,7 +1,11 @@
-"""PS-9.1 Graduated Autonomy Engine.
+"""Graduated Autonomy Engine core package."""
 
-Scores every proposed AI agent action on risk and routes it to the
-appropriate autonomy level: autonomous, confirm, or full human review.
-"""
+from autonomy_engine import (
+    action_proposer as agent_actions,
+    adaptive_calibration as calibration,
+    approval_manager as confirmation,
+    audit_repository as audit_store,
+    risk_evaluator as risk_scorer,
+)
 
 __version__ = "0.1.0"
