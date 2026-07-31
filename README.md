@@ -215,32 +215,6 @@ Detailed project documentation is available inside each workspace.
 
 ---
 
-# 📸 Screenshots
-
-### Landing Page
-
-> *Add screenshot here*
-
----
-
-### Dashboard
-
-> *Add screenshot here*
-
----
-
-### Query Writer
-
-> *Add screenshot here*
-
----
-
-### Audit Logs
-
-> *Add screenshot here*
-
----
-
 # 🎯 Core Capabilities
 
 - AI-assisted action planning
